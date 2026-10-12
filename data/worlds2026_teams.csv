@@ -1,0 +1,20 @@
+team_id,team_name_oe,oe_team_id,region,seed,stage_entry,qualification_route,notes
+GEN,Gen.G,oe:team:50f58982d91a36557ec8aec52ab014f,LCK,LCK1,swiss,LCK 2026 Split 3 champion: won final 3-1 vs HLE (2026-09-13),
+HLE,Hanwha Life Esports,oe:team:3a1d18f46bcb3716ebcfcf4ef068934,LCK,LCK2,swiss,LCK 2026 Split 3 runner-up: lost final 1-3 to GEN (2026-09-13),"MSI 2026 champion in OE data: beat BLG 3-2 (2026-07-12, last MSI series)"
+T1,T1,oe:team:ce499dea30cfce118f4fe85da0227e8,LCK,LCK3,swiss,"LCK 2026 Split 3: lost 1-3 to HLE (2026-09-12), last T1 series",
+DK,Dplus Kia,oe:team:ef69efa6acebe94107f0cf1ba716806,LCK,LCK4,swiss,"LCK 2026 Split 3: lost 1-3 to T1 (2026-09-06), last DK series",
+AL,Anyone's Legend,oe:team:ed28f87f0cfdba0a2a8f183cebae73a,LPL,LPL1,swiss,LPL 2026 Split 3 champion: won final 3-1 vs BLG (2026-09-13),
+BLG,Bilibili Gaming,oe:team:d356a144644879dabb5f34cd99c886d,LPL,LPL2,swiss,LPL 2026 Split 3 runner-up: lost final 1-3 to AL (2026-09-13),
+TES,Top Esports,oe:team:fcec508e780bbd1ad493852640f5b36,LPL,LPL3,swiss,WLDQ 2026-09-17: beat IG 3-1; no later TES game in OE data,LPL3 is from earlier research. Data cannot confirm TES vs IG seed order. Lost 2-3 to IG in LPL playoffs 2026-09-05.
+IG,Invictus Gaming,oe:team:53a258f289c26d94431c0496a54e151,LPL,LPL4,swiss,WLDQ 2026-09-19: beat JDG 3-1 (confirmed in OE data),Brief item confirmed. Lost 2-3 to AL in LPL playoffs 2026-09-12. Seed vs TES unconfirmed.
+G2,G2 Esports,oe:team:7d6673d3a9d00363c6bebc1a630da6e,LEC,LEC1,swiss,LEC Summer 2026 champion: won final 3-0 vs KOI (2026-09-20),
+MKOI,Movistar KOI,oe:team:4acc40654379b4da680be1bd3129dfa,LEC,LEC2,swiss,LEC Summer 2026 runner-up: lost final 0-3 to G2 (2026-09-20),Not the academy 'Movistar KOI Fenix'.
+KC,Karmine Corp,oe:team:f3aa9bbd924ce3af42ac53f8326bc7c,LEC,LEC3,playin,"LEC Summer 2026: lost 0-3 to KOI (2026-09-19), last KC series",Play-In entrant (UB2 vs C9).
+TL,Team Liquid,oe:team:8eb884e168f28402ce685bedebb5250,LCS,LCS1,swiss,LCS Summer 2026 champion: won final 3-1 vs LYON (2026-10-04),Old file said 'Team Liquid Alienware'; OE name is 'Team Liquid'.
+LYON,LYON,oe:team:da1143bf9a245b78a8dc86417de85b3,LCS,LCS2,swiss,LCS Summer 2026 runner-up: lost final 1-3 to TL (2026-10-04),
+C9,Cloud9,oe:team:fc8e90107dabb9a35c490b0d86adea0,LCS,LCS3,playin,"LCS Summer 2026: lost 1-3 to LYON (2026-10-03), last C9 series",Old file said 'Cloud 9 KIA'; OE name is 'Cloud9'. Play-In entrant (UB2 vs KC).
+TSW,Team Secret Whales,oe:team:740de582f50775c516c77ed7b923fd5,LCP,LCP1,swiss,LCP 2026 Split 3: won last series 3-0 vs CFO (2026-08-30),OE does not flag LCP playoffs; 'final' is inferred from being the last series (CFO also lost 0-3 to TSW on 08-23).
+CFO,CTBC Flying Oyster,oe:team:0916b3c324c8577b0c6344f3e067f62,LCP,LCP2,swiss,"LCP 2026 Split 3: lost 0-3 to TSW (2026-08-30), inferred runner-up",Same caveat as TSW.
+MVK,MVK Esports,oe:team:bc3824b0bbb8139d16109178faa4822,LCP,LCP3,playin,"LCP 2026 Split 3: lost 1-3 to CFO (2026-08-29), last MVK series",Play-In entrant (UB1 vs FUR). Vietnam.
+LOS,LØS,oe:team:ea65e6cc48a9be50fc5334369a5fca5,CBLOL,CBLOL1,swiss,CBLOL 2026 Split 2 champion: won final 3-2 vs FURIA (2026-10-10),Verdict: CBLOL1 = LØS. LOUD is a different OE team_id (lost 0-3 to FURIA 2026-10-03). Not Play-In.
+FUR,FURIA,oe:team:87e3e1e75839f75a10bbc66e894d806,CBLOL,CBLOL2,playin,CBLOL 2026 Split 2 runner-up: lost 2-3 to LØS (2026-10-10),Play-In per user brief (CBLOL2 slot). Play-In entrant (UB1 vs MVK).

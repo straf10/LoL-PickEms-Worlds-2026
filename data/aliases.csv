@@ -1,0 +1,200 @@
+entity_type,alias,canonical_id
+team,GEN,GEN
+team,Gen G,GEN
+team,Gen.G,GEN
+team,HLE,HLE
+team,Hanwha Life,HLE
+team,Hanwha Life Esports,HLE
+team,T1,T1
+team,DK,DK
+team,Dplus,DK
+team,Dplus KIA,DK
+team,Dplus Kia,DK
+team,AL,AL
+team,Anyone's Legend,AL
+team,BLG,BLG
+team,Bilibili Gaming,BLG
+team,TES,TES
+team,Top Esports,TES
+team,IG,IG
+team,Invictus Gaming,IG
+team,Shanghai Invictus Gaming,IG
+team,G2,G2
+team,G2 Esports,G2
+team,KOI,MKOI
+team,MKOI,MKOI
+team,Movistar KOI,MKOI
+team,KC,KC
+team,Karmine Corp,KC
+team,TL,TL
+team,TLAW,TL
+team,Team Liquid,TL
+team,Team Liquid Alienware,TL
+team,LYON,LYON
+team,C9,C9
+team,Cloud 9,C9
+team,Cloud 9 KIA,C9
+team,Cloud9,C9
+team,Cloud9 Kia,C9
+team,TSW,TSW
+team,Team Secret Whales,TSW
+team,CFO,CFO
+team,CTBC Flying Oyster,CFO
+team,Flying Oyster,CFO
+team,MVK,MVK
+team,MVK Esports,MVK
+team,LOS,LOS
+team,LØS,LOS
+team,FUR,FUR
+team,FURIA,FUR
+team,FURIA Esports,FUR
+player,Kiin,oe:player:03daae1844b9ad257324c3eedf41e28
+player,Canyon,oe:player:92544d7a994bd6841cccd9f6e42e3de
+player,Chovy,oe:player:fb6e61b8acb05df17b7e5ad4ae7c800
+player,Ruler,oe:player:eada4723af6f51cf2391d85b5fde49b
+player,Duro,oe:player:605821ebcf6a2e53f03ec6e8e463d1b
+player,Zeus,oe:player:98dd15c330fb5abb4508347265a7f76
+player,Kanavi,oe:player:41deab55354f57a94135989133f9968
+player,Zeka,oe:player:f9cd2ef9afea5cda0eb3263a025cec1
+player,Gumayusi,oe:player:c7319736816efe935787b4381c6f321
+player,Delight,oe:player:051ca2e31ba25123961b3df95fdef4c
+player,Doran,oe:player:57acacc1f182893280e7400073a3dd1
+player,Oner,oe:player:f8b68f268106124fc4bc1c946adc9b0
+player,Faker,oe:player:e1edfc5cea461399a63cb813cf795cc
+player,Peyz,oe:player:5bbc2b92348d930ebd500cb9ce71bb7
+player,Keria,oe:player:db79ce6ad35451c938fbe2995dabd37
+player,Siwoo,oe:player:da9f969a7ab3819b9e528072aa4d5e6
+player,Lucid,oe:player:10b86429ce8048aba673d802632e358
+player,ShowMaker,oe:player:5f8ff49cd56eae61d635966b183a451
+player,Smash,oe:player:eaebb7118d7bd83eabac513053e1f6c
+player,Career,oe:player:99e732def3601275db892c84fb85a0c
+player,Breathe,oe:player:0d9b0a3b3a93a8f759c9d8ac8eef97c
+player,Tarzan,oe:player:62922f2b370657a966de4d84f5586bf
+player,Shanks,oe:player:0e2f0d3ded24c190dd6a4b3d6f89f04
+player,Hope,oe:player:7cf68f44e5dc31827b1d3f0a3b4a28e
+player,Kael,oe:player:d24f38ec30ce6f7577066f80e43e4bf
+player,Bin,oe:player:fb66ef5885b4be9323905b821dc3a42
+player,Xun,oe:player:fbdc4428b2d095c83aebeed5da4e4b2
+player,Knight,oe:player:ed29043422e3c515e1cb292464b990b
+player,Viper,oe:player:9573154ad8bc9459b4c0d940315054f
+player,ON,oe:player:90651ebea9a35ec4e018c8157492e17
+player,ZUIAN,oe:player:f52533de1cc92487ab58b973cd2490e
+player,Tian,oe:player:0da0eeb199e8fa3ab773cf84f9de9ab
+player,Creme,oe:player:6e7908512cb309a43388bb464a312a2
+player,JackeyLove,oe:player:c54e1090ef1faa736b12493051c4855
+player,Zhuo,oe:player:e78da55d6db43d982f841204a8e51ac
+player,TheShy,oe:player:37f20525a39d17ec49fd10294f9c994
+player,Wei,oe:player:b61e517b1a6027160aafaf56e9867c0
+player,Rookie,oe:player:1213778b5c6d69dcb26aa89f7d0aaa9
+player,JiaQi,oe:player:d971df9441d60af93a87545e6a8f884
+player,Meiko,oe:player:bda7cc061d7a1576f1dcad33dd505cd
+player,BrokenBlade,oe:player:84bff3a326833c7c9181c698f676878
+player,SkewMond,oe:player:ab15060e5225b51592cd04b3aed1e09
+player,Caps,oe:player:55dd587cdc4a278be6a5c37f9e539de
+player,Hans Sama,oe:player:c62a5235ad6bc113a1e64eb0e9aa8c8
+player,Labrov,oe:player:bb6ac5763c6576e104a7a2f59eb4ddf
+player,Myrwn,oe:player:ede24d5e0911d7a4f6ec514a67802ff
+player,Elyoya,oe:player:8a8f18e4b7d0f30c19c5fb99a526951
+player,Jojopyun,oe:player:83eb62484689106807fcf5ad55b5479
+player,Supa,oe:player:1223a0ed2bfab9b714c72d965df8133
+player,Alvaro,oe:player:f5bf9bd732b85e4dcab5121e4769ae4
+player,Canna,oe:player:7577c239c73fa5f3011cd7b5503e75e
+player,Yike,oe:player:4203fc46c4c6333e9bfa9d0a8618677
+player,kyeahoo,oe:player:308e48bf56284c09a1a9aadf55bc80c
+player,Caliste,oe:player:e2af2b779499aa25ab9a9c10c9a5ffd
+player,Busio,oe:player:3e722c8ede909c83af9342c41805a16
+player,Morgan,oe:player:f73dde2d8c7879ae8d1fcdc03c4ffeb
+player,Josedeodo,oe:player:52b4f060a577ff87c99118d97fa75f4
+player,Quid,oe:player:8f8eaac8e99c203ee76e57c5c81c91f
+player,Yeon,oe:player:f6b8af05a5af22004a67a78f3046b92
+player,CoreJJ,oe:player:05fafeaf23dc3285558a4e968970b9f
+player,Dhokla,oe:player:5385f74da3e5deb5b66d9a1ee56cf97
+player,Inspired,oe:player:a8307167f3a1c933295bb9e3d43700e
+player,Saint,oe:player:f45792335d83b10581da2f0cbdd6e8e
+player,Berserker,oe:player:460ae5a7af8d68f7831b70307210ab3
+player,Isles,oe:player:40704dfd2d966862568d29770de57bd
+player,Thanatos,oe:player:1efc4e5732e91520d03385900b903f9
+player,Blaber,oe:player:ed455f823b6586e9e3621dfb5aeb42e
+player,Loki,oe:player:0a53c1102dafce61e89decc517b3175
+player,Tactical,oe:player:4e0619e57cb50c4ab1230c2dd72df1b
+player,Vulcan,oe:player:81acc6bcde5c927c78e0990e9887f84
+player,Pun,oe:player:6644a7352d32c9c4443017798130b61
+player,Hizto,oe:player:043e89cd3b06bc1a0555024d475c9d2
+player,Dire,oe:player:b7a3b6176406a92dd089fe2f82a1d3f
+player,Eddie,oe:player:e5f6c83e6e97c74fc9e9760fc8972ae
+player,Bie,oe:player:1f7d70f56b608b3137df2493949fdd0
+player,Rest,oe:player:55276c10d84e1df7713b441e76e141f
+player,Shad0w,oe:player:c332dc879e14f1feb266190c7f396fd
+player,Pout,oe:player:ca187ee49dd3e9ed20eaacbbf484fdf
+player,Doggo,oe:player:95082306f78780da5686f118c993366
+player,Kino,oe:player:acb3a05894b7c57412b2d7e911e17dd
+player,Kratos,oe:player:75019a36fdf85666fbd9396ae4fc7ec
+player,Gury,oe:player:0101bf828e44b2630d500590c4ad461
+player,Chika,oe:player:c4d64ae9f01ee43ec2367d28eeadbea
+player,Harky,oe:player:28a1925f6c4df972a5ae722c07bb4c4
+player,SiuLoong,oe:player:397fee5de074b10600707b618fb1f29
+player,Zest,oe:player:786b5bbf7bbfb7b79379e8589a865c1
+player,Curse,oe:player:9c51ed760409db6fa2a02fe8046f110
+player,Feisty,oe:player:d1ae0e2f9f3ac1e0e0cdcb86504ca77
+player,Duduhh,oe:player:b4179fdeda1242fcd94b82a5710dd3e
+player,Ackerman,oe:player:145201414ecb853de684fbe7d6bb5b6
+player,Guigo,oe:player:d61d8a0b25028f787123bfff542d305
+player,Tatu,oe:player:6625d682ed10ef5e0e7c6c9e4dd2fc1
+player,Tutsz,oe:player:886e8205ac1b091dbf67dbae83b1544
+player,Ayu,oe:player:d7a904873d10637ef44afa9c1de83b3
+player,JoJo,oe:player:cb4cd2fd258d5961d2f1c4815b04123
+player,Juny,oe:player:2864a87509c28d6ad7457d2db4a042d
+player,Harusary,oe:player:343aa950520fb5e73412ea8621866d3
+player,Courage,oe:player:4e07c3a412cda9ddf875cc14c65efc4
+player,Lumos,oe:player:6b28fcee6b9d1ddf7c2e481e7fc1c0e
+player,Kemish,oe:player:6de9a45a1a666afa34d126f9be444c0
+player,Loid,oe:player:9e368cf17db2dab6f42f3aa3bb5b4cd
+player,Ripple,oe:player:c0062863e3e99f67607ad1ae9a4299a
+player,MUDAI,oe:player:fc222b2fd22414e0b9e40aaee65fcb5
+player,Bluffing,oe:player:51e528aaaafe5451e0a14c0da847dc4
+player,Pyeonsik,oe:player:951959a620881940ca08f98e0226cf3
+player,Jackal,oe:player:c5297b90d38a4be4c290d17de208d7a
+player,Panther,oe:player:d22a9f456619f24133f9d0ddff50051
+player,Cracker,oe:player:e6d554ea9906d8f2fc26d076d2d4a4c
+player,Cypher,oe:player:31edd1e8359d849e250b854826b8c38
+player,Guti,oe:player:3950b27e47e381e26f4678ced12bc45
+player,Painter,oe:player:4d08cbf857994dc42e1b09205158e15
+player,Haetae,oe:player:9fefcdafef82ae8de67c1187546d622
+player,Cloud,oe:player:c8fe7c65a2ae0ab6ff62674ade6847d
+player,Sharvel,oe:player:18a70ca6e551b080cf886828cc18394
+player,Garden,oe:player:26626eb3322fd706f5ca63fca2bb022
+player,Solid,oe:player:307b6fb75c459e5d0f628aa8e9e438c
+player,Jaehyuk,oe:player:686e3385a39e937956485d742b689e5
+player,Wayne,oe:player:bbd0c34fcf8166e45f1161815fefccf
+player,Loopy,oe:player:e9741b3a238723ea6380ef2113fae63
+player,Flandre,oe:player:aad3806ef26a116c73b11efa07e9bd8
+player,Wenbo,oe:player:31fcee25eb58c4dad5616a879948390
+player,369,oe:player:0c74b7f78409a4022a2c4c5a5ca3ee1
+player,naiyou,oe:player:a7b51467f09577883d7150f37393964
+player,fengyue,oe:player:b777313deced54da2d2c1aa88f52e50
+player,Renard,oe:player:1b481e5ac2a687de752b330bee95ce8
+player,Photic,oe:player:1c42d9266c8b391c7870b7a39f25a12
+player,Soboro,oe:player:38e0af7278d6769d0c81d7c4b47ac1e
+player,Nia,oe:player:7c30c1a6ce9d063b361b66ccb40444b
+player,Assum,oe:player:da3299cd46f1ad8a86bbadeb6b8a320
+player,Jwei,oe:player:dfe5b204f04f40a84019af080662259
+player,Castle,oe:player:80fea0848c57b8e07a79675d41f582c
+player,Armao,oe:player:a04a853a0f540f156d08711204fe252
+player,Zven,oe:player:10fcffece0ac7be85f09c4b51a75762
+player,APA,oe:player:ea9ed09584feecae0991089f087d2ce
+player,Hiro02,oe:player:9d5e3b1fd70d1652fc3f5f1a978cd9b
+player,Pungyeon,oe:player:1c3f29080dd3dd4f666adbd6448cef4
+player,2274,oe:player:95f8d9901ca8878e291552f001f6769
+player,Elio,oe:player:21d0c093d9553e0074a98c5b5880b4c
+player,Kati,oe:player:2e7d6bbb048c7e1ff0eb4d8e3bbad9a
+player,Seany,oe:player:4830e7becfcf3539978e3a69cc1c27c
+player,Shogun,oe:player:60d1428b9206634f3feb66e4b8ebd59
+player,SofM,oe:player:a408b9f6a7b5f82bfac03a88e026986
+player,Steller,oe:player:f9234f74ef6e8ef9657e1d3afec1098
+player,Drakehero,oe:player:5ee2cd6074f5a5f37edebee2f481c6b
+player,Shini,oe:player:99f0996e8f487ec0633f1920bd4631d
+player,Luuukz,oe:player:eede71c35922ad83e3bb96fb56c40e5
+player,Zamudo,Zamudo
+player,Shadow,Shadow
+player,Skewmond,Skewmond
+player,Hans sama,Hans sama

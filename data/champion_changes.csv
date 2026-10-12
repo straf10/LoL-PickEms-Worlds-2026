@@ -1,0 +1,68 @@
+patch,kind,name,direction,magnitude,summary,pro_relevant
+16.17,champion,Aurelion Sol,buff,2,W cooldown 22-16s to 22-14s; Q mana cost per second lowered,false
+16.17,champion,Cho'Gath,buff,1,E base damage +10 per attack,false
+16.17,champion,Graves,nerf,2,Q outer and return AD ratios cut (65/55% to 55/45%); snowball reduced,false
+16.17,champion,Irelia,buff,2,Q AD ratio 70% to 80%; AP ratios raised for ARAM/Arena only,false
+16.17,champion,LeBlanc,buff,2,Attack speed ratio 0.4 to 0.625; W AP ratio 80% to 90%,false
+16.17,champion,Nasus,nerf,1,Passive lifesteal 12/18/24% to 10/15/20% (top-lane sustain),false
+16.17,champion,Nocturne,nerf,1,Armor 38 to 36; HP 655 to 640 (overperforming jungle),false
+16.17,champion,Qiyana,buff,2,Q damage +10 base and +5% AD ratio; monster damage 175% to 160%,false
+16.17,champion,Thresh,nerf,1,E damage -10 base and -5% AP ratio (high winrate),false
+16.17,champion,Trundle,buff,2,W attack speed 30-90% to 30-110%,false
+16.17,champion,Vayne,nerf,2,Top-lane focus: Q mana cost 30 to 46-30; W true damage and minimum damage cut; HP and AS ratio changes,false
+16.17,champion,Xerath,nerf,1,Base HP 596 to 575; Q damage -5 (high ban rate in some regions),false
+16.17,champion,Yasuo,buff,1,Crit damage penalty -10% to -5%,false
+16.17,champion,Yone,buff,1,Crit damage penalty -10% to -5%,false
+16.17,item,Sundered Sky,nerf,2,HP 450 to 400; AD 45 to 40,false
+16.17,item,Stormrazor,buff,1,Attack speed 20% to 25%,false
+16.18,champion,Bard,nerf,1,Base armor 34 to 32 (+5 to +4.7 per level); durability cut for overperforming pro supports,true
+16.18,champion,Cassiopeia,adjust,2,Laning power cut (Q 75 to 65 base; move speed 6-40% to 5-36%; E base AP 10 to 20 but enhanced 55 to 45%) with scaling raised (Q AP 65 to 75%; R AP 50 to 75%); pro-skew reduction,true
+16.18,champion,Ekko,buff,2,Q mana cost 50-90 to 40-80; Q return AP ratio 60% to 70%,false
+16.18,champion,Kassadin,buff,2,Q AP ratio 70% to 80%; R base damage 70-110 to 80-110,false
+16.18,champion,Master Yi,buff,2,Armor growth 4.5 to 5; R move speed 35-55% to 40-60%,false
+16.18,champion,Nautilus,nerf,2,Base AD 61 to 58; Q base damage cut (max 265 to 245); overperforming pro support,true
+16.18,champion,Seraphine,nerf,2,E cooldown 9-11s to flat 11s (bot Seraphine),false
+16.18,champion,Syndra,nerf,2,Passive splinter mana cap 255 to 199; W cooldown +1s per rank; pulled to forefront of pro play,true
+16.18,champion,Viego,buff,2,Attack damage growth 3.5 to 4; passive heal scales with AD/AP/AS/HP; low winrate,false
+16.18,champion,Zaahen,buff,1,Q2 base damage 25-125 to 30-150; Q goes on cooldown when entering resurrection (QoL),false
+16.18,champion,Zeri,nerf,2,W damage 120% to 100% tAD; wall damage 180% to 150%; rising pro presence,true
+16.18,item,Guinsoo's Rageblade,buff,1,Seething Strike stack duration 3s to 4s (compensates bugfix),false
+16.19,champion,Aatrox,buff,2,W cooldown 20-12s to 18-12s; E heal ratio 1.1% to 1.3% per 100 bonus HP,false
+16.19,champion,Aphelios,buff,2,Calibrum damage +10; Severum heal 7.1% to 8%; Infernum cooldown -1s; Gravitum slow floor 10% to 15%; hypercarry under-picked,false
+16.19,champion,Aurora,buff,1,E base damage +10; R rift duration +0.5s at minimum rank,false
+16.19,champion,Draven,buff,1,Base attack damage 62 to 64,false
+16.19,champion,Elise,buff,2,Passive magic damage on-hit +2 per rank; W bonus attack speed +10% per rank,false
+16.19,champion,Fiora,buff,2,Health growth 99 to 105; R heal range 550 to 600 and heal raised,false
+16.19,champion,Kha'Zix,buff,2,Passive damage 17-136 to 22-141; evolved E range +200 to +300; evolved W slow 2 to 2.25s; fringe of the meta,true
+16.19,champion,Lillia,buff,2,Armor 22 to 24; R sleep 2s to 2.5s; viability at higher levels of play,true
+16.19,champion,Lucian,adjust,2,Passive empowered on-hit 15 (+20% AD) to 5 (+15% AD) (mid nerf); Q base damage +10 per rank (bot buff),false
+16.19,champion,Master Yi,buff,1,Q cooldown refund haste penalty removed (-1s scaling to 1s),false
+16.19,champion,Nasus,nerf,1,Q bonus damage 40-120 to 30-110; early lifesteal sustain reduced,false
+16.19,champion,Nocturne,nerf,2,R cooldown 140/115/90s to 160/130/100s; popular in pro and solo queue,true
+16.19,champion,Poppy,nerf,2,Q jungle minion/monster max-HP cap 85-225 to 70-210 (reverts jungle buff); flex and counterpick presence,false
+16.19,champion,Rumble,nerf,2,Passive overheat attack speed 50-130% to 30-100%; monster cap raised for jungle compensation; higher-level play,true
+16.19,champion,Ryze,nerf,2,Q flux bonus 25-100% to 15-90%; E mana cost +5 per rank; armor growth 4.2 to 4.7; best-in-class skirmish in top players,true
+16.19,champion,Vi,nerf,2,Base AD 63 to 61; AD growth 3.5 to 3.9; passive shield 12% to 10% max HP; meta staple,true
+16.19,champion,Volibear,buff,2,Passive attack speed per stack AP scaling 3 to 4 per 100 AP; lightning bonus AD added,false
+16.19,item,World Atlas and Runic Compass,adjust,1,Flat HP shifted to health regen (0/60/200 HP and 50/75/75% regen); melee supports,false
+16.19,system,Top role quest Teleport,buff,1,Free Teleport cooldown 420s to 390s; upgraded Teleport 330-240s to 300-210s,false
+16.20,champion,Ambessa,nerf,2,Passive damage 5-30 (+25% bonus AD) to 5-25 (+20% bonus AD); late-game pro output,true
+16.20,champion,Ashe,nerf,2,AD per level 3.5 to 3; pro-play marksman utility,true
+16.20,champion,Cassiopeia,nerf,1,Base HP 630 to 610; base mana 480 to 450; early resources (pro skew),true
+16.20,champion,Diana,buff,1,W shield bonus HP ratio 11% to 14%; bruiser builds,false
+16.20,champion,Kennen,buff,2,E bonus attack speed 40-80% to 50-90%,false
+16.20,champion,Kindred,buff,2,W monster modifier 150% to 165%; E slow 1s to 1.5s; small monster targeting removed; possible meta addition,true
+16.20,champion,K'Sante,nerf,2,W mana cost +5 per rank; W damage reduction 30/75% to 25/70%; pro staple,true
+16.20,champion,Lillia,buff,1,R duration 2.5s to 2.5/2.75/3s,false
+16.20,champion,Lucian,buff,1,AD growth 2.5 to 2.9 per level (bot lane compensation),false
+16.20,champion,Mordekaiser,buff,2,Q scaling +5 to +7 per level (10-20); R cooldown 140/120/100s to 120/110/100s,false
+16.20,champion,Neeko,buff,1,E base damage +10 per rank; root duration +0.25s,false
+16.20,champion,Smolder,buff,2,R self-heal 100/135/170 to 100/175/250; bruiser and crit builds; bot lane meta,true
+16.20,champion,Swain,buff,2,Mid lane: W damage 70-210 to 70-250; W cooldown -2s; base MR 31 to 34; base armor 25 to 23,false
+16.20,champion,Tahm Kench,buff,2,Q base heal 10-25 to 10-50 (support item health-regen compensation),false
+16.20,champion,Vayne,buff,1,Base HP per 5 4 to 5.5; Q mana cost 46-30 to flat 30,false
+16.20,champion,Yunara,nerf,2,Q passive on-hit damage 5-25 to 3-23; W slow no longer stacks with other slows; worlds-relevant,true
+16.20,item,Experimental Hexplate,nerf,2,Ranged mod 70% to 50% of value (attack speed 35% to 25%; move speed 14% to 10%),false
+16.20,item,Hextech Rocketbelt,adjust,2,Ability haste 20 to 10; active damage 100 (+10% AP) to 135 (+15% AP); aggressive use over escape,false
+16.20,item,Runaan's Hurricane,nerf,1,Attack damage per bolt 65% to 60%,false
+16.20,system,Scoreboard item counters,adjust,1,Most item counter numbers hidden on scoreboard (no balance change),false

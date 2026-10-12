@@ -1,0 +1,84 @@
+# Worlds 2026 Pick'Em configuration. Fields marked UNKNOWN still need confirming.
+
+event: worlds2026
+lock:
+  playin_pickem: "2026-10-15, before first Play-In match (reported 11:00 PDT = 18:00 UTC; unverified, confirm in app)"
+  crystal_ball: "same as playin_pickem (confirmed by user 2026-10-12)"
+  patch_at_freeze: "26.20 (confirmed by user 2026-10-12)"
+  roster_at_freeze: "unchanged as of 2026-10-12 (confirmed by user)"
+  swiss_pickem: UNKNOWN   # before 2026-10-23
+  knockout_pickem: UNKNOWN # before 2026-11-03
+
+playin:
+  format: double_elimination
+  best_of: 5
+  fearless: true
+  teams:
+    - {id: C9,   region: LCS}
+    - {id: KC,   region: LEC}
+    - {id: FUR,  region: CBLOL}
+    - {id: MVK,  region: LCP}   # Vietnam
+  # Matches are generated from earlier results; picks are made for the whole bracket up front.
+  matches:
+    UB1: {a: FUR, b: MVK}
+    UB2: {a: C9,  b: KC}
+    UBF: {a: W(UB1), b: W(UB2)}
+    LB1: {a: L(UB1), b: L(UB2)}
+    LBF: {a: L(UBF), b: W(LB1)}
+    GF:  {a: W(UBF), b: W(LBF)}
+  scoring:
+    # Confirmed by user (2026-10-12): 5 pts per correct pre-final winner, final worth 10. Total 35.
+    UB1: 5
+    UB2: 5
+    UBF: 5
+    LB1: 5
+    LBF: 5
+    GF: 10
+
+swiss:
+  # Seeds from user-pasted "Teams Qualified for Main Event" list (2026-10-12), cross-checked with Insider Gaming.
+  # Direct (15): GEN, AL, TLAW, G2, TSW, LOS*, BLG, LYON, MKOI, TES, CFO, IG, HLE, T1, DK
+  # Play-In (4 -> 1 to Swiss): C9 (LCS3), KC (LEC3), FUR* (CBLOL2), MVK (LCP3)
+  # * CBLOL: Split 2 final result not found. Champion = direct (CBLOL1), runner-up = Play-In (CBLOL2).
+  #   Currently assumed LOS = CBLOL1, FUR = CBLOL2. If FUR won the final, swap FUR and LOS in the pools and the Play-In bracket.
+  # LCS: TLAW champion (beat LYON 3-1, Oct 4), LYON runner-up, C9 3rd place = Play-In. Paste's "C9/TL" 2nd seed conflicts; TL won, so it's likely a placeholder.
+  # Rules: no same-region matches, no rematches, draw after each round. Pool structure from Sheepesports.
+  pools:
+    P1: [GEN, AL, TLAW, G2]          # LCK1, LPL1, LCS1, LEC1
+    P2: [TSW, LOS, BLG, HLE]         # LCP1, CBLOL1*, LPL2, LCK2
+    P3: [LYON, MKOI, TES, T1]        # LCS2, LEC2, LPL3, LCK3
+    P4: [CFO, IG, DK, PLAYIN]        # LCP2, LPL4, LCK4, Play-In winner (C9/KC/FUR/MVK)
+  # Conflict: Sheepesports had HLE as LCK4 (DK in P4 vs HLE). The pasted list and Insider both have HLE 2nd, DK 4th. Using the pasted list.
+  # Draw date conflicts: Gaming.net says Oct 18, LoL Theory lists Swiss Oct 23–26. Check official source.
+  rounds: 5
+  advance_wins: 3
+  eliminate_losses: 3
+  bo3_when_decisive: true
+  no_rematches: true
+
+knockout:
+  teams: 8
+  best_of: 5
+
+# Scoring (user, 2026-10-12): one answer per question. Ranked questions (points: [1st, 2nd, 3rd]) pay out
+# if the pick finishes 1st/2nd/3rd; ties are NOT split (every tied entry gets that place's full points).
+# Choose answers by expected points = 50*P(1st) + 20*P(2nd) + 10*P(3rd), not by P(1st).
+crystal_ball:
+  - {id: 1,  q: "Champion with highest presence", type: meta, points: [50, 20, 10]}
+  - {id: 2,  q: "Champion* with highest win rate", type: meta, min_games: 5, points: [50, 20, 10]}   # * = min 5 games (user-confirmed)
+  - {id: 3,  q: "Champion* with highest avg deaths per game", type: meta, min_games: 5, points: [50, 20, 10]}   # * = min 5 games (user-confirmed)
+  - {id: 4,  q: "Pro with highest avg KDA", type: player_rate, min_games: 1, points: [50, 20, 10]}   # no minimum (user-confirmed)
+  - {id: 5,  q: "Pro with highest avg damage per game", type: player_rate, min_games: 1, points: [50, 20, 10]}   # no minimum (user-confirmed)
+  - {id: 6,  q: "Pro with highest avg kill participation", type: player_rate, min_games: 1, points: [50, 20, 10]}   # no minimum (user-confirmed)
+  - {id: 7,  q: "Peyz vs Gumayusi total kills", type: player_total, points: [100]}
+  - {id: 8,  q: "Faker reaches 700 career Worlds kills (616 now, needs 84)", type: player_total, points: [100]}
+  - {id: 9,  q: "Teemo picked at least once", type: rare_event, points: [100]}
+  - {id: 10, q: "Number of unique champions picked", type: count, points: [50], buckets: ["0-99", "100-104", "105-109", "110-114", "115-119", "120+"]}
+  - {id: 11, q: "More games before or after 32:00", type: distribution, points: [50]}
+  - {id: 12, q: "Any pro with 15+ kills in a game", type: rare_event, points: [50]}
+  - {id: 13, q: "Any pro with 450+ CS in a game", type: rare_event, points: [50]}
+  - {id: 14, q: "Role of Finals MVP", type: categorical, points: [50]}
+  - {id: 15, q: "Number of regions in Knockouts", type: tournament_sim, points: [50]}
+  - {id: 16, q: "LCS team reaches Knockouts", type: tournament_sim, points: [50]}
+  - {id: 17, q: "HLE or T1 places higher", type: tournament_sim, points: [50]}
+  - {id: 18, q: "Team that wins the shortest game", type: categorical, points: [50, 20, 10]}   # each team ranked by its own shortest win (distinct teams; user-confirmed)
