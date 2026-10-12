@@ -1,6 +1,6 @@
 """Q10 (unique champions picked at Worlds 2026) with a bias correction from the meta-shift model.
 
-The draft sim (outputs/draft/tmp_run_k15_shift_s5000.pkl) is a per-sim distribution of unique
+The draft sim (outputs/draft/run_k15_shift_s5000.pkl) is a per-sim distribution of unique
 champions. The meta-shift closed form (crystal/meta_shift.py, same formula as the sanity table in
 outputs/meta/meta_shift_report.md) over-predicted past Worlds events. The draft sim is compared
 with the closed form for Worlds 2026 here, and the historical residual (actual - expected) is
@@ -26,7 +26,7 @@ from common.paths import DB_PATH as DB_FILE, ROOT
 from crystal import draft
 from crystal import meta_shift as ms
 
-DRAFT_PKL = ROOT / "outputs" / "draft" / "tmp_run_k15_shift_s5000.pkl"
+DRAFT_PKL = ROOT / "outputs" / "draft" / "run_k15_shift_s5000.pkl"
 GAMES_FILE = ROOT / "outputs" / "draft" / "sim_games_5k.csv.gz"
 OUT_DIR = ROOT / "outputs" / "q10"
 CACHE_PKL = OUT_DIR / "draft_q10_s5000.pkl"

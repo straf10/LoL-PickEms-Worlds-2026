@@ -20,9 +20,9 @@ Model (see outputs/draft/champion_sim.md for the parameters used):
 
     python -m crystal.draft [--sims N] [--k K] [--no-shift] [--seed S] [--main]
 
---main writes outputs/draft/champion_sim.csv and champion_sim.md (the report, using the
-sensitivity pickles outputs/draft/tmp_run_*.pkl that exist). Every run also saves
-outputs/draft/tmp_run_<label>.pkl with its DataFrames.
+--main writes outputs/draft/champion_sim.csv and champion_sim.md. The report adds a sensitivity
+section from outputs/draft/run_*.pkl when those files exist. Every run saves its DataFrames to
+outputs/draft/run_<label>.pkl.
 """
 from __future__ import annotations
 
@@ -441,7 +441,7 @@ def _shift_draws(fit, b, S, rng, M=None, slope_p=None, slope_b=None):
 
     Pick: shift = (eta_p + sd_p*z1) - logit(pibar), eta_p = logit pi'_0, pibar = marginal mean.
     Ban:  shift = (eta_b + sd_b*(rho*z1 + sqrt(1-rho^2)*z2)) - logit(bebar).
-    Round 7: the whole deviation (eta + u - logit(target marginal)) is divided by the measured draft
+    The whole deviation (eta + u - logit(target marginal)) is divided by the measured draft
     slope of each champion (slope_p, slope_b; default 1).
     """
     if M is None:
@@ -573,7 +573,7 @@ def run_draft(games: pd.DataFrame, k: float = 15, shift: bool = True, seed: int 
         verify["err_pick_pp"] = verify.sim_pick_pct - verify.target_pick_pct
         verify["err_ban_pp"] = verify.sim_ban_pct - verify.target_ban_pct
 
-    # draft slopes (round 6): slope of logit(rate) per unit log-weight at baseline (calibrated
+    # draft slopes: slope of logit(rate) per unit log-weight at baseline (calibrated
     # weights, forced marginal), measured on sims SLOPE_SIMS. The random part of the shift is
     # divided by these slopes.
     slopes_df = None
@@ -838,7 +838,7 @@ def _write_report(main: dict, sens: dict[str, dict], path: Path, runtime_note: s
                f"{np.percentile(q10, 10):.0f} to {np.percentile(q10, 90):.0f} "
                f"(min {q10.min()}, max {q10.max()}, {len(q10)} sims).\n")
     med_ok = 95 <= np.median(q10) <= 120
-    out.append(f"Acceptance check, Q10 median in [95, 120]: **{'PASS' if med_ok else 'FAIL'}** "
+    out.append(f"Check, Q10 median in [95, 120]: **{'PASS' if med_ok else 'FAIL'}** "
                f"(median {np.median(q10):.0f}). Historical Worlds reference: 95 unique champions in 84 games "
                f"(2025) and 95 in 106 games (2024).\n")
 
@@ -956,7 +956,7 @@ def _write_report(main: dict, sens: dict[str, dict], path: Path, runtime_note: s
     else:
         out.append("No shift in this run.\n")
 
-    out.append("## (j) Verification, spread and benchmark (round 4)\n")
+    out.append("## Verification, spread and benchmark\n")
     ver = main.get("verification")
     spr = main.get("spread")
     ben = main.get("benchmark")
@@ -975,7 +975,7 @@ def _write_report(main: dict, sens: dict[str, dict], path: Path, runtime_note: s
         out.append(_md_table(vt) + "\n")
     if spr is not None:
         out.append("### Spread: across-sim sd of the simulated ban rate vs GLMM-implied sd (marginal formulation, G = 103)\n")
-        out.append(f"Band [0.85, 1.25] (acceptance): all inside = {info['spread_all_in_band']}. Ratios range "
+        out.append(f"Band [0.85, 1.25]: all inside = {info['spread_all_in_band']}. Ratios range "
                    f"{float(info['spread_ratio_min']):.2f} to {float(info['spread_ratio_max']):.2f}.\n")
         st = pd.DataFrame({
             "champion": spr.champion, "bin": spr.bin, "sd(logit) bin": [f"{v:.4f}" for v in spr.sd_logit_bin],
@@ -1008,7 +1008,7 @@ def _write_report(main: dict, sens: dict[str, dict], path: Path, runtime_note: s
         stop.append("benchmark diff > 0.15")
     out.append("Stop-rule status: " + ("none triggered." if not stop else "TRIGGERED: " + "; ".join(stop) + ".") + "\n")
 
-    out.append("## (k) Slope correction (round 7)\n")
+    out.append("## Slope correction\n")
     out.append("Correction: the shift is (eta + u - logit(target marginal)) / slope_c for both picks and bans, where "
                "slope_c = d logit(rate) / d log-weight measured at baseline (calibrated weights, forced marginal) with "
                "a +0.25 bump on that champion's weight, 500 sims (sims 500-999), common random numbers. Ban slopes "
@@ -1038,64 +1038,56 @@ def _write_report(main: dict, sens: dict[str, dict], path: Path, runtime_note: s
             "pick slope (applied)": [f"{v:.3f}" for v in pt_.pick_slope_applied],
         })
         out.append("### Pick slopes (measured)\n\n" + _md_table(pp_) + "\n")
-    before = None
-    if (OUT_DIR / "tmp_round4_k15_shift_s5000.pkl").exists():
-        with open(OUT_DIR / "tmp_round4_k15_shift_s5000.pkl", "rb") as fh:
-            before = pickle.load(fh)["spread"].set_index("champion")
     spr_now = main.get("spread")
-    if spr_now is not None and before is not None:
+    if spr_now is not None:
         now = spr_now.set_index("champion")
         bf = pd.DataFrame({
             "champion": SPREAD_CHAMPS,
             "GLMM sd (pp)": [f"{now.loc[c, 'glmm_sd_pp']:.2f}" for c in SPREAD_CHAMPS],
-            "ratio before (round 4)": [f"{before.loc[c, 'ratio_sim_to_glmm']:.3f}" for c in SPREAD_CHAMPS],
-            "ratio after (round 7)": [f"{now.loc[c, 'ratio_sim_to_glmm']:.3f}" for c in SPREAD_CHAMPS],
+            "ratio sim/GLMM": [f"{now.loc[c, 'ratio_sim_to_glmm']:.3f}" for c in SPREAD_CHAMPS],
             "in [0.85, 1.25]": ["yes" if SPREAD_BAND[0] <= now.loc[c, 'ratio_sim_to_glmm'] <= SPREAD_BAND[1] else "NO"
                                 for c in SPREAD_CHAMPS],
         })
-        out.append("### Spread before and after (sim sd / GLMM sd)\n\n" + _md_table(bf) + "\n")
+        out.append("### Spread (sim sd / GLMM sd)\n\n" + _md_table(bf) + "\n")
         mv = pd.DataFrame({
             "champion": SPREAD_CHAMPS,
             "target ban-bar %": [f"{now.loc[c, 'target_ban_pct']:.2f}" for c in SPREAD_CHAMPS],
-            "mean before %": [f"{before.loc[c, 'sim_mean_ban_pct']:.2f}" for c in SPREAD_CHAMPS],
-            "mean after %": [f"{now.loc[c, 'sim_mean_ban_pct']:.2f}" for c in SPREAD_CHAMPS],
-            "after minus target (pp)": [f"{now.loc[c, 'sim_mean_ban_pct'] - now.loc[c, 'target_ban_pct']:+.2f}"
-                                        for c in SPREAD_CHAMPS],
+            "mean ban %": [f"{now.loc[c, 'sim_mean_ban_pct']:.2f}" for c in SPREAD_CHAMPS],
+            "minus target (pp)": [f"{now.loc[c, 'sim_mean_ban_pct'] - now.loc[c, 'target_ban_pct']:+.2f}"
+                                  for c in SPREAD_CHAMPS],
             "within 1.5 pp": ["yes" if abs(now.loc[c, 'sim_mean_ban_pct'] - now.loc[c, 'target_ban_pct']) <= CAL_TOL_PP
                               else "NO" for c in SPREAD_CHAMPS],
         })
-        out.append("### Mean ban rate vs target, before and after\n\n" + _md_table(mv) + "\n")
+        out.append("### Mean ban rate vs target\n\n" + _md_table(mv) + "\n")
     pk = main.get("pick_check")
     if pk is not None:
-        out.append("### Mean pick rate vs target (report only; not an acceptance check)\n\n" + _md_table(pk.assign(
+        out.append("### Mean pick rate vs target (report only)\n\n" + _md_table(pk.assign(
             target_pick_pct=lambda x: x.target_pick_pct.round(2), sim_mean_pick_pct=lambda x: x.sim_mean_pick_pct.round(2),
             diff_pp=lambda x: x.diff_pp.round(2))) + "\n")
-    acc = []
+    checks = []
     if spr_now is not None:
         ok_sp = bool(all(SPREAD_BAND[0] <= v <= SPREAD_BAND[1] for v in spr_now.ratio_sim_to_glmm))
         ok_mean = bool(all(abs(spr_now.sim_mean_ban_pct - spr_now.target_ban_pct) <= CAL_TOL_PP))
-        acc.append(f"spread ratio in [{SPREAD_BAND[0]}, {SPREAD_BAND[1]}] for the 4 champions: {ok_sp}")
-        acc.append(f"mean ban rate within {CAL_TOL_PP} pp of the target for the 4: {ok_mean}")
+        checks.append(f"spread ratio in [{SPREAD_BAND[0]}, {SPREAD_BAND[1]}] for the 4 champions: {ok_sp}")
+        checks.append(f"mean ban rate within {CAL_TOL_PP} pp of the target for the 4: {ok_mean}")
     if main.get("benchmark") is not None:
         bdiff = main["benchmark"]["diff"].abs().max()
-        acc.append(f"Q1 P(rank 1) within {BENCH_TOL} of the benchmark (Nocturne, Cassiopeia, Vi): {bdiff <= BENCH_TOL}")
-    acc.append("constraints pass (outputs/draft/tmp_check.py on the round-7 code: 0 duplicate picks, 0 role "
-               "violations, 0 ban/pick overlaps, 0 fearless violations, 10 picks, 10 bans and 5 wins per game); "
-               f"Sum P(rank 1) >= 1: "
-               f"{float(info['q1_sum_p1']) >= 1 and float(info['q2_sum_p1']) >= 1 and float(info['q3_sum_p1']) >= 1}")
-    out.append("Acceptance (round 7): " + "; ".join(acc) + ".\n")
+        checks.append(f"Q1 P(rank 1) within {BENCH_TOL} of the benchmark (Nocturne, Cassiopeia, Vi): {bdiff <= BENCH_TOL}")
+    sums_ok = float(info['q1_sum_p1']) >= 1 and float(info['q2_sum_p1']) >= 1 and float(info['q3_sum_p1']) >= 1
+    checks.append(f"Sum P(rank 1) >= 1: {sums_ok}")
+    out.append("Checks: " + "; ".join(checks) + ".\n")
 
     out.append("## (g) Runtime\n")
     out.append(f"Main run: {info['seconds_total']} s total (calibration {info['seconds_calibration']} s, "
                f"simulation {info['seconds_simulation']} s). {runtime_note}\n")
 
-    out.append("## Notes and deviations from the spec\n")
+    out.append("## Modelling notes\n")
     out.append(
         f"- Bans per game: {info['bans_per_game']:.3f} in the window, rounded to {info['bans_per_game']:.0f}. "
         f"Window target sums (count + 0.5)/(G + 1): picks {info['sum_window_pick_targets']}, bans "
         f"{info['sum_window_ban_targets']}. Calibrated target sums (marginal means + common shift): picks "
         f"{info['sum_calib_pick_targets']}, bans {info['sum_calib_ban_targets']}.\n"
-        "- Shift bins for the ban logit use each champion's ban rate beta_c (the spec does not say which rate).\n"
+        "- Shift bins for the ban logit use each champion's ban rate beta_c .\n"
         "- Role share smoothing: s = (n_cr + 0.1) / (n_c + 0.5). Champions with no window player rows get uniform shares.\n"
         "- Death pool: a starter's 2026 top-league games with the same result (all champions). If that pool is empty, "
         "use the starter role's pool across all starters with that result.\n"
@@ -1105,8 +1097,7 @@ def _write_report(main: dict, sens: dict[str, dict], path: Path, runtime_note: s
         "- The calibration error is in-sample (the same 500 sims used for IPS, with the random shift off). Calibration "
         "targets are the marginal means with one common logit shift per type so each sums to 10 per game.\n"
         "- Presence uses picks + bans per sim; a champion cannot be both banned and picked in the same game.\n"
-        "- Shift: the refit contract (a, b, c, sd_by_bin, rho_pick_ban from meta_shift_fit.json). c is required; "
-        "a missing key raises. The earlier logit-centre diagnostic is removed because it does not apply to this model.\n"
+        "- Shift: a, b, c, sd_by_bin and rho_pick_ban come from meta_shift_fit.json. c is required; a missing key raises.\n"
     )
     path.write_text("\n".join(out), encoding="utf-8")
 
@@ -1117,7 +1108,7 @@ def _load_sensitivity() -> dict[str, dict]:
     labels = [("K=5, shift", "k5_shift_s1000"), ("K=15, shift", "k15_shift_s1000"),
               ("K=30, shift", "k30_shift_s1000"), ("no-shift", "k15_noshift_s1000")]
     for name, lab in labels:
-        f = OUT_DIR / f"tmp_run_{lab}.pkl"
+        f = OUT_DIR / f"run_{lab}.pkl"
         if f.exists():
             with open(f, "rb") as fh:
                 sens[name] = pickle.load(fh)
@@ -1146,7 +1137,7 @@ def main(argv=None):
 
     label = f"k{args.k:g}_{'shift' if shift else 'noshift'}_s{args.sims}"
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    with open(OUT_DIR / f"tmp_run_{label}.pkl", "wb") as fh:
+    with open(OUT_DIR / f"run_{label}.pkl", "wb") as fh:
         pickle.dump(out, fh)
 
     info = _info_dict(out["info"])
@@ -1166,7 +1157,7 @@ def main(argv=None):
         if out["slopes"] is not None:
             out["slopes"].to_csv(OUT_DIR / "slopes.csv", index=False)
         _write_report(out, _load_sensitivity(), REPORT,
-                      runtime_note="Sensitivity runs are 1,000 sims each; their timings are in their own tmp_run pickles.")
+                      runtime_note="Sensitivity runs are 1,000 sims each; their timings are in their own run_*.pkl files.")
         print(f"wrote {SUMMARY_CSV} and {REPORT}")
 
 
