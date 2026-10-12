@@ -655,6 +655,7 @@ def run_draft(games: pd.DataFrame, k: float = 15, shift: bool = True, seed: int 
             "ev_q3": POINTS[0] * P3[0] + POINTS[1] * P3[1] + POINTS[2] * P3[2],
             "mean_presence": presence.mean(0),
             "mean_picks": picks.mean(0),
+            "mean_bans": res.bans.mean(0),
             "p_ge5_picks": elig.mean(0),
             "mean_wr_given_ge5": np.nanmean(np.where(elig, wr, np.nan), 0),
             "mean_deaths_given_ge5": np.nanmean(np.where(elig, dpp, np.nan), 0),
