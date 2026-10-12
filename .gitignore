@@ -2,3 +2,4 @@
 data/raw/
 data/*.duckdb
 __pycache__/
+outputs/draft/run_*_s1000.pkl
