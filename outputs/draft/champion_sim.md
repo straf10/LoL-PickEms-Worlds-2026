@@ -70,7 +70,7 @@ Rank = 1 + number of eligible champions strictly better (ties are not split: eve
 
 Mean 110.5, median 110, 10-90% range 105 to 116 (min 96, max 125, 5000 sims).
 
-Acceptance check, Q10 median in [95, 120]: **PASS** (median 110). Historical Worlds reference: 95 unique champions in 84 games (2025) and 95 in 106 games (2024).
+Check, Q10 median in [95, 120]: **PASS** (median 110). Historical Worlds reference: 95 unique champions in 84 games (2025) and 95 in 106 games (2024).
 
 ## (c) Calibration
 
@@ -220,7 +220,7 @@ The z = 0 shifted rates are in section (i).
 
 Late rates are the smoothed (count + 0.5)/(G_late + 1) values used in the model, not raw counts. Champions with no late-window appearance sit at the smoothed floor, as intended.
 
-## (j) Verification, spread and benchmark (round 4)
+## Verification, spread and benchmark
 
 ### Verification: forced marginal (shift term = 0), out of sample on sims 500-999
 
@@ -235,7 +235,7 @@ Max abs error over targets > 3%: pick 1.153 pp, ban 1.391 pp. Pass (< 1.5 pp): T
 
 ### Spread: across-sim sd of the simulated ban rate vs GLMM-implied sd (marginal formulation, G = 103)
 
-Band [0.85, 1.25] (acceptance): all inside = True. Ratios range 0.95 to 1.04.
+Band [0.85, 1.25]: all inside = True. Ratios range 0.95 to 1.04.
 
 | champion | bin | sd(logit) bin | target ban-bar % | sim mean ban % | sim sd (pp) | GLMM sd (pp) | ratio | in band |
 |---|---|---|---|---|---|---|---|---|
@@ -255,7 +255,7 @@ Band [0.85, 1.25] (acceptance): all inside = True. Ratios range 0.95 to 1.04.
 
 Stop-rule status: none triggered.
 
-## (k) Slope correction (round 7)
+## Slope correction
 
 Correction: the shift is (eta + u - logit(target marginal)) / slope_c for both picks and bans, where slope_c = d logit(rate) / d log-weight measured at baseline (calibrated weights, forced marginal) with a +0.25 bump on that champion's weight, 500 sims (sims 500-999), common random numbers. Ban slopes are measured for champions with target above 10%, pick slopes for champions above 10% plus six checks. Other champions are interpolated linearly in logit(target), clamped to [1.0, max] for bans and [0.3, max] for picks. Slopes outside [0.3, 2.5] stop the run.
 
@@ -344,25 +344,25 @@ Measured ban slopes: 30 champions, range 1.029 to 1.944. Measured pick slopes: 4
 | Anivia | 6.36 | 0.872 | 0.872 |
 | Leona | 4.85 | 0.889 | 0.889 |
 
-### Spread before and after (sim sd / GLMM sd)
+### Spread (sim sd / GLMM sd)
 
-| champion | GLMM sd (pp) | ratio before (round 4) | ratio after (round 7) | in [0.85, 1.25] |
+| champion | GLMM sd (pp) | ratio sim/GLMM | in [0.85, 1.25] |
+|---|---|---|---|
+| Cassiopeia | 15.91 | 0.953 | yes |
+| Nocturne | 15.85 | 0.966 | yes |
+| Vi | 18.01 | 0.972 | yes |
+| Jarvan IV | 16.84 | 1.040 | yes |
+
+### Mean ban rate vs target
+
+| champion | target ban-bar % | mean ban % | minus target (pp) | within 1.5 pp |
 |---|---|---|---|---|
-| Cassiopeia | 15.91 | 1.499 | 0.953 | yes |
-| Nocturne | 15.85 | 1.456 | 0.966 | yes |
-| Vi | 18.01 | 1.387 | 0.972 | yes |
-| Jarvan IV | 16.84 | 1.316 | 1.040 | yes |
+| Cassiopeia | 69.68 | 69.49 | -0.18 | yes |
+| Nocturne | 69.89 | 69.34 | -0.55 | yes |
+| Vi | 55.83 | 56.20 | +0.37 | yes |
+| Jarvan IV | 34.76 | 35.35 | +0.58 | yes |
 
-### Mean ban rate vs target, before and after
-
-| champion | target ban-bar % | mean before % | mean after % | after minus target (pp) | within 1.5 pp |
-|---|---|---|---|---|---|
-| Cassiopeia | 69.68 | 67.84 | 69.49 | -0.18 | yes |
-| Nocturne | 69.89 | 68.02 | 69.34 | -0.55 | yes |
-| Vi | 55.83 | 55.67 | 56.20 | +0.37 | yes |
-| Jarvan IV | 34.76 | 35.88 | 35.35 | +0.58 | yes |
-
-### Mean pick rate vs target (report only; not an acceptance check)
+### Mean pick rate vs target (report only)
 
 | champion | target_pick_pct | sim_mean_pick_pct | diff_pp |
 |---|---|---|---|
@@ -371,20 +371,20 @@ Measured ban slopes: 30 champions, range 1.029 to 1.944. Measured pick slopes: 4
 | Vi | 16.090 | 13.960 | -2.130 |
 | Jarvan IV | 21.830 | 20.920 | -0.900 |
 
-Acceptance (round 7): spread ratio in [0.85, 1.25] for the 4 champions: True; mean ban rate within 1.5 pp of the target for the 4: True; Q1 P(rank 1) within 0.15 of the benchmark (Nocturne, Cassiopeia, Vi): True; constraints pass (outputs/draft/tmp_check.py on the round-7 code: 0 duplicate picks, 0 role violations, 0 ban/pick overlaps, 0 fearless violations, 10 picks, 10 bans and 5 wins per game); Sum P(rank 1) >= 1: True.
+Checks: spread ratio in [0.85, 1.25] for the 4 champions: True; mean ban rate within 1.5 pp of the target for the 4: True; Q1 P(rank 1) within 0.15 of the benchmark (Nocturne, Cassiopeia, Vi): True; Sum P(rank 1) >= 1: True.
 
 ## (g) Runtime
 
-Main run: 320.48 s total (calibration 27.72 s, simulation 292.24 s). Sensitivity runs are 1,000 sims each; their timings are in their own tmp_run pickles.
+Main run: 395.06 s total (calibration 32.17 s, simulation 362.32 s). Sensitivity runs are 1,000 sims each; their timings are in their own run_*.pkl files.
 
-## Notes and deviations from the spec
+## Modelling notes
 
 - Bans per game: 9.998 in the window, rounded to 10. Window target sums (count + 0.5)/(G + 1): picks 10.13, bans 10.1281. Calibrated target sums (marginal means + common shift): picks 10.0, bans 10.0.
-- Shift bins for the ban logit use each champion's ban rate beta_c (the spec does not say which rate).
+- Shift bins for the ban logit use each champion's ban rate beta_c .
 - Role share smoothing: s = (n_cr + 0.1) / (n_c + 0.5). Champions with no window player rows get uniform shares.
 - Death pool: a starter's 2026 top-league games with the same result (all champions). If that pool is empty, use the starter role's pool across all starters with that result.
 - Death factor n_c = champion's picks in the window; ratio_c = champion's window mean deaths / mean deaths of its most common window role. Champions with no window player rows get factor 1.
 - mean_wr_given_ge5 and mean_deaths_given_ge5 average the per-sim rate over sims where the champion has >= 5 picks.
 - The calibration error is in-sample (the same 500 sims used for IPS, with the random shift off). Calibration targets are the marginal means with one common logit shift per type so each sums to 10 per game.
 - Presence uses picks + bans per sim; a champion cannot be both banned and picked in the same game.
-- Shift: the refit contract (a, b, c, sd_by_bin, rho_pick_ban from meta_shift_fit.json). c is required; a missing key raises. The earlier logit-centre diagnostic is removed because it does not apply to this model.
+- Shift: a, b, c, sd_by_bin and rho_pick_ban come from meta_shift_fit.json. c is required; a missing key raises.
