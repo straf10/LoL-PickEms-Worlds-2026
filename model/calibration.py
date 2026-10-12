@@ -18,6 +18,7 @@ Usage:
 from __future__ import annotations
 
 import json
+from functools import partial
 from pathlib import Path
 
 import numpy as np
@@ -25,7 +26,10 @@ import pandas as pd
 from scipy.optimize import minimize
 from sklearn.isotonic import IsotonicRegression
 
-from model.mathutil import logit as _logit, sigmoid
+from common.mathutil import logit as _logit, sigmoid
+from common.report import md_table
+
+fmt_table = partial(md_table, floatfmt="{:.3f}")
 
 DB = "data/pickems.duckdb"
 OUT_DIR = Path("outputs/calibration")
@@ -300,21 +304,6 @@ def playin_probs(m, regions, cal: Calibrator | None, a: str, b: str) -> dict:
     raw = m.p_game(ia, ib)
     return {"pair": f"{a} vs {b}", "cross_region": cross, "raw_game": raw,
             "game": p_game, "raw_bo5": series_prob(raw, 5), "bo5": series_prob(p_game, 5)}
-
-
-def fmt_table(df: pd.DataFrame, floatfmt: str = "{:.3f}") -> str:
-    cols = list(df.columns)
-    lines = ["| " + " | ".join(str(c) for c in cols) + " |", "|" + "|".join("---" for _ in cols) + "|"]
-    for _, r in df.iterrows():
-        cells = []
-        for c in cols:
-            v = r[c]
-            if isinstance(v, (float, np.floating)):
-                cells.append("" if np.isnan(v) else floatfmt.format(v))
-            else:
-                cells.append(str(v))
-        lines.append("| " + " | ".join(cells) + " |")
-    return "\n".join(lines)
 
 
 def main():

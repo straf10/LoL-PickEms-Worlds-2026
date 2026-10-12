@@ -23,6 +23,8 @@ import duckdb
 import numpy as np
 import pandas as pd
 
+from common.report import fmt_num as fmt, md_table
+
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "data" / "pickems.duckdb"
 OUT_MD = ROOT / "outputs" / "base_rates.md"
@@ -63,22 +65,6 @@ FINALS_MVP_VERIFIED = [
 
 
 # ---------------------------------------------------------------- helpers
-
-def md_table(df: pd.DataFrame) -> str:
-    if df is None or len(df) == 0:
-        return "_(no rows)_"
-    cols = [str(c) for c in df.columns]
-    lines = ["| " + " | ".join(cols) + " |", "|" + "|".join(["---"] * len(cols)) + "|"]
-    for _, row in df.iterrows():
-        lines.append("| " + " | ".join("" if pd.isna(v) else str(v) for v in row.values) + " |")
-    return "\n".join(lines)
-
-
-def fmt(x, nd=1):
-    if x is None or (isinstance(x, float) and np.isnan(x)):
-        return "-"
-    return f"{x:.{nd}f}"
-
 
 def mode_or_none(s: pd.Series):
     m = s.dropna().mode()

@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import brentq
 
-from model.mathutil import logit, sigmoid
+from common.mathutil import logit, sigmoid
 from model.player_ratings import PlayerModel, PParams, load
 from model.ratings import BTModel, Params, load_games, series_prob, team_regions
 

@@ -32,7 +32,7 @@ import pickle
 import sys
 import time
 import warnings
-from functools import lru_cache
+from functools import lru_cache, partial
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -41,7 +41,10 @@ import pandas as pd
 
 from crystal.meta import (RECENT_FROM, TOP, champ_table, connect, game_champ_sets, load,
                           split_list)
-from model.mathutil import logit, sigmoid
+from common.mathutil import logit, sigmoid
+from common.report import md_table
+
+_md_table = partial(md_table, floatfmt="{:.3f}")
 
 ROOT = Path(__file__).resolve().parent.parent
 GAMES_FILE = ROOT / "outputs" / "draft" / "sim_games_5k.csv.gz"
@@ -791,20 +794,6 @@ def run_draft(games: pd.DataFrame, k: float = 15, shift: bool = True, seed: int 
 
 
 # ---------------------------------------------------------------- report
-
-def _md_table(df: pd.DataFrame) -> str:
-    cols = list(df.columns)
-    lines = ["| " + " | ".join(cols) + " |", "|" + "|".join("---" for _ in cols) + "|"]
-    for row in df.itertuples(index=False):
-        cells = []
-        for v in row:
-            if isinstance(v, float):
-                cells.append("" if np.isnan(v) else f"{v:.3f}")
-            else:
-                cells.append(str(v))
-        lines.append("| " + " | ".join(cells) + " |")
-    return "\n".join(lines)
-
 
 def _info_dict(info: pd.DataFrame) -> dict:
     return dict(zip(info.key, info.value))

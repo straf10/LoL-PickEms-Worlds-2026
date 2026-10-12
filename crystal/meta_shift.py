@@ -33,7 +33,8 @@ from numpy.polynomial.hermite import hermgauss
 from scipy.optimize import minimize
 from scipy.special import gammaln, logsumexp
 
-from model.mathutil import logit
+from common.mathutil import logit
+from common.report import md_rows, round_finite
 
 ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "data" / "pickems.duckdb"
@@ -281,19 +282,13 @@ def expected_unique_by_event(theta, D: dict, name_list) -> dict:
     return out
 
 
-def fmt(x, nd=4):
-    x = float(x)
-    assert math.isfinite(x), f"non-finite value {x}"
-    return round(x, nd)
-
-
 def block(f: dict) -> dict:
     return {
-        "a": fmt(f["a"]), "b": fmt(f["b"]), "c": fmt(f["c"]),
-        "sd_by_bin": {k: fmt(f["sd_by_bin"][k]) for k in BINS},
-        "se": {k: fmt(f["se"][k]) for k in ("a", "b", "c")},
+        "a": round_finite(f["a"]), "b": round_finite(f["b"]), "c": round_finite(f["c"]),
+        "sd_by_bin": {k: round_finite(f["sd_by_bin"][k]) for k in BINS},
+        "se": {k: round_finite(f["se"][k]) for k in ("a", "b", "c")},
         "n": int(f["n"]),
-        "loglik": fmt(f["loglik"], 4),
+        "loglik": round_finite(f["loglik"], 4),
     }
 
 
@@ -308,13 +303,6 @@ def load_smoothed_v1():
 
 def f4(x):
     return f"{float(x):.4f}"
-
-
-def md_table(headers, rows_):
-    lines = ["| " + " | ".join(headers) + " |", "|" + "|".join(["---"] * len(headers)) + "|"]
-    for r in rows_:
-        lines.append("| " + " | ".join(str(x) for x in r) + " |")
-    return "\n".join(lines)
 
 
 def main() -> None:
@@ -351,7 +339,7 @@ def main() -> None:
     names = [e["event"] for e in events]
     exp_unique = expected_unique_by_event(rec["pick"]["theta"], D_all_pick, names)
     for e in events:
-        e["unique_picked_expected"] = fmt(exp_unique[e["event"]])
+        e["unique_picked_expected"] = round_finite(exp_unique[e["event"]])
 
     v1 = load_smoothed_v1()
 
@@ -363,7 +351,7 @@ def main() -> None:
         "recommended": recommended,
         "pick": block(rec["pick"]),
         "ban": block(rec["ban"]),
-        "rho_pick_ban": fmt(rho),
+        "rho_pick_ban": round_finite(rho),
         "fearless": {m: block(fits["fearless"][m]) for m in METRICS},
         "pooled": {m: block(fits["pooled"][m]) for m in METRICS},
         "events": events,
@@ -416,7 +404,7 @@ def write_report(events, fits, recommended, rho, lc, lc_notes, exp_unique):
                           f"{f4(f['c'])} ({f4(f['se']['c'])})",
                           f4(f["sd_by_bin"]["lt5"]), f4(f["sd_by_bin"]["5to20"]), f4(f["sd_by_bin"]["gt20"]),
                           f["n"], f"{f['loglik']:.2f}"])
-    L.append(md_table(["Fit", "a (SE)", "b (SE)", "c (SE)", "sd lt5", "sd 5to20", "sd gt20", "n", "loglik"], rows_))
+    L.append(md_rows(["Fit", "a (SE)", "b (SE)", "c (SE)", "sd lt5", "sd 5to20", "sd gt20", "n", "loglik"], rows_))
     L.append("")
 
     L.append("## What c says\n")
@@ -440,7 +428,7 @@ def write_report(events, fits, recommended, rho, lc, lc_notes, exp_unique):
         exp = exp_unique[e["event"]]
         srows.append([e["event"], e["G_pre"], e["G_ev"], e["G_late"], e["universe_size"],
                       e["unique_picked_actual"], f"{exp:.1f}", f"{e['unique_picked_actual'] - exp:+.1f}"])
-    L.append(md_table(["Event", "G_pre", "G_ev", "G_late", "Universe", "Unique picked (actual)",
+    L.append(md_rows(["Event", "G_pre", "G_ev", "G_late", "Universe", "Unique picked (actual)",
                        "Unique picked (expected, rec. pick model)", "actual - expected"], srows))
     L.append(
         "\nExpected = sum over the universe of 1 - E_u[(1 - p)^G_ev], integrated over u with the recommended pick model. "
@@ -461,7 +449,7 @@ def write_report(events, fits, recommended, rho, lc, lc_notes, exp_unique):
     lrows = [[x["event"], f"{x['presence_leader']} (pre rank {x['its_pre_rank']})",
               f"{x['pre_leader']} (event rank {x['its_event_rank']})",
               f"{x['pick_leader']} (pre pick rank {x['its_pre_rank_pick']})"] for x in lc]
-    L.append(md_table(["Event", "Presence leader (pre rank)", "Pre presence leader (event rank)",
+    L.append(md_rows(["Event", "Presence leader (pre rank)", "Pre presence leader (event rank)",
                        "Most picked (pre pick rank)"], lrows))
     L.append("")
     if lc_notes:
@@ -471,7 +459,7 @@ def write_report(events, fits, recommended, rho, lc, lc_notes, exp_unique):
     L.append("## Events\n")
     erows = [[e["event"], e["start"], e["G_pre"], e["G_ev"], e["G_late"], ", ".join(e["leagues_pre"])]
              for e in events]
-    L.append(md_table(["Event", "Start (UTC)", "G_pre", "G_ev", "G_late", "Top-league pre-window leagues"], erows))
+    L.append(md_rows(["Event", "Start (UTC)", "G_pre", "G_ev", "G_late", "Top-league pre-window leagues"], erows))
     L.append("")
 
     L.append("## Data notes\n")

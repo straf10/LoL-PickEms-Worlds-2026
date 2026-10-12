@@ -19,11 +19,16 @@ from __future__ import annotations
 import sys
 import time
 from datetime import datetime, timezone
+from functools import partial
 from pathlib import Path
 
 import duckdb
 import numpy as np
 import pandas as pd
+
+from common.report import fmt_num, md_table
+
+fmt = partial(fmt_num, missing="n/a")
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -454,22 +459,6 @@ def main():
     print(f"Worlds-scale pick threshold: {thr_rate:.2f}% (W={W}); cands passing: {n_worlds_ok} worlds, {n_raw_ok} raw")
     print(f"unmatched changes names: {unmatched}")
     print(f"report written: {REPORT}")
-
-
-def fmt(x, nd=1):
-    if x is None or (isinstance(x, float) and np.isnan(x)):
-        return "n/a"
-    return f"{x:.{nd}f}"
-
-
-def md_table(df: pd.DataFrame) -> str:
-    if df.empty:
-        return "_(no rows)_"
-    cols = list(df.columns)
-    lines = ["| " + " | ".join(cols) + " |", "|" + "|".join("---" for _ in cols) + "|"]
-    for row in df.itertuples(index=False):
-        lines.append("| " + " | ".join(str(v) for v in row) + " |")
-    return "\n".join(lines)
 
 
 def write_report(*, snapshot, G_r, G_e, W, thr_rate, q1, q2_w, q2_r, q3_w, q3_r, n_worlds_ok,

@@ -22,6 +22,7 @@ from pathlib import Path
 import numpy as np
 from scipy.optimize import minimize
 
+from common.report import md_rows, round_finite
 from crystal.meta_shift import (
     EVENTS,
     FEARLESS_MIN_YEAR,
@@ -219,7 +220,7 @@ def main():
 
     result = {
         "draws": DRAWS,
-        "rho_used": fmt(rho),
+        "rho_used": round_finite(rho),
         "rho_note": "rho_pick_ban from the fit is a correlation of posterior-mean u, which is attenuated; "
                     "it is used as the latent correlation, as briefed.",
         "s_grid": S_LIST,
@@ -253,19 +254,6 @@ def main():
     print("Wrote", MD_PATH)
 
 
-def fmt(x, nd=4):
-    x = float(x)
-    assert math.isfinite(x)
-    return round(x, nd)
-
-
-def md_table(headers, rows_):
-    lines = ["| " + " | ".join(headers) + " |", "|" + "|".join(["---"] * len(headers)) + "|"]
-    for r in rows_:
-        lines.append("| " + " | ".join(str(x) for x in r) + " |")
-    return "\n".join(lines)
-
-
 def write_md(in_res, in_cal, in_table, in_best, loeo_res, loeo_cal, loeo_table, loeo_best,
              rho, loeo_secs, total_secs, fit_p, fit_b, n_disagree, uniform_ll):
     L = []
@@ -288,7 +276,7 @@ def write_md(in_res, in_cal, in_table, in_best, loeo_res, loeo_cal, loeo_table, 
         for r in res:
             rows_.append([r["event"], fmt_leaders(r["actual_leaders"]), f"{r['P_actual_leader']:.4f}",
                           r["favourite"], f"{r['P_favourite']:.4f}", "Y" if r["favourite_hit"] else "N"])
-        return md_table(["Event", "Actual leader(s)", "P(actual leader)", "Model favourite", "P(favourite)",
+        return md_rows(["Event", "Actual leader(s)", "P(actual leader)", "Model favourite", "P(favourite)",
                          "Favourite hit"], rows_)
 
     def cal_line(c):
@@ -298,7 +286,7 @@ def write_md(in_res, in_cal, in_table, in_best, loeo_res, loeo_cal, loeo_table, 
     def s_rows(tbl, best):
         rows_ = [[r["s"], f"{r['expected_fav_hits']:.2f}", r["actual_fav_hits"], f"{r['mean_logloss']:.4f}",
                   "<- s_best" if r["s"] == best else ""] for r in tbl]
-        return md_table(["sd scale s", "Expected favourite hits", "Actual favourite hits", "Mean log-loss", ""],
+        return md_rows(["sd scale s", "Expected favourite hits", "Actual favourite hits", "Mean log-loss", ""],
                         rows_)
 
     L.append("## In-sample (recommended fearless fit)\n")
