@@ -19,6 +19,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import brentq
 
+from model.mathutil import logit, sigmoid
 from model.player_ratings import PlayerModel, PParams, load
 from model.ratings import BTModel, Params, load_games, series_prob, team_regions
 
@@ -30,14 +31,6 @@ USE_CALIBRATION = True
 
 # decimal odds as given by the user on 2026-10-12 (Bo5 match winner)
 MARKET_BO5 = {("FUR", "MVK"): (1.22, 3.65), ("C9", "KC"): (2.55, 1.44)}
-
-
-def logit(p):
-    return np.log(p / (1 - p))
-
-
-def sigmoid(z):
-    return 1 / (1 + np.exp(-z))
 
 
 def market_prob(odds_a: float, odds_b: float) -> float:

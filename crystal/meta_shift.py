@@ -33,6 +33,8 @@ from numpy.polynomial.hermite import hermgauss
 from scipy.optimize import minimize
 from scipy.special import gammaln, logsumexp
 
+from model.mathutil import logit
+
 ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "data" / "pickems.duckdb"
 OUT_DIR = ROOT / "outputs" / "meta"
@@ -71,11 +73,6 @@ def tokens(text) -> set[str]:
     if text is None or (isinstance(text, float) and math.isnan(text)):
         return set()
     return {t.strip() for t in str(text).split(",") if t.strip()}
-
-
-def logit(p):
-    p = np.asarray(p, dtype=float)
-    return np.log(p / (1.0 - p))
 
 
 def load_games() -> pd.DataFrame:

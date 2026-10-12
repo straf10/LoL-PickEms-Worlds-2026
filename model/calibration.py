@@ -25,6 +25,8 @@ import pandas as pd
 from scipy.optimize import minimize
 from sklearn.isotonic import IsotonicRegression
 
+from model.mathutil import logit as _logit, sigmoid
+
 DB = "data/pickems.duckdb"
 OUT_DIR = Path("outputs/calibration")
 PREDS_CSV = OUT_DIR / "bt_preds.csv"
@@ -50,12 +52,7 @@ BIN_LABELS = ["50-55", "55-60", "60-65", "65-70", "70-75", "75-80", "80-85", "85
 
 
 def logit(p):
-    p = np.clip(np.asarray(p, dtype=float), EPS, 1 - EPS)
-    return np.log(p) - np.log1p(-p)
-
-
-def sigmoid(z):
-    return 1.0 / (1.0 + np.exp(-z))
+    return _logit(np.clip(np.asarray(p, dtype=float), EPS, 1 - EPS))
 
 
 class Calibrator:

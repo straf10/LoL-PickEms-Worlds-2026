@@ -41,6 +41,7 @@ import pandas as pd
 
 from crystal.meta import (RECENT_FROM, TOP, champ_table, connect, game_champ_sets, load,
                           split_list)
+from model.mathutil import logit, sigmoid
 
 ROOT = Path(__file__).resolve().parent.parent
 GAMES_FILE = ROOT / "outputs" / "draft" / "sim_games_5k.csv.gz"
@@ -245,14 +246,6 @@ def _bin_index(rate):
     return np.where(rate < 0.05, 0, np.where(rate > 0.20, 2, 1))
 
 
-def _logit(p):
-    return np.log(p) - np.log1p(-p)
-
-
-def _sigmoid(x):
-    return 1.0 / (1.0 + np.exp(-x))
-
-
 def _context(k: float):
     """Per-K arrays: propensity weights W[t, r, c] (log) and per-slot log-weights."""
     b = _base()
@@ -394,7 +387,7 @@ _GH_W = _GH_W / _GH_W.sum()          # weights for E_z[f(z)], z ~ N(0,1)
 
 def _gh_moments(eta, s):
     """Gauss-Hermite (20 nodes) mean and variance over z of p = sigmoid(eta + s*z), elementwise."""
-    p = _sigmoid(eta[None, :] + s[None, :] * _GH_X[:, None])
+    p = sigmoid(eta[None, :] + s[None, :] * _GH_X[:, None])
     m = (_GH_W[:, None] * p).sum(0)
     v = (_GH_W[:, None] * p * p).sum(0) - m * m
     e_pq = (_GH_W[:, None] * p * (1 - p)).sum(0)
@@ -406,7 +399,7 @@ def _bisect_common_shift(logit_base, total=10.0):
     lo, hi = -15.0, 15.0
     for _ in range(200):
         mid = 0.5 * (lo + hi)
-        if _sigmoid(logit_base + mid).sum() < total:
+        if sigmoid(logit_base + mid).sum() < total:
             lo = mid
         else:
             hi = mid
@@ -419,17 +412,17 @@ def _marg(fit, b):
     pk, bk = fit["pick"], fit["ban"]
     sdp = np.array([pk["sd_by_bin"][k] for k in BINS])[_bin_index(b.pi)]
     sdb = np.array([bk["sd_by_bin"][k] for k in BINS])[_bin_index(b.beta)]
-    x1, x2 = _logit(b.pi), _logit(b.late_pick)
-    y1, y2 = _logit(b.beta), _logit(b.late_ban)
+    x1, x2 = logit(b.pi), logit(b.late_pick)
+    y1, y2 = logit(b.beta), logit(b.late_ban)
     lp0 = pk["a"] + pk["b"] * x1 + pk["c"] * (x2 - x1)     # eta_pick = logit pi'_0
     lb0 = bk["a"] + bk["b"] * y1 + bk["c"] * (y2 - y1)     # eta_ban = logit beta'_0
     pibar, _, _ = _gh_moments(lp0, sdp)
     bebar, _, _ = _gh_moments(lb0, sdb)
-    dp = _bisect_common_shift(_logit(pibar), 10.0)
-    db = _bisect_common_shift(_logit(bebar), 10.0)
-    return SimpleNamespace(lp0=lp0, lb0=lb0, sdp=sdp, sdb=sdb, p0=_sigmoid(lp0), be0=_sigmoid(lb0),
+    dp = _bisect_common_shift(logit(pibar), 10.0)
+    db = _bisect_common_shift(logit(bebar), 10.0)
+    return SimpleNamespace(lp0=lp0, lb0=lb0, sdp=sdp, sdb=sdb, p0=sigmoid(lp0), be0=sigmoid(lb0),
                            pibar=pibar, bebar=bebar, dp=dp, db=db,
-                           pi_t=_sigmoid(_logit(pibar) + dp), be_t=_sigmoid(_logit(bebar) + db))
+                           pi_t=sigmoid(logit(pibar) + dp), be_t=sigmoid(logit(bebar) + db))
 
 
 def _glmm_sd_marginal(eta_plus_delta, s, G=SPREAD_G):
@@ -458,8 +451,8 @@ def _shift_draws(fit, b, S, rng, M=None, slope_p=None, slope_b=None):
     rho = fit["rho_pick_ban"]
     u_p = M.sdp[None, :] * z1
     u_b = M.sdb[None, :] * (rho * z1 + np.sqrt(1 - rho ** 2) * z2)
-    sh_pick = (M.lp0[None, :] + u_p - _logit(M.pibar)[None, :]) / slope_p[None, :]
-    sh_ban = (M.lb0[None, :] + u_b - _logit(M.bebar)[None, :]) / slope_b[None, :]
+    sh_pick = (M.lp0[None, :] + u_p - logit(M.pibar)[None, :]) / slope_p[None, :]
+    sh_ban = (M.lb0[None, :] + u_b - logit(M.bebar)[None, :]) / slope_b[None, :]
     return sh_pick, sh_ban
 
 
@@ -483,7 +476,7 @@ def _measure_slopes(Gv, ctx, logm, logmb, b, champs, side):
         else:
             r = _simulate(Gv, ctx, logm, logmb, bump, zero, seed=SLOPE_SEED)
             rate1 = r.picks.sum(0) / r.games.sum()
-        out[c] = float((_logit(np.array([rate1[j]]))[0] - _logit(np.array([rate0[j]]))[0]) / SLOPE_BUMP)
+        out[c] = float((logit(np.array([rate1[j]]))[0] - logit(np.array([rate0[j]]))[0]) / SLOPE_BUMP)
     return out
 
 
@@ -492,11 +485,11 @@ def _interp_slopes(tgt, measured, lo=1.0):
     measured champions, clamped to [1.0, max measured slope]. tgt: array over all champions;
     measured: {index: slope}."""
     idx = np.array(sorted(measured))
-    x_m = _logit(tgt[idx])
+    x_m = logit(tgt[idx])
     y_m = np.array([measured[i] for i in idx])
     order = np.argsort(x_m)
     x_m, y_m = x_m[order], y_m[order]
-    out = np.interp(_logit(tgt), x_m, y_m)
+    out = np.interp(logit(tgt), x_m, y_m)
     out = np.clip(out, lo, y_m.max())
     for i, v in measured.items():
         out[i] = v
