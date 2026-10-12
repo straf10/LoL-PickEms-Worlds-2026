@@ -77,7 +77,7 @@ def rank_table(metric: np.ndarray, ok: np.ndarray, names) -> pd.DataFrame:
     return df.sort_values("EV", ascending=False)
 
 
-def estimate(n: int = 20000, seed: int = 11, uncertainty: bool = True):
+def estimate(n: int = 20000, seed: int = 11, uncertainty: bool = True, samples: dict | None = None):
     rng = np.random.default_rng(seed)
     con = duckdb.connect(str(DB_PATH), read_only=True)
     teams = teams_table()
@@ -188,6 +188,8 @@ def estimate(n: int = 20000, seed: int = 11, uncertainty: bool = True):
     # Q18: rank teams by their own shortest win in each sim (a team with no win in a sim cannot place)
     W = games.groupby(["winner", "sim"])["duration"].min().unstack("sim").reindex(columns=range(n))
     out["Q18 shortest game winner"] = rank_table(-W.to_numpy(float), W.notna().to_numpy(), list(W.index))
+    if samples is not None:    # per-sim data for crystal/charts.py
+        samples["players"] = agg   # per player: per-sim arrays of games, kills, deaths, assists, damage, kp
 
     # Play-In bracket optimisation on the same simulations
     pteams = ["FUR", "MVK", "C9", "KC"]

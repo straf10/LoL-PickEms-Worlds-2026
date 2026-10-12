@@ -375,7 +375,7 @@ Checks: spread ratio in [0.85, 1.25] for the 4 champions: True; mean ban rate wi
 
 ## (g) Runtime
 
-Main run: 395.06 s total (calibration 32.17 s, simulation 362.32 s). Sensitivity runs are 1,000 sims each; their timings are in their own run_*.pkl files.
+Main run: 353.78 s total (calibration 31.14 s, simulation 322.12 s). Sensitivity runs are 1,000 sims each; their timings are in their own run_*.pkl files.
 
 ## Modelling notes
 
