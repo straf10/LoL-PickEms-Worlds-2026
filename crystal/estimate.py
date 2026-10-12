@@ -165,7 +165,7 @@ def estimate(n: int = 20000, seed: int = 11, uncertainty: bool = True):
                                              "p10": np.percentile(fk, 10), "p90": np.percentile(fk, 90)})
     any_ = lambda flag: pd.Series(flag).groupby(sim).any().mean()
     out["Q11 games under 32:00"] = pd.Series({"share under": under(dur),
-                                              "P(more games after)": np.mean(games.assign(u=dur < 1920).groupby("sim")["u"].mean() < 0.5)})
+                                              "P(more games after)": np.mean(pd.Series(dur < 1920).groupby(games["sim"].to_numpy()).mean() < 0.5)})
     out["Q12 any 15+ kill game"] = pd.Series({"Yes": any_(max_k >= 15)})
     out["Q13 any 450+ CS game"] = pd.Series({"Yes": any_(max_cs >= 450)})
 
@@ -180,7 +180,7 @@ def estimate(n: int = 20000, seed: int = 11, uncertainty: bool = True):
 
     ko = places[places["placement"].isin(["Champion", "Final", "SF", "QF"])].assign(region=lambda d: d["team"].map(region))
     out["Q15 regions in KO"] = ko.groupby("sim")["region"].nunique().value_counts(normalize=True).sort_index()
-    out["Q16 LCS team in KO"] = pd.Series({"Yes": ko.groupby("sim")["region"].apply(lambda r: (r == "LCS").any()).reindex(range(n), fill_value=False).mean()})
+    out["Q16 LCS team in KO"] = pd.Series({"Yes": ko.assign(lcs=ko["region"].eq("LCS")).groupby("sim")["lcs"].any().reindex(range(n), fill_value=False).mean()})
     rank = {p: i for i, p in enumerate(["Champion", "Final", "SF", "QF", "Swiss 2-3", "Swiss 1-3", "Swiss 0-3", "Play-In"])}
     pr = places.assign(r=places["placement"].map(rank)).pivot(index="sim", columns="team", values="r")
     out["Q17 HLE vs T1"] = pd.Series({"T1 higher": np.mean(pr["T1"] < pr["HLE"]), "HLE higher": np.mean(pr["HLE"] < pr["T1"]),
