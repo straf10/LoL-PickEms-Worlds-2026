@@ -1,6 +1,6 @@
 # Worlds 2026 rosters, aliases and Swiss rules (T1.3b)
 
-Snapshot: 2026-10-11. Source: `data/pickems.duckdb` (Oracle's Elixir, built by `ingest/oracles.py`), read-only. No network calls. Rebuild the tables with `python ingest/rosters_from_db.py`. Status: **complete for the 19 teams, the 95 starters and the three Crystal Ball players.** Open items are in section 5.
+Snapshot: 2026-10-11. Source: `data/pickems.duckdb` (Oracle's Elixir, built by `ingest/oracles.py`), read-only. No network calls. Rebuild the tables with `python -m ingest.rosters_from_db`. Status: **complete for the 19 teams, the 95 starters and the three Crystal Ball players.** Open items are in section 5.
 
 ## 1. Corrections to the earlier partial report
 

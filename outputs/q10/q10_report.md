@@ -69,4 +69,4 @@ Rerun check: `python -m crystal.q10_correct --rerun-draft` reruns the draft sim 
 
 ## 7. Rerun after the Oct 14 refresh
 
-`python -m crystal.q10_correct` checks whether the saved draft run (`outputs/draft/tmp_run_k15_shift_s5000.pkl`) is newer than `data/pickems.duckdb`. If it is not, it reruns the draft sim (about 5 minutes) and caches it in `outputs/q10/draft_q10_s5000.pkl`. The closed-form check and the backtest are recomputed from the DB each time.
+`python -m crystal.q10_correct` checks whether the saved draft run (`outputs/draft/run_k15_shift_s5000.pkl`) is newer than `data/pickems.duckdb`. If it is not, it reruns the draft sim (about 5 minutes) and caches it in `outputs/q10/draft_q10_s5000.pkl`. The closed-form check and the backtest are recomputed from the DB each time.

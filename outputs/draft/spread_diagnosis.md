@@ -1,6 +1,6 @@
 # Spread diagnosis: across-tournament sd of the ban rate vs the GLMM sd
 
-Scratch diagnostic `outputs/draft/tmp_spread_diag.py`. Same calibration as the main run (500 sims, marginal targets, common shift). Experiments use 1,000 sims unless stated. Ratios are sim sd / GLMM sd (marginal formulation, G = 103). sd values are in percentage points.
+Diagnostic run. Its script (`tmp_spread_diag.py`) was removed in the cleanup; the version in git history is commit `37e4aec`. Same calibration as the main run (500 sims, marginal targets, common shift). Experiments use 1,000 sims unless stated. Ratios are sim sd / GLMM sd (marginal formulation, G = 103). sd values are in percentage points.
 
 ## Reproduction check (experiment A at the round-4 setting)
 
@@ -61,4 +61,4 @@ Reproduction: the 5,000-sim rerun reproduces the round-4 ratios exactly. The 1,0
 ## Files
 
 - Deliverables `outputs/draft/champion_sim.md`, `outputs/draft/champion_sim.csv` and `crystal/draft.py` were not modified; their SHA-256 hashes match the pre-diagnosis values (checked before and after).
-- Diagnostic code: `outputs/draft/tmp_spread_diag.py` (imports `crystal.draft`, adds shift masks and a fearless switch on a copy of the game arrays; no change to `draft.py`).
+- Diagnostic code: removed from the tree. It imported `crystal.draft`, added shift masks and a fearless switch on a copy of the game arrays, and did not change `draft.py`.
