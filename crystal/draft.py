@@ -300,8 +300,8 @@ def _simulate(G, ctx, logm, logmb, sh_pick, sh_ban, seed, trace=None):
             ta, tb, tw = G.ga[bi], G.gb[bi], G.gw[bi]
 
             avail = ~locked[sid]
-            lb = np.where(avail, logmb[None, :] + sh_ban[sim], -np.inf)
-            gb_ = lb + rng.gumbel(size=(n, C))
+            gb_ = rng.gumbel(size=(n, C))
+            gb_ += np.where(avail, logmb[None, :] + sh_ban[sim], -np.inf)
             top = np.argpartition(-gb_, B - 1, axis=1)[:, :B]
             banned = np.zeros((n, C), dtype=bool)
             banned[rows[:, None], top] = True
@@ -321,8 +321,9 @@ def _simulate(G, ctx, logm, logmb, sh_pick, sh_ban, seed, trace=None):
                 rg = np.where(~filled[:, side, :], rng.gumbel(size=(n, 5)), -np.inf)
                 role = rg.argmax(1)
                 filled[rows, side, role] = True
-                L = np.where(blocked, -np.inf, ctx.logW[team, role] + base)
-                g = L + rng.gumbel(size=(n, C))
+                g = rng.gumbel(size=(n, C))
+                g += ctx.logW[team, role] + base
+                g[blocked] = -np.inf
                 ch = g.argmax(1)
                 if not np.isfinite(g[rows, ch]).all():
                     raise RuntimeError("no available champion for a pick")
