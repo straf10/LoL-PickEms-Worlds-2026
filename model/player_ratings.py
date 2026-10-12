@@ -23,7 +23,9 @@ from scipy.optimize import minimize
 
 from model.ratings import DOMESTIC, EXTRA
 
-DB = "data/pickems.duckdb"
+from common.paths import DB_PATH
+
+DB = str(DB_PATH)
 
 
 @dataclass

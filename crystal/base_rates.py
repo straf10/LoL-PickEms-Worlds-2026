@@ -17,16 +17,14 @@ Stage logic (league 'WLDs' only; 'WLDQ' regional qualifiers are excluded):
 from __future__ import annotations
 
 import sys
-from pathlib import Path
 
 import duckdb
 import numpy as np
 import pandas as pd
 
+from common.paths import DB_PATH, ROOT
 from common.report import fmt_num as fmt, md_table
 
-ROOT = Path(__file__).resolve().parent.parent
-DB_PATH = ROOT / "data" / "pickems.duckdb"
 OUT_MD = ROOT / "outputs" / "base_rates.md"
 OUT_DIR = ROOT / "outputs" / "base_rates"
 

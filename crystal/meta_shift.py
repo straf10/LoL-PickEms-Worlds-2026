@@ -24,7 +24,6 @@ from __future__ import annotations
 import json
 import math
 from collections import Counter
-from pathlib import Path
 
 import duckdb
 import numpy as np
@@ -34,10 +33,9 @@ from scipy.optimize import minimize
 from scipy.special import gammaln, logsumexp
 
 from common.mathutil import logit
+from common.paths import DB_PATH, ROOT
 from common.report import md_rows, round_finite
 
-ROOT = Path(__file__).resolve().parents[1]
-DB_PATH = ROOT / "data" / "pickems.duckdb"
 OUT_DIR = ROOT / "outputs" / "meta"
 JSON_PATH = OUT_DIR / "meta_shift_fit.json"
 REPORT_PATH = OUT_DIR / "meta_shift_report.md"

@@ -20,20 +20,18 @@ import sys
 import time
 from datetime import datetime, timezone
 from functools import partial
-from pathlib import Path
 
 import duckdb
 import numpy as np
 import pandas as pd
 
+from common.paths import DB_PATH as DB, ROOT
 from common.report import fmt_num, md_table
 
 fmt = partial(fmt_num, missing="n/a")
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
-DB = ROOT / "data" / "pickems.duckdb"
 CHANGES = ROOT / "data" / "champion_changes.csv"
 ROSTERS = ROOT / "data" / "rosters_2026.csv"
 META_DIR = ROOT / "outputs" / "meta"

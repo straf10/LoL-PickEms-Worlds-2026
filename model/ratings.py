@@ -19,7 +19,9 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
 
-DB = "data/pickems.duckdb"
+from common.paths import DB_PATH
+
+DB = str(DB_PATH)
 
 DOMESTIC = {
     "LCK": "LCK", "LPL": "LPL", "LEC": "LEC",

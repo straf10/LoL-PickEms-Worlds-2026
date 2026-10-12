@@ -11,17 +11,17 @@ from __future__ import annotations
 
 import math
 import sys
-from pathlib import Path
 
 import duckdb
 import numpy as np
 import pandas as pd
 
+from common.paths import DB_PATH, OUTPUTS
 from crystal.estimate import duration_pools
 from model.predict import matrix_sampler, teams_table
 from sim.tournament import run
 
-OUT = Path("outputs/q11")
+OUT = OUTPUTS / "q11"
 THR = 1920                                   # 32:00 in seconds; under = duration < THR, so exactly 32:00 is "after"
 DOM = ["LCK", "LPL", "LEC", "LCS", "LCP", "CBLOL"]
 INTL = ["MSI", "FST", "EWC"]
@@ -100,7 +100,7 @@ def project(t: pd.DataFrame, name: str) -> float:
 def simulate(n: int, seed: int):
     """Same draws as crystal.estimate.estimate (sampler uncertainty, then duration noise), before the shift."""
     rng = np.random.default_rng(seed)
-    con = duckdb.connect("data/pickems.duckdb", read_only=True)
+    con = duckdb.connect(str(DB_PATH), read_only=True)
     teams = teams_table()
     region = teams.set_index("team_id")["region"].to_dict()
     games, _, _ = run(None, region, n=n, seed=seed, sampler=matrix_sampler())
@@ -150,7 +150,7 @@ def main(n: int = 20000) -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     OUT.mkdir(parents=True, exist_ok=True)
     pd.set_option("display.width", 220)
-    con = duckdb.connect("data/pickems.duckdb", read_only=True)
+    con = duckdb.connect(str(DB_PATH), read_only=True)
     g = load(con)
     t = year_table(g)
     t.round(2).to_csv(OUT / "gap_by_year.csv", index=False)

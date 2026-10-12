@@ -3,14 +3,13 @@
 Run from the project root:  python ingest/oracles.py
 Idempotent: drops and rebuilds all tables from the CSVs.
 """
-from pathlib import Path
 
 import duckdb
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
+from common.paths import DB_PATH as DB, ROOT
+
 RAW = ROOT / "data" / "raw" / "oe"
-DB = ROOT / "data" / "pickems.duckdb"
 
 INTERNATIONAL = {"WLDs", "MSI", "FST", "EWC"}
 # OE also tags regional Worlds qualifiers (e.g. LPL/LCK last-chance series) as WLDs;

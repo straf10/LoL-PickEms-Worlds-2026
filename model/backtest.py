@@ -15,7 +15,9 @@ import duckdb
 import numpy as np
 import pandas as pd
 
-DB = "data/pickems.duckdb"
+from common.paths import DB_PATH
+
+DB = str(DB_PATH)
 
 EVENTS = {  # name: (league, start, end)
     "Worlds 2022": ("WLDs", "2022-09-29", "2022-11-07"),

@@ -22,11 +22,10 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
+from common.paths import DB_PATH as DB_FILE, ROOT
 from crystal import draft
 from crystal import meta_shift as ms
 
-ROOT = Path(__file__).resolve().parents[1]
-DB_FILE = ROOT / "data" / "pickems.duckdb"
 DRAFT_PKL = ROOT / "outputs" / "draft" / "tmp_run_k15_shift_s5000.pkl"
 GAMES_FILE = ROOT / "outputs" / "draft" / "sim_games_5k.csv.gz"
 OUT_DIR = ROOT / "outputs" / "q10"

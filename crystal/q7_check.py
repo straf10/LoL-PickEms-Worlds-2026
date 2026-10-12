@@ -18,6 +18,7 @@ import duckdb
 import numpy as np
 import pandas as pd
 
+from common.paths import DB_PATH, OUTPUTS, ROSTERS_CSV
 from crystal.estimate import TOP, player_pools, estimate
 from model.predict import matrix_sampler, teams_table
 from sim.tournament import run
@@ -122,8 +123,8 @@ def simulate(games, pools, field_adj, fear_r, rec, flags, rng, n):
 
 
 def main(n: int = 40000, seed: int = 11):
-    con = duckdb.connect("data/pickems.duckdb", read_only=True)
-    ros = pd.read_csv("data/rosters_2026.csv")
+    con = duckdb.connect(str(DB_PATH), read_only=True)
+    ros = pd.read_csv(ROSTERS_CSV)
     starters = ros[ros["is_starter"] == True][["team_id", "role", "player", "player_id"]]
     st = starters[starters["player"].isin(PLAYERS)]
     pids = dict(zip(st["player"], st["player_id"]))
@@ -133,7 +134,7 @@ def main(n: int = 40000, seed: int = 11):
     lck4 = {"oe:team:50f58982d91a36557ec8aec52ab014f", "oe:team:3a1d18f46bcb3716ebcfcf4ef068934",
             "oe:team:ce499dea30cfce118f4fe85da0227e8", "oe:team:ef69efa6acebe94107f0cf1ba716806"}
     fear_r = fearless_ratio(con)
-    os.makedirs("outputs/q7", exist_ok=True)
+    os.makedirs(OUTPUTS / "q7", exist_ok=True)
 
     # inputs (sanity printout)
     rows, adj, rec = [], {"field": {}, "lck4": {}}, {}
@@ -160,7 +161,7 @@ def main(n: int = 40000, seed: int = 11):
     print("== inputs (2026 top-league pool; field = 2026 Worlds teams; factors shrunk, n<30 games shrink most)")
     print(inputs.T.round(3).to_string())
     print(f"fearless / game-3+ kill ratio (all players, 2025-26 top leagues): {fear_r:.3f}")
-    inputs.round(4).to_csv("outputs/q7/q7_inputs.csv")
+    inputs.round(4).to_csv(OUTPUTS / "q7" / "q7_inputs.csv")
 
     # baseline cross-check against the existing estimate (same sims, same seed/n)
     base_est, _, _ = estimate(n, seed=seed)
@@ -192,11 +193,11 @@ def main(n: int = 40000, seed: int = 11):
     table = table.drop(columns=[]).round(4)
     print(f"\n== variants (n={n}, seed={seed})")
     print(table.drop(columns=["seed"]).to_string())
-    table.to_csv("outputs/q7/q7_variants.csv")
+    table.to_csv(OUTPUTS / "q7" / "q7_variants.csv")
     cmp = pd.DataFrame({"P_Peyz_seed%d" % s: {v: res[(s, v)]["P_Peyz"] for v in VARIANTS} for s in (seed, seed + 1)})
     print(f"\n== seed stability (seeds {seed} and {seed + 1})")
     print(cmp.round(4).to_string())
-    cmp.round(4).to_csv("outputs/q7/q7_seed_stability.csv")
+    cmp.round(4).to_csv(OUTPUTS / "q7" / "q7_seed_stability.csv")
     print("\n== plausibility (combined variant): mean games x kills/game used = expected total; vs simulated total")
     r = res[(seed, "d) all combined (b1-b4)")]
     for name, key in (("Peyz", "Peyz"), ("Gumayusi", "Gum")):

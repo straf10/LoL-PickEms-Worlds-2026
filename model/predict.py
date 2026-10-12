@@ -12,7 +12,6 @@ then optionally:
 from __future__ import annotations
 
 from functools import lru_cache
-from pathlib import Path
 
 import duckdb
 import numpy as np
@@ -20,10 +19,10 @@ import pandas as pd
 from scipy.optimize import brentq
 
 from common.mathutil import logit, sigmoid
+from common.paths import DB_PATH, ROOT
 from model.player_ratings import PlayerModel, PParams, load
 from model.ratings import BTModel, Params, load_games, series_prob, team_regions
 
-ROOT = Path(__file__).resolve().parents[1]
 AS_OF = pd.Timestamp("2026-10-15")
 W_PLAYER = 0.5
 MARKET_GAP = 0.15
@@ -45,7 +44,7 @@ def game_from_series(p_series: float, best_of: int = 5) -> float:
 
 @lru_cache(maxsize=1)
 def _models():
-    con = duckdb.connect(str(ROOT / "data" / "pickems.duckdb"), read_only=True)
+    con = duckdb.connect(str(DB_PATH), read_only=True)
     games = load_games(con)
     team = BTModel(Params()).fit(games, AS_OF, team_regions(games))
     pgames, pg = load(con)

@@ -27,12 +27,13 @@ from scipy.optimize import minimize
 from sklearn.isotonic import IsotonicRegression
 
 from common.mathutil import logit as _logit, sigmoid
+from common.paths import DB_PATH, OUTPUTS
 from common.report import md_table
 
 fmt_table = partial(md_table, floatfmt="{:.3f}")
 
-DB = "data/pickems.duckdb"
-OUT_DIR = Path("outputs/calibration")
+DB = str(DB_PATH)
+OUT_DIR = OUTPUTS / "calibration"
 PREDS_CSV = OUT_DIR / "bt_preds.csv"
 CAL_JSON = OUT_DIR / "calibrator.json"
 REPORT_MD = OUT_DIR / "report.md"

@@ -42,11 +42,11 @@ import pandas as pd
 from crystal.meta import (RECENT_FROM, TOP, champ_table, connect, game_champ_sets, load,
                           split_list)
 from common.mathutil import logit, sigmoid
+from common.paths import ROOT
 from common.report import md_table
 
 _md_table = partial(md_table, floatfmt="{:.3f}")
 
-ROOT = Path(__file__).resolve().parent.parent
 GAMES_FILE = ROOT / "outputs" / "draft" / "sim_games_5k.csv.gz"
 FIT_FILE = ROOT / "outputs" / "meta" / "meta_shift_fit.json"
 ROSTERS = ROOT / "data" / "rosters_2026.csv"

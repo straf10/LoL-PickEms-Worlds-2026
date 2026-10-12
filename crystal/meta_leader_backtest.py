@@ -17,11 +17,11 @@ from __future__ import annotations
 import json
 import math
 import time
-from pathlib import Path
 
 import numpy as np
 from scipy.optimize import minimize
 
+from common.paths import ROOT
 from common.report import md_rows, round_finite
 from crystal.meta_shift import (
     EVENTS,
@@ -36,7 +36,6 @@ from crystal.meta_shift import (
     nll,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "outputs" / "meta"
 MD_PATH = OUT_DIR / "leader_backtest.md"
 JSON_OUT = OUT_DIR / "leader_backtest.json"

@@ -10,13 +10,11 @@ Writes:
   outputs/rosters_report.md   replaces only the block between the GENERATED markers
 """
 import sys
-from pathlib import Path
 
 import duckdb
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
-DB = ROOT / "data" / "pickems.duckdb"
+from common.paths import DB_PATH as DB, ROOT
 TEAMS_CSV = ROOT / "data" / "worlds2026_teams.csv"
 ROSTERS_CSV = ROOT / "data" / "rosters_2026.csv"
 ALIASES_CSV = ROOT / "data" / "aliases.csv"

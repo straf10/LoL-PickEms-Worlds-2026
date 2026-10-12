@@ -15,6 +15,7 @@ import duckdb
 import numpy as np
 import pandas as pd
 
+from common.paths import DB_PATH, OUTPUTS, ROSTERS_CSV
 from model.predict import game_matrix, matrix_sampler, teams_table
 from sim import playin
 from sim.tournament import run, summarize
@@ -78,10 +79,10 @@ def rank_table(metric: np.ndarray, ok: np.ndarray, names) -> pd.DataFrame:
 
 def estimate(n: int = 20000, seed: int = 11, uncertainty: bool = True):
     rng = np.random.default_rng(seed)
-    con = duckdb.connect("data/pickems.duckdb", read_only=True)
+    con = duckdb.connect(str(DB_PATH), read_only=True)
     teams = teams_table()
     region = teams.set_index("team_id")["region"].to_dict()
-    ros = pd.read_csv("data/rosters_2026.csv")
+    ros = pd.read_csv(ROSTERS_CSV)
     starters = ros[ros["is_starter"] == True][["team_id", "role", "player", "player_id"]]
 
     P = game_matrix(verbose=True)
@@ -213,7 +214,7 @@ if __name__ == "__main__":
         lines.append(f"## {k}\n\n```\n{v.round(3).head(8).to_string()}\n```\n")
         if "p1" in v:   # ranked tables: each place's probabilities should sum to ~1
             print(f"sum p1={v['p1'].sum():.4f}  p2={v['p2'].sum():.4f}  p3={v['p3'].sum():.4f}")
-    with open("outputs/crystal_sim.md", "w", encoding="utf-8") as f:
+    with open(OUTPUTS / "crystal_sim.md", "w", encoding="utf-8") as f:
         mode = "point estimates" if fixed else "with rating uncertainty"
         f.write(f"# Crystal Ball — simulation estimates ({n} sims, {mode})\n\n" + "\n".join(lines))
         f.write("\n## Tournament outcome table\n\n```\n" + summary.round(3).to_string() + "\n```\n")

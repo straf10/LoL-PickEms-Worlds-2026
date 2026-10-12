@@ -17,6 +17,8 @@ from dataclasses import dataclass, field
 import numpy as np
 import pandas as pd
 
+from common.paths import OUTPUTS
+
 TIERS = {
     1: ["GEN", "AL", "TL", "G2"],
     2: ["LOS", "TSW", "HLE", "BLG"],
@@ -198,7 +200,7 @@ if __name__ == "__main__":
     P = game_matrix(verbose=True)
     region = teams_table().set_index("team_id")["region"].to_dict()
     games, places, _ = run(P, region, n=n)
-    games.to_csv("outputs/sim_games.csv.gz", index=False)
-    places.to_csv("outputs/sim_places.csv.gz", index=False)
+    games.to_csv(OUTPUTS / "sim_games.csv.gz", index=False)
+    places.to_csv(OUTPUTS / "sim_places.csv.gz", index=False)
     pd.set_option("display.width", 200)
     print(summarize(places, games).round(3).to_string())
