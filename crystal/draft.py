@@ -64,7 +64,6 @@ SPREAD_BAND = (0.85, 1.25)
 # supplied by the coordinator for comparison only.
 BENCHMARK_Q1 = {"Nocturne": 0.31, "Cassiopeia": 0.29, "Vi": 0.18, "Jarvan IV": 0.04}
 BENCH_TOL = 0.15
-SPREAD_TOL = 0.50
 SLOPE_SIMS = (500, 1000)   # slope measurement sims (out of calibration sample)
 SLOPE_BUMP = 0.25
 SLOPE_SEED = 303
@@ -431,20 +430,6 @@ def _marg(fit, b):
     return SimpleNamespace(lp0=lp0, lb0=lb0, sdp=sdp, sdb=sdb, p0=_sigmoid(lp0), be0=_sigmoid(lb0),
                            pibar=pibar, bebar=bebar, dp=dp, db=db,
                            pi_t=_sigmoid(_logit(pibar) + dp), be_t=_sigmoid(_logit(bebar) + db))
-
-
-def _det_shift(fit, pi, beta, late_pick, late_ban):
-    """Deterministic (z = 0) shifted rates pi', beta' for the current model.
-
-    logit pi' = a_p + b_p*x1 + c_p*(x2 - x1), x1 = logit(pi), x2 = logit(late pick rate)
-    logit beta' = a_b + b_b*y1 + c_b*(y2 - y1), y1 = logit(beta), y2 = logit(late ban rate)
-    """
-    pk, bk = fit["pick"], fit["ban"]
-    x1, x2 = _logit(pi), _logit(late_pick)
-    y1, y2 = _logit(beta), _logit(late_ban)
-    pi0 = _sigmoid(pk["a"] + pk["b"] * x1 + pk["c"] * (x2 - x1))
-    be0 = _sigmoid(bk["a"] + bk["b"] * y1 + bk["c"] * (y2 - y1))
-    return pi0, be0
 
 
 def _glmm_sd_marginal(eta_plus_delta, s, G=SPREAD_G):

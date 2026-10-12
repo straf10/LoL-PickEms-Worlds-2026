@@ -37,9 +37,6 @@ REPORT = ROOT / "outputs" / "patch_report.md"
 TOP = ["LCK", "LPL", "LEC", "LCS", "LCP", "CBLOL", "WLDQ"]
 RECENT_FROM = "2026-08-14"
 EARLY_PATCHES = ["16.18", "16.20"]
-POOL_NAMES = ["Cassiopeia", "Nocturne", "Vi", "Orianna", "Olaf", "Jarvan IV", "Lucian",
-              "Ezreal", "Akali", "Lee Sin", "Syndra", "Nautilus", "Jayce", "Ryze",
-              "Rumble", "Galio", "Teemo"]
 PLAYIN_TEAMS = ["C9", "KC", "FUR", "MVK"]
 MIN_RAW_PICKS = 5
 TOP_N = 5

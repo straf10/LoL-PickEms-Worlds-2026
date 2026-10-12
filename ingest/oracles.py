@@ -18,7 +18,6 @@ INTERNATIONAL = {"WLDs", "MSI", "FST", "EWC"}
 WORLDS_START = {2022: "2022-09-29", 2023: "2023-10-09", 2024: "2024-09-25", 2025: "2025-10-14", 2026: "2026-10-15"}
 # Same for EWC: 2026 includes regional online qualifiers from April-June.
 EWC_START = {2024: "2024-07-01", 2025: "2025-07-01", 2026: "2026-07-01"}
-MAJOR_LEAGUES = {"LCK", "LPL", "LEC", "LCS", "LCP", "CBLOL", "LTA", "LTA N", "LTA S", "VCS", "PCS", "LJL"}
 ROLE = {"top": "Top", "jng": "Jungle", "mid": "Mid", "bot": "Bot", "sup": "Support"}
 
 

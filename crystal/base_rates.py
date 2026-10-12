@@ -41,9 +41,7 @@ STAGE_ORDER = ["Play-In", "Swiss", "QF", "SF", "F"]
 STAGE_LABEL = {"Play-In": "Play-In", "Swiss": "Swiss", "QF": "Quarterfinal",
                "SF": "Semifinal", "F": "Final"}
 PLACEMENT_ORDER = ["Champion", "Finalist", "SF", "QF", "Swiss exit", "Play-In exit"]
-PRO_PLAYERS = {"Peyz": "Peyz", "Gumayusi": "Gumayusi", "Faker": "Faker"}
 PATCH_RE = r"^16\.(17|18|19|20)(\.|$)"
-PATCH_TARGETS = ["16.17", "16.18", "16.19", "16.20"]
 # Domestic leagues (for Q15/Q16 regions). Pacific leagues merge into one "LCP" bucket.
 REGION_OF_LEAGUE = {
     "LCK": "LCK", "LPL": "LPL", "LEC": "LEC",

@@ -133,13 +133,6 @@ def game_matrix(use_market: bool = True, verbose: bool = False) -> pd.DataFrame:
     return pd.DataFrame(P, index=ids, columns=ids)
 
 
-def strength_sd() -> pd.DataFrame:
-    """Per-team strength and its Laplace standard deviation in each model (log-odds units)."""
-    ids, s_t, s_p, *_, cov_t, cov_p, _ = _strengths()
-    return pd.DataFrame({"team_model": s_t, "team_sd": np.sqrt(np.diag(cov_t)),
-                         "player_model": s_p, "player_sd": np.sqrt(np.diag(cov_p))}, index=ids)
-
-
 def matrix_sampler(use_market: bool = True, scale: float = 1.0):
     """Returns sample(rng) -> one plausible probability matrix (numpy, order = ids).
     Strength draws come from each model's Laplace covariance. The two models are fitted on the same
