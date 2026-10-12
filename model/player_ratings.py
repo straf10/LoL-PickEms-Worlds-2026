@@ -127,7 +127,7 @@ class PlayerModel:
         p = self.p
         n, nP, nT, nR = len(B), len(self.players), len(self.teams), len(self.regions)
         oR, oP, oT = 1, 1 + nR, 1 + nR + nP
-        side, R, th, T = x[0], x[oR:oP], x[oP:oT], x[oT:]
+        side, th, T = x[0], x[oP:oT], x[oT:]
         z = side + th[B].sum(1) - th[Rd].sum(1) + ((T[tb] - T[tr]) if p.use_team else 0)
         pr = 1 / (1 + np.exp(-z))
         k = 13 if p.use_team else 11

@@ -820,16 +820,12 @@ def _info_dict(info: pd.DataFrame) -> dict:
 def _write_report(main: dict, sens: dict[str, dict], path: Path, runtime_note: str):
     s = main["summary"]
     info = _info_dict(main["info"])
-    cal = main["calibration"]
     q10 = main["q10"].unique_champions
     out = []
     out.append("# Crystal Ball: champion-draft simulation (Worlds 2026)\n")
     out.append(f"Main run: {info['sims']} sims, K = {float(info['k']):g}, meta shift = {'on' if info['shift'] else 'off'}, "
                f"window G = {info['window_games']} games, bans per game = {float(info['bans_per_game']):.2f}, "
                f"universe = {info['universe_champions']} champions. Code: `crystal/draft.py`.\n")
-
-    cols = ["champion", "p_lead", "mean_presence", "mean_picks", "p_ge5_picks",
-            "mean_wr_given_ge5", "mean_deaths_given_ge5", "base_pick_pct", "base_ban_pct"]
 
     def top(q, name):
         ev, p1, p2, p3 = f"ev_{q}", f"p1_{q}", f"p2_{q}", f"p3_{q}"

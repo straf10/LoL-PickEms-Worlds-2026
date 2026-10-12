@@ -16,7 +16,6 @@ Stage logic (league 'WLDs' only; 'WLDQ' regional qualifiers are excluded):
 """
 from __future__ import annotations
 
-import re
 import sys
 from pathlib import Path
 
@@ -686,7 +685,6 @@ def write_outputs(R: dict, B: dict) -> None:
                          "kills": int(r.kills), "kills_per_game": fmt(r.kills_per_game, 2)})
     w(md_table(pd.DataFrame(rows)))
     w("")
-    kp = {y: {r.player: r.kills_per_game for _, r in R[y]["q7"].iterrows()} for y in YEARS}
     def kpg_txt(y, name):
         rr = R[y]["q7"][R[y]["q7"].player == name].iloc[0]
         if rr.games == 0:

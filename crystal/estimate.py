@@ -145,8 +145,6 @@ def estimate(n: int = 20000, seed: int = 11, uncertainty: bool = True):
     out = {}
     names = list(agg)
     gm = np.array([agg[p]["games"] for p in names])
-    ok = gm >= MIN_GAMES
-
     def ranked(metric, min_games=MIN_GAMES):
         return rank_table(metric, gm >= min_games, names)
 

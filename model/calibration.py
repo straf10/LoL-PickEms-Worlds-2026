@@ -249,7 +249,6 @@ def loeo_predict(d: pd.DataFrame, method: str, cross: bool) -> np.ndarray:
     for ev in d["event"].unique():
         te = (d["event"] == ev).to_numpy()
         cal = fit_calibrator(d[~te], method, cross_region_col=col)
-        cr = d.loc[te, "cross_region"].astype(bool).to_numpy() if cross else None
         ok = te & d["p_blue"].notna().to_numpy()
         q[ok] = cal.transform(d.loc[ok, "p_blue"].to_numpy(dtype=float),
                               cross_region=d.loc[ok, "cross_region"].astype(bool).to_numpy() if cross else None)
