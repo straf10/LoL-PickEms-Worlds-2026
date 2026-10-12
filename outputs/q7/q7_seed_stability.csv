@@ -1,9 +1,9 @@
-,P_Peyz_seed7,P_Peyz_seed8
-a) current method,0.6716,0.6753
-b1) team kill env only,0.6756,0.6796
-b2) bot share only,0.6884,0.6921
-b3) game-3+ factor only,0.6734,0.6764
-b4) recency shrink only,0.6391,0.6394
-c) opponent (b1+b2),0.6942,0.697
-"c2) opponent, LCK top-4 def",0.6674,0.6716
-d) all combined (b1-b4),0.6626,0.6627
+,P_Peyz_seed11,P_Peyz_seed12
+a) current method,0.672,0.6667
+b1) team kill env only,0.6759,0.6712
+b2) bot share only,0.6894,0.6832
+b3) game-3+ factor only,0.6733,0.6682
+b4) recency shrink only,0.6389,0.6351
+c) opponent (b1+b2),0.6946,0.6884
+"c2) opponent, LCK top-4 def",0.6684,0.6635
+d) all combined (b1-b4),0.6616,0.6594
