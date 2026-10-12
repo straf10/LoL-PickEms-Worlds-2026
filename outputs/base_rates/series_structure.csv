@@ -1,0 +1,92 @@
+series_id,start,day,n_games,first_game,max_gis,winner,team_a,team_b,loser,stage,format,year
+1,2024-09-25 12:12:29,2024-09-25,2,LOLTMNT05_83571,2,MAD Lions KOI,MAD Lions KOI,MGN Vikings Esports,MGN Vikings Esports,Play-In,multi-game series,2024
+2,2024-09-25 14:18:29,2024-09-25,3,LOLTMNT05_82750,3,PSG Talon,PSG Talon,paiN Gaming,paiN Gaming,Play-In,multi-game series,2024
+3,2024-09-26 12:10:46,2024-09-26,2,LOLTMNT05_82854,2,GAM Esports,GAM Esports,Fukuoka SoftBank HAWKS gaming,Fukuoka SoftBank HAWKS gaming,Play-In,multi-game series,2024
+4,2024-09-26 13:47:48,2024-09-26,3,LOLTMNT05_82864,3,Movistar R7,100 Thieves,Movistar R7,100 Thieves,Play-In,multi-game series,2024
+5,2024-09-27 12:12:46,2024-09-27,3,LOLTMNT05_82955,3,MAD Lions KOI,MAD Lions KOI,PSG Talon,PSG Talon,Play-In,multi-game series,2024
+6,2024-09-27 14:59:49,2024-09-27,2,LOLTMNT05_82961,2,GAM Esports,GAM Esports,Movistar R7,Movistar R7,Play-In,multi-game series,2024
+7,2024-09-28 12:12:07,2024-09-28,2,LOLTMNT05_84084,2,paiN Gaming,paiN Gaming,MGN Vikings Esports,MGN Vikings Esports,Play-In,multi-game series,2024
+8,2024-09-28 14:03:16,2024-09-28,2,LOLTMNT05_85045,2,100 Thieves,Fukuoka SoftBank HAWKS gaming,100 Thieves,Fukuoka SoftBank HAWKS gaming,Play-In,multi-game series,2024
+9,2024-09-29 12:12:43,2024-09-29,3,LOLTMNT05_85079,3,paiN Gaming,paiN Gaming,Movistar R7,Movistar R7,Play-In,multi-game series,2024
+10,2024-09-29 14:59:14,2024-09-29,2,LOLTMNT05_84137,2,PSG Talon,PSG Talon,100 Thieves,100 Thieves,Play-In,multi-game series,2024
+11,2024-10-03 12:15:13,2024-10-03,1,LOLTMNT05_87210,1,Bilibili Gaming,Bilibili Gaming,MAD Lions KOI,MAD Lions KOI,Swiss,Bo1 (single game),2024
+12,2024-10-03 13:31:54,2024-10-03,1,LOLTMNT05_87211,1,Top Esports,Top Esports,T1,T1,Swiss,Bo1 (single game),2024
+13,2024-10-03 14:27:48,2024-10-03,1,LOLTMNT05_87219,1,Gen.G,Gen.G,Weibo Gaming,Weibo Gaming,Swiss,Bo1 (single game),2024
+14,2024-10-03 15:37:53,2024-10-03,1,LOLTMNT05_87230,1,Dplus Kia,Fnatic,Dplus Kia,Fnatic,Swiss,Bo1 (single game),2024
+15,2024-10-03 16:36:53,2024-10-03,1,LOLTMNT05_87239,1,LNG Esports,Team Liquid,LNG Esports,Team Liquid,Swiss,Bo1 (single game),2024
+16,2024-10-03 17:40:16,2024-10-03,1,LOLTMNT05_86248,1,Hanwha Life Esports,Hanwha Life Esports,PSG Talon,PSG Talon,Swiss,Bo1 (single game),2024
+17,2024-10-03 18:34:57,2024-10-03,1,LOLTMNT05_86264,1,FlyQuest,GAM Esports,FlyQuest,GAM Esports,Swiss,Bo1 (single game),2024
+18,2024-10-03 19:26:03,2024-10-03,1,LOLTMNT05_86274,1,G2 Esports,G2 Esports,paiN Gaming,paiN Gaming,Swiss,Bo1 (single game),2024
+19,2024-10-04 12:13:21,2024-10-04,1,LOLTMNT05_89019,1,LNG Esports,Bilibili Gaming,LNG Esports,Bilibili Gaming,Swiss,Bo1 (single game),2024
+20,2024-10-04 13:05:50,2024-10-04,1,LOLTMNT05_88031,1,Gen.G,Gen.G,Top Esports,Top Esports,Swiss,Bo1 (single game),2024
+21,2024-10-04 14:03:16,2024-10-04,1,LOLTMNT05_88034,1,Hanwha Life Esports,G2 Esports,Hanwha Life Esports,G2 Esports,Swiss,Bo1 (single game),2024
+22,2024-10-04 15:12:24,2024-10-04,1,LOLTMNT05_89043,1,Weibo Gaming,Team Liquid,Weibo Gaming,Team Liquid,Swiss,Bo1 (single game),2024
+23,2024-10-04 16:20:50,2024-10-04,1,LOLTMNT05_88058,1,T1,T1,paiN Gaming,paiN Gaming,Swiss,Bo1 (single game),2024
+24,2024-10-04 17:09:36,2024-10-04,1,LOLTMNT05_89058,1,Dplus Kia,Dplus Kia,FlyQuest,FlyQuest,Swiss,Bo1 (single game),2024
+25,2024-10-04 18:03:56,2024-10-04,1,LOLTMNT05_89068,1,Fnatic,Fnatic,GAM Esports,GAM Esports,Swiss,Bo1 (single game),2024
+26,2024-10-04 19:02:53,2024-10-04,1,LOLTMNT05_88097,1,PSG Talon,PSG Talon,MAD Lions KOI,MAD Lions KOI,Swiss,Bo1 (single game),2024
+27,2024-10-05 12:14:14,2024-10-05,2,LOLTMNT05_89252,2,LNG Esports,Dplus Kia,LNG Esports,Dplus Kia,Swiss,multi-game series,2024
+28,2024-10-05 14:15:00,2024-10-05,3,LOLTMNT05_88269,3,Gen.G,Hanwha Life Esports,Gen.G,Hanwha Life Esports,Swiss,multi-game series,2024
+29,2024-10-06 12:10:39,2024-10-06,1,LOLTMNT05_88332,1,Top Esports,Top Esports,Fnatic,Fnatic,Swiss,Bo1 (single game),2024
+30,2024-10-06 13:00:06,2024-10-06,1,LOLTMNT05_89304,1,T1,Bilibili Gaming,T1,Bilibili Gaming,Swiss,Bo1 (single game),2024
+31,2024-10-06 13:58:26,2024-10-06,1,LOLTMNT05_89309,1,FlyQuest,FlyQuest,PSG Talon,PSG Talon,Swiss,Bo1 (single game),2024
+32,2024-10-06 15:06:48,2024-10-06,1,LOLTMNT05_88353,1,G2 Esports,G2 Esports,Weibo Gaming,Weibo Gaming,Swiss,Bo1 (single game),2024
+33,2024-10-07 12:11:05,2024-10-07,3,LOLTMNT05_89359,3,GAM Esports,MAD Lions KOI,GAM Esports,MAD Lions KOI,Swiss,multi-game series,2024
+34,2024-10-07 14:48:00,2024-10-07,2,LOLTMNT05_89371,2,Team Liquid,Team Liquid,paiN Gaming,paiN Gaming,Swiss,multi-game series,2024
+35,2024-10-10 12:13:23,2024-10-10,2,LOLTMNT05_89529,2,Top Esports,Top Esports,Dplus Kia,Dplus Kia,Swiss,multi-game series,2024
+36,2024-10-10 14:09:15,2024-10-10,3,LOLTMNT05_88569,3,Hanwha Life Esports,Hanwha Life Esports,FlyQuest,FlyQuest,Swiss,multi-game series,2024
+37,2024-10-11 12:12:11,2024-10-11,2,LOLTMNT05_88620,2,T1,G2 Esports,T1,G2 Esports,Swiss,multi-game series,2024
+38,2024-10-11 14:04:51,2024-10-11,2,LOLTMNT05_88621,2,Bilibili Gaming,Bilibili Gaming,PSG Talon,PSG Talon,Swiss,multi-game series,2024
+39,2024-10-12 12:11:02,2024-10-12,3,LOLTMNT05_89600,3,Weibo Gaming,Fnatic,Weibo Gaming,Fnatic,Swiss,multi-game series,2024
+40,2024-10-12 14:45:14,2024-10-12,3,LOLTMNT05_88668,3,Team Liquid,Team Liquid,GAM Esports,GAM Esports,Swiss,multi-game series,2024
+41,2024-10-13 12:12:28,2024-10-13,3,LOLTMNT05_89633,3,Weibo Gaming,Dplus Kia,Weibo Gaming,Dplus Kia,Swiss,multi-game series,2024
+42,2024-10-13 15:06:01,2024-10-13,3,LOLTMNT05_88695,3,Bilibili Gaming,G2 Esports,Bilibili Gaming,G2 Esports,Swiss,multi-game series,2024
+43,2024-10-13 18:06:41,2024-10-13,3,LOLTMNT05_89647,3,FlyQuest,FlyQuest,Team Liquid,Team Liquid,Swiss,multi-game series,2024
+44,2024-10-17 12:16:56,2024-10-17,4,LOLTMNT05_89822,4,Weibo Gaming,Weibo Gaming,LNG Esports,LNG Esports,QF,multi-game series,2024
+45,2024-10-18 12:14:53,2024-10-18,4,LOLTMNT05_88903,4,Bilibili Gaming,Hanwha Life Esports,Bilibili Gaming,Hanwha Life Esports,QF,multi-game series,2024
+46,2024-10-19 12:15:26,2024-10-19,3,LOLTMNT05_89869,3,T1,Top Esports,T1,Top Esports,QF,multi-game series,2024
+47,2024-10-20 12:16:21,2024-10-20,5,LOLTMNT05_88946,5,Gen.G,Gen.G,FlyQuest,FlyQuest,QF,multi-game series,2024
+48,2024-10-26 12:22:30,2024-10-26,3,LOLTMNT05_90077,3,Bilibili Gaming,Weibo Gaming,Bilibili Gaming,Weibo Gaming,SF,multi-game series,2024
+49,2024-10-27 13:17:55,2024-10-27,4,LOLTMNT05_90106,4,T1,T1,Gen.G,Gen.G,SF,multi-game series,2024
+50,2024-11-02 14:35:39,2024-11-02,5,LOLTMNT05_90304,5,T1,T1,Bilibili Gaming,Bilibili Gaming,F,multi-game series,2024
+1,2025-10-14 08:20:58,2025-10-14,4,LOLTMNT01_296586,4,T1,Invictus Gaming,T1,Invictus Gaming,Play-In,multi-game series,2025
+2,2025-10-15 05:18:22,2025-10-15,1,LOLTMNT01_297691,1,Team Secret Whales,Team Secret Whales,Vivo Keyd Stars,Vivo Keyd Stars,Play-In,Bo1 (single game),2025
+3,2025-10-15 06:18:06,2025-10-15,1,LOLTMNT01_296718,1,CTBC Flying Oyster,CTBC Flying Oyster,Fnatic,Fnatic,Play-In,Bo1 (single game),2025
+4,2025-10-15 07:15:27,2025-10-15,1,LOLTMNT01_297721,1,KT Rolster,KT Rolster,Movistar KOI,Movistar KOI,Play-In,Bo1 (single game),2025
+5,2025-10-15 08:15:05,2025-10-15,1,LOLTMNT01_297733,1,100 Thieves,Bilibili Gaming,100 Thieves,Bilibili Gaming,Play-In,Bo1 (single game),2025
+6,2025-10-15 09:18:31,2025-10-15,1,LOLTMNT01_296748,1,T1,FlyQuest,T1,FlyQuest,Play-In,Bo1 (single game),2025
+7,2025-10-15 10:20:25,2025-10-15,1,LOLTMNT01_296764,1,Anyone's Legend,Hanwha Life Esports,Anyone's Legend,Hanwha Life Esports,Play-In,Bo1 (single game),2025
+8,2025-10-15 11:28:12,2025-10-15,1,LOLTMNT01_297767,1,Top Esports,G2 Esports,Top Esports,G2 Esports,Play-In,Bo1 (single game),2025
+9,2025-10-15 12:27:04,2025-10-15,1,LOLTMNT01_296795,1,Gen.G,Gen.G,PSG Talon,PSG Talon,Play-In,Bo1 (single game),2025
+10,2025-10-16 05:12:25,2025-10-16,1,LOLTMNT01_296903,1,FlyQuest,Vivo Keyd Stars,FlyQuest,Vivo Keyd Stars,Play-In,Bo1 (single game),2025
+11,2025-10-16 06:08:03,2025-10-16,1,LOLTMNT01_296921,1,KT Rolster,KT Rolster,Team Secret Whales,Team Secret Whales,Play-In,Bo1 (single game),2025
+12,2025-10-16 07:02:03,2025-10-16,1,LOLTMNT01_296936,1,G2 Esports,Movistar KOI,G2 Esports,Movistar KOI,Play-In,Bo1 (single game),2025
+13,2025-10-16 07:54:27,2025-10-16,1,LOLTMNT01_297965,1,Top Esports,Top Esports,100 Thieves,100 Thieves,Play-In,Bo1 (single game),2025
+14,2025-10-16 08:46:57,2025-10-16,1,LOLTMNT01_296949,1,CTBC Flying Oyster,CTBC Flying Oyster,T1,T1,Play-In,Bo1 (single game),2025
+15,2025-10-16 10:06:54,2025-10-16,1,LOLTMNT01_297998,1,Anyone's Legend,Gen.G,Anyone's Legend,Gen.G,Play-In,Bo1 (single game),2025
+16,2025-10-16 11:02:52,2025-10-16,1,LOLTMNT01_296976,1,Bilibili Gaming,Bilibili Gaming,Fnatic,Fnatic,Play-In,Bo1 (single game),2025
+17,2025-10-16 11:56:15,2025-10-16,1,LOLTMNT01_296993,1,Hanwha Life Esports,Hanwha Life Esports,PSG Talon,PSG Talon,Play-In,Bo1 (single game),2025
+18,2025-10-17 08:09:42,2025-10-17,2,LOLTMNT01_298178,2,KT Rolster,KT Rolster,Top Esports,Top Esports,Play-In,multi-game series,2025
+19,2025-10-17 09:56:46,2025-10-17,3,LOLTMNT01_299149,3,Anyone's Legend,CTBC Flying Oyster,Anyone's Legend,CTBC Flying Oyster,Play-In,multi-game series,2025
+20,2025-10-18 08:12:24,2025-10-18,1,LOLTMNT01_298440,1,FlyQuest,FlyQuest,Team Secret Whales,Team Secret Whales,Play-In,Bo1 (single game),2025
+21,2025-10-18 09:22:08,2025-10-18,1,LOLTMNT01_299401,1,Gen.G,Gen.G,T1,T1,Play-In,Bo1 (single game),2025
+22,2025-10-18 10:12:59,2025-10-18,1,LOLTMNT01_298463,1,G2 Esports,Bilibili Gaming,G2 Esports,Bilibili Gaming,Play-In,Bo1 (single game),2025
+23,2025-10-18 11:02:40,2025-10-18,1,LOLTMNT01_298478,1,Hanwha Life Esports,Hanwha Life Esports,100 Thieves,100 Thieves,Play-In,Bo1 (single game),2025
+24,2025-10-19 08:09:49,2025-10-19,3,LOLTMNT01_298640,3,Movistar KOI,Movistar KOI,Fnatic,Fnatic,Play-In,multi-game series,2025
+25,2025-10-19 10:40:16,2025-10-19,3,LOLTMNT01_299677,3,Vivo Keyd Stars,PSG Talon,Vivo Keyd Stars,PSG Talon,Play-In,multi-game series,2025
+26,2025-10-22 08:14:32,2025-10-22,2,LOLTMNT01_301255,2,Hanwha Life Esports,CTBC Flying Oyster,Hanwha Life Esports,CTBC Flying Oyster,Swiss,multi-game series,2025
+27,2025-10-22 10:18:14,2025-10-22,3,LOLTMNT01_301279,3,G2 Esports,FlyQuest,G2 Esports,FlyQuest,Swiss,multi-game series,2025
+28,2025-10-23 08:12:26,2025-10-23,3,LOLTMNT01_301407,3,Movistar KOI,Movistar KOI,Team Secret Whales,Team Secret Whales,Swiss,multi-game series,2025
+29,2025-10-23 10:56:57,2025-10-23,2,LOLTMNT01_301421,2,Gen.G,Gen.G,Top Esports,Top Esports,Swiss,multi-game series,2025
+30,2025-10-24 08:12:30,2025-10-24,2,LOLTMNT01_300568,2,Bilibili Gaming,Bilibili Gaming,Vivo Keyd Stars,Vivo Keyd Stars,Swiss,multi-game series,2025
+31,2025-10-24 10:12:00,2025-10-24,2,LOLTMNT01_300584,2,T1,100 Thieves,T1,100 Thieves,Swiss,multi-game series,2025
+32,2025-10-25 05:14:57,2025-10-25,2,LOLTMNT01_300730,2,CTBC Flying Oyster,CTBC Flying Oyster,FlyQuest,FlyQuest,Swiss,multi-game series,2025
+33,2025-10-25 07:34:59,2025-10-25,3,LOLTMNT01_301758,3,Top Esports,Top Esports,Bilibili Gaming,Bilibili Gaming,Swiss,multi-game series,2025
+34,2025-10-25 10:17:04,2025-10-25,2,LOLTMNT01_300794,2,T1,Movistar KOI,T1,Movistar KOI,Swiss,multi-game series,2025
+35,2025-10-28 07:13:37,2025-10-28,4,LOLTMNT01_303065,4,Gen.G,Gen.G,Hanwha Life Esports,Hanwha Life Esports,QF,multi-game series,2025
+36,2025-10-29 07:13:13,2025-10-29,3,LOLTMNT01_303118,3,KT Rolster,KT Rolster,CTBC Flying Oyster,CTBC Flying Oyster,QF,multi-game series,2025
+37,2025-10-30 07:15:39,2025-10-30,4,LOLTMNT01_302227,4,Top Esports,Top Esports,G2 Esports,G2 Esports,QF,multi-game series,2025
+38,2025-10-31 07:14:12,2025-10-31,5,LOLTMNT01_303213,5,T1,Anyone's Legend,T1,Anyone's Legend,QF,multi-game series,2025
+39,2025-11-01 07:16:36,2025-11-01,4,LOLTMNT01_303255,4,KT Rolster,Gen.G,KT Rolster,Gen.G,SF,multi-game series,2025
+40,2025-11-02 07:15:05,2025-11-02,3,LOLTMNT01_303337,3,T1,T1,Top Esports,Top Esports,SF,multi-game series,2025
+41,2025-11-09 07:32:16,2025-11-09,5,LOLTMNT01_307101,5,T1,KT Rolster,T1,KT Rolster,F,multi-game series,2025

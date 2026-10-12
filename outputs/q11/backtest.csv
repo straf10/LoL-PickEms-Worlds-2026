@@ -1,0 +1,8 @@
+method,err 2023,err 2024,err 2025,rmse
+last Worlds,-2.1,13.83,-0.7,8.09
+mean of prior Worlds,-2.1,12.78,7.82,8.74
+same-year intl + prior intl gap,-1.38,13.62,2.22,8.01
+"same-year intl, no gap",2.53,16.84,9.97,11.39
+6wk domestic + prior 6wk gap,25.75,9.74,9.85,16.88
+"6wk domestic, no gap",10.78,7.64,11.0,9.93
+8wk domestic + prior 8wk gap,9.27,17.14,11.51,13.06

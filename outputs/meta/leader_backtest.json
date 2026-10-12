@@ -1,0 +1,528 @@
+{
+  "draws": 5000,
+  "rho_used": 0.3846,
+  "rho_note": "rho_pick_ban from the fit is a correlation of posterior-mean u, which is attenuated; it is used as the latent correlation, as briefed.",
+  "s_grid": [
+    1.0,
+    1.25,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "s_best": 1.5,
+  "table": [
+    {
+      "s": 1.0,
+      "expected_fav_hits": 2.8371,
+      "actual_fav_hits": 4,
+      "mean_logloss": 2.8987
+    },
+    {
+      "s": 1.25,
+      "expected_fav_hits": 2.2464,
+      "actual_fav_hits": 3,
+      "mean_logloss": 2.7894
+    },
+    {
+      "s": 1.5,
+      "expected_fav_hits": 1.7514,
+      "actual_fav_hits": 3,
+      "mean_logloss": 2.7582
+    },
+    {
+      "s": 2.0,
+      "expected_fav_hits": 1.0212,
+      "actual_fav_hits": 3,
+      "mean_logloss": 2.9844
+    },
+    {
+      "s": 2.5,
+      "expected_fav_hits": 0.6268,
+      "actual_fav_hits": 3,
+      "mean_logloss": 3.2705
+    },
+    {
+      "s": 3.0,
+      "expected_fav_hits": 0.4306,
+      "actual_fav_hits": 3,
+      "mean_logloss": 3.5328
+    }
+  ],
+  "in_sample": {
+    "events": [
+      {
+        "event": "WLDs 2022",
+        "actual_leaders": [
+          "Aatrox"
+        ],
+        "actual_leader_presence": 125,
+        "G_ev": 127,
+        "P_actual_leader": 0.015466666666666668,
+        "favourite": "Wukong",
+        "P_favourite": 0.22361666666666669,
+        "favourite_hit": false
+      },
+      {
+        "event": "WLDs 2023",
+        "actual_leaders": [
+          "Orianna"
+        ],
+        "actual_leader_presence": 106,
+        "G_ev": 113,
+        "P_actual_leader": 0.0023666666666666662,
+        "favourite": "Rell",
+        "P_favourite": 0.21182333333333359,
+        "favourite_hit": false
+      },
+      {
+        "event": "WLDs 2024",
+        "actual_leaders": [
+          "Yone"
+        ],
+        "actual_leader_presence": 99,
+        "G_ev": 106,
+        "P_actual_leader": 0.02951666666666667,
+        "favourite": "Rumble",
+        "P_favourite": 0.16851666666666668,
+        "favourite_hit": false
+      },
+      {
+        "event": "WLDs 2025",
+        "actual_leaders": [
+          "Yunara"
+        ],
+        "actual_leader_presence": 74,
+        "G_ev": 84,
+        "P_actual_leader": 0.0302,
+        "favourite": "Azir",
+        "P_favourite": 0.21546666666666664,
+        "favourite_hit": false
+      },
+      {
+        "event": "MSI 2022",
+        "actual_leaders": [
+          "Ahri",
+          "Lucian"
+        ],
+        "actual_leader_presence": 80,
+        "G_ev": 80,
+        "P_actual_leader": 0.3761333333333333,
+        "favourite": "Ahri",
+        "P_favourite": 0.36696666666666666,
+        "favourite_hit": true
+      },
+      {
+        "event": "MSI 2023",
+        "actual_leaders": [
+          "Vi"
+        ],
+        "actual_leader_presence": 72,
+        "G_ev": 76,
+        "P_actual_leader": 0.18063333333333334,
+        "favourite": "Vi",
+        "P_favourite": 0.18063333333333334,
+        "favourite_hit": true
+      },
+      {
+        "event": "MSI 2024",
+        "actual_leaders": [
+          "Kalista",
+          "Senna"
+        ],
+        "actual_leader_presence": 71,
+        "G_ev": 78,
+        "P_actual_leader": 0.19953333333333337,
+        "favourite": "Kalista",
+        "P_favourite": 0.19743333333333338,
+        "favourite_hit": true
+      },
+      {
+        "event": "MSI 2025",
+        "actual_leaders": [
+          "Varus"
+        ],
+        "actual_leader_presence": 55,
+        "G_ev": 80,
+        "P_actual_leader": 0.1443333333333333,
+        "favourite": "Vi",
+        "P_favourite": 0.23046666666666665,
+        "favourite_hit": false
+      },
+      {
+        "event": "MSI 2026",
+        "actual_leaders": [
+          "Vi"
+        ],
+        "actual_leader_presence": 51,
+        "G_ev": 71,
+        "P_actual_leader": 0.004366666666666666,
+        "favourite": "Orianna",
+        "P_favourite": 0.30135,
+        "favourite_hit": false
+      },
+      {
+        "event": "FST 2025",
+        "actual_leaders": [
+          "Kalista"
+        ],
+        "actual_leader_presence": 30,
+        "G_ev": 35,
+        "P_actual_leader": 0.15546666666666673,
+        "favourite": "Skarner",
+        "P_favourite": 0.43653999999999976,
+        "favourite_hit": false
+      },
+      {
+        "event": "FST 2026",
+        "actual_leaders": [
+          "Orianna",
+          "Ryze"
+        ],
+        "actual_leader_presence": 37,
+        "G_ev": 45,
+        "P_actual_leader": 0.3276999999999999,
+        "favourite": "Orianna",
+        "P_favourite": 0.30433333333333323,
+        "favourite_hit": true
+      }
+    ],
+    "calibration": {
+      "sum_P_favourite": 2.8371,
+      "actual_fav_hits": 4,
+      "mean_logloss": 2.8987
+    }
+  },
+  "loeo": {
+    "events": [
+      {
+        "event": "WLDs 2022",
+        "actual_leaders": [
+          "Aatrox"
+        ],
+        "actual_leader_presence": 125,
+        "G_ev": 127,
+        "P_actual_leader": 0.015596666666666672,
+        "favourite": "Wukong",
+        "P_favourite": 0.15833857142857188,
+        "favourite_hit": false
+      },
+      {
+        "event": "WLDs 2023",
+        "actual_leaders": [
+          "Orianna"
+        ],
+        "actual_leader_presence": 106,
+        "G_ev": 113,
+        "P_actual_leader": 0.004488571428571427,
+        "favourite": "Rell",
+        "P_favourite": 0.14024190476190526,
+        "favourite_hit": false
+      },
+      {
+        "event": "WLDs 2024",
+        "actual_leaders": [
+          "Yone"
+        ],
+        "actual_leader_presence": 99,
+        "G_ev": 106,
+        "P_actual_leader": 0.021713333333333324,
+        "favourite": "Rumble",
+        "P_favourite": 0.1171333333333333,
+        "favourite_hit": false
+      },
+      {
+        "event": "WLDs 2025",
+        "actual_leaders": [
+          "Yunara"
+        ],
+        "actual_leader_presence": 74,
+        "G_ev": 84,
+        "P_actual_leader": 0.029909999999999996,
+        "favourite": "Azir",
+        "P_favourite": 0.09538190476190458,
+        "favourite_hit": false
+      },
+      {
+        "event": "MSI 2022",
+        "actual_leaders": [
+          "Ahri",
+          "Lucian"
+        ],
+        "actual_leader_presence": 80,
+        "G_ev": 80,
+        "P_actual_leader": 0.24689333333333335,
+        "favourite": "Ahri",
+        "P_favourite": 0.23671000000000003,
+        "favourite_hit": true
+      },
+      {
+        "event": "MSI 2023",
+        "actual_leaders": [
+          "Vi"
+        ],
+        "actual_leader_presence": 72,
+        "G_ev": 76,
+        "P_actual_leader": 0.12980666666666665,
+        "favourite": "Vi",
+        "P_favourite": 0.12980666666666665,
+        "favourite_hit": true
+      },
+      {
+        "event": "MSI 2024",
+        "actual_leaders": [
+          "Kalista",
+          "Senna"
+        ],
+        "actual_leader_presence": 71,
+        "G_ev": 78,
+        "P_actual_leader": 0.13850714285714286,
+        "favourite": "Nautilus",
+        "P_favourite": 0.14644857142857173,
+        "favourite_hit": false
+      },
+      {
+        "event": "MSI 2025",
+        "actual_leaders": [
+          "Varus"
+        ],
+        "actual_leader_presence": 55,
+        "G_ev": 80,
+        "P_actual_leader": 0.10595999999999986,
+        "favourite": "Vi",
+        "P_favourite": 0.12009666666666663,
+        "favourite_hit": false
+      },
+      {
+        "event": "MSI 2026",
+        "actual_leaders": [
+          "Vi"
+        ],
+        "actual_leader_presence": 51,
+        "G_ev": 71,
+        "P_actual_leader": 0.019003333333333323,
+        "favourite": "Orianna",
+        "P_favourite": 0.16203190476190527,
+        "favourite_hit": false
+      },
+      {
+        "event": "FST 2025",
+        "actual_leaders": [
+          "Kalista"
+        ],
+        "actual_leader_presence": 30,
+        "G_ev": 35,
+        "P_actual_leader": 0.0901899999999998,
+        "favourite": "Skarner",
+        "P_favourite": 0.18994047619047713,
+        "favourite_hit": false
+      },
+      {
+        "event": "FST 2026",
+        "actual_leaders": [
+          "Orianna",
+          "Ryze"
+        ],
+        "actual_leader_presence": 37,
+        "G_ev": 45,
+        "P_actual_leader": 0.20516666666666708,
+        "favourite": "Orianna",
+        "P_favourite": 0.16362666666666703,
+        "favourite_hit": true
+      }
+    ],
+    "calibration": {
+      "sum_P_favourite": 1.6598,
+      "actual_fav_hits": 3,
+      "mean_logloss": 2.9565
+    },
+    "s_best": 1.0,
+    "table": [
+      {
+        "s": 1.0,
+        "expected_fav_hits": 1.6598,
+        "actual_fav_hits": 3,
+        "mean_logloss": 2.9565
+      },
+      {
+        "s": 1.25,
+        "expected_fav_hits": 1.1539,
+        "actual_fav_hits": 3,
+        "mean_logloss": 2.9811
+      },
+      {
+        "s": 1.5,
+        "expected_fav_hits": 0.8236,
+        "actual_fav_hits": 4,
+        "mean_logloss": 3.1343
+      },
+      {
+        "s": 2.0,
+        "expected_fav_hits": 0.4736,
+        "actual_fav_hits": 4,
+        "mean_logloss": 3.4643
+      },
+      {
+        "s": 2.5,
+        "expected_fav_hits": 0.3145,
+        "actual_fav_hits": 4,
+        "mean_logloss": 3.7425
+      },
+      {
+        "s": 3.0,
+        "expected_fav_hits": 0.2348,
+        "actual_fav_hits": 4,
+        "mean_logloss": 3.9528
+      }
+    ],
+    "fit_seconds": 27.5,
+    "start_disagreements": 3,
+    "start_checks": [
+      {
+        "event": "WLDs 2022",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      },
+      {
+        "event": "WLDs 2023",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      },
+      {
+        "event": "WLDs 2024",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      },
+      {
+        "event": "WLDs 2025",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0877,
+          "dnll": 4.4553,
+          "agree": false
+        }
+      },
+      {
+        "event": "MSI 2022",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      },
+      {
+        "event": "MSI 2023",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      },
+      {
+        "event": "MSI 2024",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0859,
+          "dnll": 4.8648,
+          "agree": false
+        }
+      },
+      {
+        "event": "MSI 2025",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      },
+      {
+        "event": "MSI 2026",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0727,
+          "dnll": 4.0083,
+          "agree": false
+        }
+      },
+      {
+        "event": "FST 2025",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      },
+      {
+        "event": "FST 2026",
+        "pick": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        },
+        "ban": {
+          "dmax_abc": 0.0,
+          "dnll": 0.0,
+          "agree": true
+        }
+      }
+    ]
+  },
+  "uniform_baseline_logloss": 5.1247,
+  "total_seconds": 59.7
+}

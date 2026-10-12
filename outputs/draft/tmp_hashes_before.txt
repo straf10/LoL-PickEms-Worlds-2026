@@ -1,0 +1,3 @@
+e761476bdb8ed14d27632cd2eaff9b5e1b0cba95905aa1a54360fff44de3e40c *outputs/draft/champion_sim.md
+7fbdbd5122317ea7654fa72d7b94f2cd179ff3ff3954d30bff98f2fd441a616b *outputs/draft/champion_sim.csv
+3f21aa0a41c3dabefaa415d6cbe150d3152f48e7e2404f1c39cd9d23388e5648 *crystal/draft.py

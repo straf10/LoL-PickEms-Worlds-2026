@@ -1,0 +1,38 @@
+team,placement,reached_knockouts,games,games_playin,games_swiss,games_ko,region,league,year
+T1,Champion,True,17,0,5,12,LCK,LCK,2024
+Bilibili Gaming,Finalist,True,20,0,8,12,LPL,LPL,2024
+Gen.G,SF,True,14,0,5,9,LCK,LCK,2024
+Weibo Gaming,SF,True,16,0,9,7,LPL,LPL,2024
+FlyQuest,QF,True,14,0,9,5,NA,LCS,2024
+Hanwha Life Esports,QF,True,12,0,8,4,LCK,LCK,2024
+LNG Esports,QF,True,8,0,4,4,LPL,LPL,2024
+Top Esports,QF,True,8,0,5,3,LPL,LPL,2024
+Dplus Kia,Swiss exit,False,9,0,9,0,LCK,LCK,2024
+Fnatic,Swiss exit,False,6,0,6,0,LEC,LEC,2024
+G2 Esports,Swiss exit,False,8,0,8,0,LEC,LEC,2024
+GAM Esports,Swiss exit,False,12,4,8,0,LCP (Pacific),VCS,2024
+MAD Lions KOI,Swiss exit,False,10,5,5,0,LEC,LEC,2024
+PSG Talon,Swiss exit,False,13,8,5,0,LCP (Pacific),PCS,2024
+Team Liquid,Swiss exit,False,10,0,10,0,NA,LCS,2024
+paiN Gaming,Swiss exit,False,12,8,4,0,BR,CBLOL,2024
+100 Thieves,Play-In exit,False,7,7,0,0,NA,LCS,2024
+Fukuoka SoftBank HAWKS gaming,Play-In exit,False,4,4,0,0,LCP (Pacific),LJL,2024
+MGN Vikings Esports,Play-In exit,False,4,4,0,0,LCP (Pacific),VCS,2024
+Movistar R7,Play-In exit,False,8,8,0,0,LLA,LLA,2024
+T1,Champion,True,24,7,4,13,LCK,LCK,2025
+KT Rolster,Finalist,True,16,4,0,12,LCK,LCK,2025
+Gen.G,SF,True,13,3,2,8,LCK,LCK,2025
+Top Esports,SF,True,16,4,5,7,LPL,LPL,2025
+Anyone's Legend,QF,True,10,5,0,5,LPL,LPL,2025
+CTBC Flying Oyster,QF,True,12,5,4,3,LCP (Pacific),LCP,2025
+G2 Esports,QF,True,10,3,3,4,LEC,LEC,2025
+Hanwha Life Esports,QF,True,9,3,2,4,LCK,LCK,2025
+100 Thieves,Swiss exit,False,5,3,2,0,NA,LTA N,2025
+Bilibili Gaming,Swiss exit,False,8,3,5,0,LPL,LPL,2025
+FlyQuest,Swiss exit,False,8,3,5,0,NA,LTA N,2025
+Movistar KOI,Swiss exit,False,10,5,5,0,LEC,LEC,2025
+Team Secret Whales,Swiss exit,False,6,3,3,0,LCP (Pacific),LCP,2025
+Vivo Keyd Stars,Swiss exit,False,7,5,2,0,BR,LTA S,2025
+Fnatic,Play-In exit,False,5,5,0,0,LEC,LEC,2025
+Invictus Gaming,Play-In exit,False,4,4,0,0,LPL,LPL,2025
+PSG Talon,Play-In exit,False,5,5,0,0,LCP (Pacific),LCP,2025

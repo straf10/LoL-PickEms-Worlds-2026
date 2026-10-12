@@ -1,0 +1,880 @@
+{
+  "model": "binomial-logitnormal",
+  "pre_window_days": 60,
+  "late_window_days": 21,
+  "late_leagues": "all non-international",
+  "recommended": "fearless",
+  "pick": {
+    "a": -0.0237,
+    "b": 1.0337,
+    "c": 0.6848,
+    "sd_by_bin": {
+      "lt5": 0.9377,
+      "5to20": 0.3302,
+      "gt20": 0.1492
+    },
+    "se": {
+      "a": 0.0596,
+      "b": 0.0283,
+      "c": 0.0687
+    },
+    "n": 862,
+    "loglik": -1345.2966
+  },
+  "ban": {
+    "a": 0.1445,
+    "b": 1.1905,
+    "c": 0.6813,
+    "sd_by_bin": {
+      "lt5": 1.1986,
+      "5to20": 0.8065,
+      "gt20": 0.8011
+    },
+    "se": {
+      "a": 0.0944,
+      "b": 0.0355,
+      "c": 0.0682
+    },
+    "n": 862,
+    "loglik": -1258.5135
+  },
+  "rho_pick_ban": 0.3846,
+  "fearless": {
+    "pick": {
+      "a": -0.0237,
+      "b": 1.0337,
+      "c": 0.6848,
+      "sd_by_bin": {
+        "lt5": 0.9377,
+        "5to20": 0.3302,
+        "gt20": 0.1492
+      },
+      "se": {
+        "a": 0.0596,
+        "b": 0.0283,
+        "c": 0.0687
+      },
+      "n": 862,
+      "loglik": -1345.2966
+    },
+    "ban": {
+      "a": 0.1445,
+      "b": 1.1905,
+      "c": 0.6813,
+      "sd_by_bin": {
+        "lt5": 1.1986,
+        "5to20": 0.8065,
+        "gt20": 0.8011
+      },
+      "se": {
+        "a": 0.0944,
+        "b": 0.0355,
+        "c": 0.0682
+      },
+      "n": 862,
+      "loglik": -1258.5135
+    }
+  },
+  "pooled": {
+    "pick": {
+      "a": -0.0735,
+      "b": 1.0345,
+      "c": 0.4917,
+      "sd_by_bin": {
+        "lt5": 1.3865,
+        "5to20": 0.6989,
+        "gt20": 0.7617
+      },
+      "se": {
+        "a": 0.0568,
+        "b": 0.0215,
+        "c": 0.0363
+      },
+      "n": 1850,
+      "loglik": -3483.6447
+    },
+    "ban": {
+      "a": 0.0323,
+      "b": 1.2044,
+      "c": 0.6264,
+      "sd_by_bin": {
+        "lt5": 1.6325,
+        "5to20": 1.1588,
+        "gt20": 1.063
+      },
+      "se": {
+        "a": 0.0553,
+        "b": 0.0237,
+        "c": 0.0277
+      },
+      "n": 1850,
+      "loglik": -3134.7046
+    }
+  },
+  "events": [
+    {
+      "event": "WLDs 2022",
+      "league": "WLDs",
+      "year": 2022,
+      "start": "2022-09-29",
+      "G_pre": 563,
+      "G_ev": 127,
+      "G_late": 354,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCS",
+        "LEC",
+        "LJL",
+        "LPL",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 162,
+      "unique_picked_actual": 109,
+      "unique_picked_expected": 108.425
+    },
+    {
+      "event": "WLDs 2023",
+      "league": "WLDs",
+      "year": 2023,
+      "start": "2023-10-09",
+      "G_pre": 230,
+      "G_ev": 113,
+      "G_late": 259,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCS",
+        "LEC",
+        "LJL",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 163,
+      "unique_picked_actual": 89,
+      "unique_picked_expected": 101.4908
+    },
+    {
+      "event": "WLDs 2024",
+      "league": "WLDs",
+      "year": 2024,
+      "start": "2024-09-25",
+      "G_pre": 490,
+      "G_ev": 106,
+      "G_late": 337,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCS",
+        "LEC",
+        "LJL",
+        "LPL",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 169,
+      "unique_picked_actual": 95,
+      "unique_picked_expected": 110.7641
+    },
+    {
+      "event": "WLDs 2025",
+      "league": "WLDs",
+      "year": 2025,
+      "start": "2025-10-14",
+      "G_pre": 605,
+      "G_ev": 84,
+      "G_late": 556,
+      "leagues_pre": [
+        "LCK",
+        "LCP",
+        "LEC",
+        "LJL",
+        "LPL",
+        "LTA",
+        "LTA N",
+        "LTA S",
+        "PCS"
+      ],
+      "universe_size": 172,
+      "unique_picked_actual": 95,
+      "unique_picked_expected": 106.934
+    },
+    {
+      "event": "MSI 2022",
+      "league": "MSI",
+      "year": 2022,
+      "start": "2022-05-10",
+      "G_pre": 559,
+      "G_ev": 80,
+      "G_late": 190,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCS",
+        "LEC",
+        "LJL",
+        "LPL",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 162,
+      "unique_picked_actual": 98,
+      "unique_picked_expected": 86.7359
+    },
+    {
+      "event": "MSI 2023",
+      "league": "MSI",
+      "year": 2023,
+      "start": "2023-05-02",
+      "G_pre": 771,
+      "G_ev": 76,
+      "G_late": 308,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCS",
+        "LEC",
+        "LJL",
+        "LPL",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 163,
+      "unique_picked_actual": 79,
+      "unique_picked_expected": 86.8522
+    },
+    {
+      "event": "MSI 2024",
+      "league": "MSI",
+      "year": 2024,
+      "start": "2024-05-01",
+      "G_pre": 645,
+      "G_ev": 78,
+      "G_late": 360,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCS",
+        "LEC",
+        "LJL",
+        "LPL",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 169,
+      "unique_picked_actual": 86,
+      "unique_picked_expected": 89.4445
+    },
+    {
+      "event": "MSI 2025",
+      "league": "MSI",
+      "year": 2025,
+      "start": "2025-06-27",
+      "G_pre": 909,
+      "G_ev": 80,
+      "G_late": 459,
+      "leagues_pre": [
+        "LCK",
+        "LCP",
+        "LEC",
+        "LJL",
+        "LPL",
+        "LTA N",
+        "LTA S",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 172,
+      "unique_picked_actual": 107,
+      "unique_picked_expected": 107.53
+    },
+    {
+      "event": "MSI 2026",
+      "league": "MSI",
+      "year": 2026,
+      "start": "2026-06-28",
+      "G_pre": 689,
+      "G_ev": 71,
+      "G_late": 337,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCP",
+        "LCS",
+        "LEC",
+        "LJL",
+        "LPL",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 173,
+      "unique_picked_actual": 101,
+      "unique_picked_expected": 105.5066
+    },
+    {
+      "event": "FST 2025",
+      "league": "FST",
+      "year": 2025,
+      "start": "2025-03-10",
+      "G_pre": 654,
+      "G_ev": 35,
+      "G_late": 704,
+      "leagues_pre": [
+        "LCK",
+        "LCP",
+        "LEC",
+        "LJL",
+        "LPL",
+        "LTA",
+        "LTA N",
+        "LTA S",
+        "PCS",
+        "VCS"
+      ],
+      "universe_size": 172,
+      "unique_picked_actual": 84,
+      "unique_picked_expected": 87.3296
+    },
+    {
+      "event": "FST 2026",
+      "league": "FST",
+      "year": 2026,
+      "start": "2026-03-16",
+      "G_pre": 846,
+      "G_ev": 45,
+      "G_late": 615,
+      "leagues_pre": [
+        "CBLOL",
+        "LCK",
+        "LCP",
+        "LCS",
+        "LEC",
+        "LJL",
+        "LPL",
+        "VCS"
+      ],
+      "universe_size": 173,
+      "unique_picked_actual": 95,
+      "unique_picked_expected": 92.5272
+    }
+  ],
+  "leader_check": [
+    {
+      "event": "WLDs 2022",
+      "presence_leader": "Aatrox",
+      "its_pre_rank": 25,
+      "pre_leader": "Kalista",
+      "its_event_rank": 9,
+      "pick_leader": "Sylas",
+      "its_pre_rank_pick": 9
+    },
+    {
+      "event": "WLDs 2023",
+      "presence_leader": "Orianna",
+      "its_pre_rank": 54,
+      "pre_leader": "Xayah",
+      "its_event_rank": 2,
+      "pick_leader": "Kai'Sa",
+      "its_pre_rank_pick": 2
+    },
+    {
+      "event": "WLDs 2024",
+      "presence_leader": "Yone",
+      "its_pre_rank": 28,
+      "pre_leader": "Rumble",
+      "its_event_rank": 13,
+      "pick_leader": "Rell",
+      "its_pre_rank_pick": 2
+    },
+    {
+      "event": "WLDs 2025",
+      "presence_leader": "Yunara",
+      "its_pre_rank": 2,
+      "pre_leader": "Azir",
+      "its_event_rank": 2,
+      "pick_leader": "Xin Zhao",
+      "its_pre_rank_pick": 3
+    },
+    {
+      "event": "MSI 2022",
+      "presence_leader": "Ahri",
+      "its_pre_rank": 2,
+      "pre_leader": "Zeri",
+      "its_event_rank": 58,
+      "pick_leader": "Gwen",
+      "its_pre_rank_pick": 28
+    },
+    {
+      "event": "MSI 2023",
+      "presence_leader": "Vi",
+      "its_pre_rank": 2,
+      "pre_leader": "Annie",
+      "its_event_rank": 3,
+      "pick_leader": "Aphelios",
+      "its_pre_rank_pick": 6
+    },
+    {
+      "event": "MSI 2024",
+      "presence_leader": "Kalista",
+      "its_pre_rank": 1,
+      "pre_leader": "Kalista",
+      "its_event_rank": 1,
+      "pick_leader": "K'Sante",
+      "its_pre_rank_pick": 3
+    },
+    {
+      "event": "MSI 2025",
+      "presence_leader": "Varus",
+      "its_pre_rank": 2,
+      "pre_leader": "Vi",
+      "its_event_rank": 5,
+      "pick_leader": "Rell",
+      "its_pre_rank_pick": 6
+    },
+    {
+      "event": "MSI 2026",
+      "presence_leader": "Vi",
+      "its_pre_rank": 13,
+      "pre_leader": "Varus",
+      "its_event_rank": 7,
+      "pick_leader": "Jarvan IV",
+      "its_pre_rank_pick": 4
+    },
+    {
+      "event": "FST 2025",
+      "presence_leader": "Kalista",
+      "its_pre_rank": 2,
+      "pre_leader": "Skarner",
+      "its_event_rank": 2,
+      "pick_leader": "Ezreal",
+      "its_pre_rank_pick": 6
+    },
+    {
+      "event": "FST 2026",
+      "presence_leader": "Orianna",
+      "its_pre_rank": 2,
+      "pre_leader": "Varus",
+      "its_event_rank": 4,
+      "pick_leader": "Yunara",
+      "its_pre_rank_pick": 2
+    }
+  ],
+  "smoothed_fit_v1": {
+    "pre_window_days": 60,
+    "smoothing": "(x+0.5)/(G+1)",
+    "recommended": "fearless",
+    "sd_note": "sd excludes event-window sampling noise; the draft sim regenerates it",
+    "pick": {
+      "a": -0.9838,
+      "b": 0.6028,
+      "sd": 0.5812,
+      "n": 733,
+      "r2": 0.6334,
+      "sd_by_bin": {
+        "lt5": 0.6058,
+        "5to20": 0.596,
+        "gt20": 0.3908
+      },
+      "sd_raw": 0.8264,
+      "lt5_fallback": false
+    },
+    "ban": {
+      "a": -1.1533,
+      "b": 0.5692,
+      "sd": 0.7206,
+      "n": 733,
+      "r2": 0.6171,
+      "sd_by_bin": {
+        "lt5": 0.6169,
+        "5to20": 0.8238,
+        "gt20": 1.0111
+      },
+      "sd_raw": 0.9333,
+      "lt5_fallback": false
+    },
+    "presence": {
+      "a": -0.5723,
+      "b": 0.7126,
+      "sd": 0.8204,
+      "n": 733,
+      "r2": 0.6906,
+      "sd_by_bin": {
+        "lt5": 0.798,
+        "5to20": 0.9808,
+        "gt20": 0.7181
+      },
+      "sd_raw": 0.9811,
+      "lt5_fallback": false
+    },
+    "raw_fit": {
+      "pick": {
+        "a": -0.9838,
+        "b": 0.6028,
+        "sd": 0.8264,
+        "n": 733,
+        "r2": 0.6334,
+        "sd_by_bin": {
+          "lt5": 0.8961,
+          "5to20": 0.766,
+          "gt20": 0.4581
+        }
+      },
+      "ban": {
+        "a": -1.1533,
+        "b": 0.5692,
+        "sd": 0.9333,
+        "n": 733,
+        "r2": 0.6171,
+        "sd_by_bin": {
+          "lt5": 0.888,
+          "5to20": 0.9626,
+          "gt20": 1.0096
+        }
+      },
+      "presence": {
+        "a": -0.5723,
+        "b": 0.7126,
+        "sd": 0.9811,
+        "n": 733,
+        "r2": 0.6906,
+        "sd_by_bin": {
+          "lt5": 1.03,
+          "5to20": 1.0669,
+          "gt20": 0.7433
+        }
+      }
+    },
+    "fearless": {
+      "pick": {
+        "a": -0.9838,
+        "b": 0.6028,
+        "sd": 0.8264,
+        "n": 733,
+        "r2": 0.6334
+      },
+      "ban": {
+        "a": -1.1533,
+        "b": 0.5692,
+        "sd": 0.9333,
+        "n": 733,
+        "r2": 0.6171
+      },
+      "presence": {
+        "a": -0.5723,
+        "b": 0.7126,
+        "sd": 0.9811,
+        "n": 733,
+        "r2": 0.6906
+      }
+    },
+    "pre_fearless": {
+      "pick": {
+        "a": -1.2845,
+        "b": 0.5672,
+        "sd": 1.1779,
+        "n": 781,
+        "r2": 0.4409
+      },
+      "ban": {
+        "a": -1.5214,
+        "b": 0.5246,
+        "sd": 1.3319,
+        "n": 781,
+        "r2": 0.4231
+      },
+      "presence": {
+        "a": -0.929,
+        "b": 0.6307,
+        "sd": 1.5654,
+        "n": 781,
+        "r2": 0.4457
+      }
+    },
+    "rho_pick_ban": 0.6606,
+    "events": [
+      {
+        "event": "WLDs 2022",
+        "start": "2022-09-29",
+        "G_pre": 563,
+        "G_ev": 127,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCS",
+          "LEC",
+          "LJL",
+          "LPL",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "WLDs 2023",
+        "start": "2023-10-09",
+        "G_pre": 230,
+        "G_ev": 113,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCS",
+          "LEC",
+          "LJL",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "WLDs 2024",
+        "start": "2024-09-25",
+        "G_pre": 490,
+        "G_ev": 106,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCS",
+          "LEC",
+          "LJL",
+          "LPL",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "WLDs 2025",
+        "start": "2025-10-14",
+        "G_pre": 605,
+        "G_ev": 84,
+        "leagues_pre": [
+          "LCK",
+          "LCP",
+          "LEC",
+          "LJL",
+          "LPL",
+          "LTA",
+          "LTA N",
+          "LTA S",
+          "PCS"
+        ]
+      },
+      {
+        "event": "MSI 2022",
+        "start": "2022-05-10",
+        "G_pre": 559,
+        "G_ev": 80,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCS",
+          "LEC",
+          "LJL",
+          "LPL",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "MSI 2023",
+        "start": "2023-05-02",
+        "G_pre": 771,
+        "G_ev": 76,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCS",
+          "LEC",
+          "LJL",
+          "LPL",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "MSI 2024",
+        "start": "2024-05-01",
+        "G_pre": 645,
+        "G_ev": 78,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCS",
+          "LEC",
+          "LJL",
+          "LPL",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "MSI 2025",
+        "start": "2025-06-27",
+        "G_pre": 909,
+        "G_ev": 80,
+        "leagues_pre": [
+          "LCK",
+          "LCP",
+          "LEC",
+          "LJL",
+          "LPL",
+          "LTA N",
+          "LTA S",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "MSI 2026",
+        "start": "2026-06-28",
+        "G_pre": 689,
+        "G_ev": 71,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCP",
+          "LCS",
+          "LEC",
+          "LJL",
+          "LPL",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "FST 2025",
+        "start": "2025-03-10",
+        "G_pre": 654,
+        "G_ev": 35,
+        "leagues_pre": [
+          "LCK",
+          "LCP",
+          "LEC",
+          "LJL",
+          "LPL",
+          "LTA",
+          "LTA N",
+          "LTA S",
+          "PCS",
+          "VCS"
+        ]
+      },
+      {
+        "event": "FST 2026",
+        "start": "2026-03-16",
+        "G_pre": 846,
+        "G_ev": 45,
+        "leagues_pre": [
+          "CBLOL",
+          "LCK",
+          "LCP",
+          "LCS",
+          "LEC",
+          "LJL",
+          "LPL",
+          "VCS"
+        ]
+      }
+    ],
+    "leader_check": [
+      {
+        "event": "WLDs 2022",
+        "presence_leader": "Aatrox",
+        "its_pre_rank": 25,
+        "pre_leader": "Kalista",
+        "its_event_rank": 9,
+        "pick_leader": "Sylas",
+        "its_pre_rank_pick": 9
+      },
+      {
+        "event": "WLDs 2023",
+        "presence_leader": "Orianna",
+        "its_pre_rank": 54,
+        "pre_leader": "Xayah",
+        "its_event_rank": 2,
+        "pick_leader": "Kai'Sa",
+        "its_pre_rank_pick": 2
+      },
+      {
+        "event": "WLDs 2024",
+        "presence_leader": "Yone",
+        "its_pre_rank": 28,
+        "pre_leader": "Rumble",
+        "its_event_rank": 13,
+        "pick_leader": "Rell",
+        "its_pre_rank_pick": 2
+      },
+      {
+        "event": "WLDs 2025",
+        "presence_leader": "Yunara",
+        "its_pre_rank": 2,
+        "pre_leader": "Azir",
+        "its_event_rank": 2,
+        "pick_leader": "Xin Zhao",
+        "its_pre_rank_pick": 3
+      },
+      {
+        "event": "MSI 2022",
+        "presence_leader": "Ahri",
+        "its_pre_rank": 2,
+        "pre_leader": "Zeri",
+        "its_event_rank": 58,
+        "pick_leader": "Gwen",
+        "its_pre_rank_pick": 28
+      },
+      {
+        "event": "MSI 2023",
+        "presence_leader": "Vi",
+        "its_pre_rank": 2,
+        "pre_leader": "Annie",
+        "its_event_rank": 3,
+        "pick_leader": "Aphelios",
+        "its_pre_rank_pick": 6
+      },
+      {
+        "event": "MSI 2024",
+        "presence_leader": "Kalista",
+        "its_pre_rank": 1,
+        "pre_leader": "Kalista",
+        "its_event_rank": 1,
+        "pick_leader": "K'Sante",
+        "its_pre_rank_pick": 3
+      },
+      {
+        "event": "MSI 2025",
+        "presence_leader": "Varus",
+        "its_pre_rank": 2,
+        "pre_leader": "Vi",
+        "its_event_rank": 5,
+        "pick_leader": "Rell",
+        "its_pre_rank_pick": 6
+      },
+      {
+        "event": "MSI 2026",
+        "presence_leader": "Vi",
+        "its_pre_rank": 13,
+        "pre_leader": "Varus",
+        "its_event_rank": 7,
+        "pick_leader": "Jarvan IV",
+        "its_pre_rank_pick": 4
+      },
+      {
+        "event": "FST 2025",
+        "presence_leader": "Kalista",
+        "its_pre_rank": 2,
+        "pre_leader": "Skarner",
+        "its_event_rank": 2,
+        "pick_leader": "Ezreal",
+        "its_pre_rank_pick": 6
+      },
+      {
+        "event": "FST 2026",
+        "presence_leader": "Orianna",
+        "its_pre_rank": 2,
+        "pre_leader": "Varus",
+        "its_event_rank": 4,
+        "pick_leader": "Yunara",
+        "its_pre_rank_pick": 2
+      }
+    ]
+  },
+  "sd_note": "sd is the event-specific shift; binomial event noise is excluded (the draft sim regenerates it)"
+}

@@ -1,0 +1,38 @@
+  [pick/fearless] start 0: success=True nll=1345.2966 theta=[-0.0237, 1.0337, 0.6848, -0.0644, -1.1082, -1.9023] msg=CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+  [pick/fearless] start 1: success=True nll=1345.2966 theta=[-0.0237, 1.0337, 0.6848, -0.0644, -1.1082, -1.9023] msg=CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+
+Backtest, closed-form pick model (actual - expected):
+    event  G_ev  expected  realized_sd  actual  resid
+WLDs 2022   127    108.42         4.45     109   0.58
+WLDs 2023   113    101.49         4.83      89 -12.49
+WLDs 2024   106    110.76         4.58      95 -15.76
+WLDs 2025    84    106.93         4.33      95 -11.93
+ MSI 2022    80     86.74         4.60      98  11.26
+ MSI 2023    76     86.85         4.43      79  -7.85
+ MSI 2024    78     89.44         4.27      86  -3.44
+ MSI 2025    80    107.53         4.32     107  -0.53
+ MSI 2026    71    105.51         4.31     101  -4.51
+ FST 2025    35     87.33         4.37      84  -3.33
+ FST 2026    45     92.53         4.29      95   2.47
+
+Draft sim input: outputs\q10\draft_q10_s5000.pkl
+
+Worlds 2026 closed form: G_pre 528, G_late 563, universe 173, mean G 103.19
+  expected unique at mean G 111.28, averaged over sim G 111.27
+Draft sim (shifted): mean 110.51, sd 4.04, median 110, n 5000
+  gap draft - closed form (sim-G average): -0.76
+
+Model-error sd (pooled over 11 events, realized binomial spread removed): 6.32
+
+Bucket probabilities (seed 11, 5000 sims x 200 noise draws):
+                                          variant       mu  se_mu     sd  a) 0-99  b) 100-104  c) 105-109  d) 110-114  e) 115-119  f) 120+  sum
+                         Worlds 2022-25 (primary)  -9.9035 3.5936 7.2744   0.4469      0.2336      0.1774      0.0948      0.0358   0.0116  1.0
+                                   Worlds 2023-25 -13.3963 1.1948 6.4367   0.6239      0.2109      0.1134      0.0406      0.0095   0.0017  1.0
+                                    All 11 events  -4.1400 2.3295 6.7402   0.1906      0.2151      0.2496      0.1946      0.1027   0.0474  1.0
+Worlds 2022-25, sd without realized-noise removal  -9.9035 3.5936 8.0354   0.4508      0.2170      0.1713      0.0998      0.0431   0.0180  1.0
+                Previous manual -10 +/- 7 (check) -10.0000    NaN 7.0000   0.4500      0.2396      0.1777      0.0907      0.0324   0.0094  1.0
+                    No correction (raw draft sim)   0.0000    NaN 0.0000   0.0040      0.0626      0.3374      0.4356      0.1480   0.0124  1.0
+MC vs analytic max abs diff: [0.0006, 0.0004, 0.0007, 0.0006, 0.0007]
+
+Wrote C:\Python\LOL_PICKEMS\outputs\q10\q10_backtest.csv
+Wrote C:\Python\LOL_PICKEMS\outputs\q10\q10_buckets.csv

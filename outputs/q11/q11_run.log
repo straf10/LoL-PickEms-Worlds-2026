@@ -1,0 +1,37 @@
+   year  worlds_under  worlds_n  intl_under  intl_n  dom6wk_under  dom6wk_n  dom8wk_under  dom8wk_n  dom_year_under  dom_year_n  gap_vs_intl  gap_vs_dom6wk  gap_vs_dom8wk  gap_vs_dom_year
+0  2022         59.84       127       63.75      80         44.87       156         47.20       339           51.10        2045        -3.91          14.97          12.64             8.74
+1  2023         61.95       113       64.47      76         72.73        22         58.57        70           57.44        2037        -2.53         -10.78           3.38             4.51
+2  2024         48.11       106       64.95      97         55.76       165         57.24       290           52.87        1948       -16.84          -7.64          -9.13            -4.76
+3  2025         48.81        84       58.78     148         59.81       209         58.02       343           54.26        1959        -9.97         -11.00          -9.21            -5.45
+4  2026           NaN         0       52.69     167         56.95       223         53.90       410           50.43        2417          NaN            NaN            NaN              NaN
+                            method  err 2023  err 2024  err 2025   rmse
+0                      last Worlds     -2.10     13.83     -0.70   8.09
+1             mean of prior Worlds     -2.10     12.78      7.82   8.74
+2  same-year intl + prior intl gap     -1.38     13.62      2.22   8.01
+3           same-year intl, no gap      2.53     16.84      9.97  11.39
+4     6wk domestic + prior 6wk gap     25.75      9.74      9.85  16.88
+5             6wk domestic, no gap     10.78      7.64     11.00   9.93
+6     8wk domestic + prior 8wk gap      9.27     17.14     11.51  13.06
+seed 11: sims 20000, games 2064617
+seed 12: sims 20000, games 2064003
+                                    variant  seed     mu     sd  pooled under  mean sim share  P(After)  P(Before)  P(tie)  mean games  P(After) normal approx
+0                   (a) current: fixed 0.44    11  0.440  0.000         0.440           0.440     0.879      0.102   0.019     103.231                   0.890
+1                (b) fixed 0.44 + target sd    11  0.440  0.080         0.439           0.439     0.734      0.251   0.015     103.231                   0.739
+2          (c) rebuilt: intl + gap, with sd    11  0.444  0.080         0.444           0.444     0.711      0.272   0.017     103.231                   0.725
+3                      s1 intl 2026, no gap    11  0.527  0.114         0.527           0.528     0.405      0.580   0.015     103.231                   0.414
+4              s2 recent domestic 6wk + gap    11  0.533  0.169         0.532           0.532     0.421      0.568   0.011     103.231                   0.425
+5             s3 mean of all Worlds 2022-25    11  0.547  0.087         0.546           0.546     0.316      0.669   0.015     103.231                   0.320
+6                     s4 last Worlds (2025)    11  0.488  0.081         0.489           0.489     0.534      0.448   0.018     103.231                   0.550
+7            s5 recent domestic 6wk, no gap    11  0.570  0.099         0.570           0.570     0.257      0.729   0.013     103.231                   0.265
+8   avg of projection methods (inverse MSE)    11    NaN    NaN           NaN             NaN     0.468        NaN     NaN         NaN                     NaN
+9                   (a) current: fixed 0.44    12  0.440  0.000         0.440           0.440     0.881      0.101   0.018     103.200                   0.890
+10               (b) fixed 0.44 + target sd    12  0.440  0.080         0.440           0.440     0.732      0.251   0.017     103.200                   0.739
+11         (c) rebuilt: intl + gap, with sd    12  0.444  0.080         0.443           0.443     0.718      0.265   0.017     103.200                   0.725
+12                     s1 intl 2026, no gap    12  0.527  0.114         0.527           0.527     0.408      0.577   0.015     103.200                   0.414
+13             s2 recent domestic 6wk + gap    12  0.533  0.169         0.534           0.534     0.418      0.571   0.011     103.200                   0.425
+14            s3 mean of all Worlds 2022-25    12  0.547  0.087         0.546           0.546     0.314      0.668   0.018     103.200                   0.320
+15                    s4 last Worlds (2025)    12  0.488  0.081         0.489           0.489     0.539      0.442   0.019     103.200                   0.550
+16           s5 recent domestic 6wk, no gap    12  0.570  0.099         0.570           0.570     0.257      0.729   0.014     103.200                   0.265
+17  avg of projection methods (inverse MSE)    12    NaN    NaN           NaN             NaN     0.471        NaN     NaN         NaN                     NaN
+
+projections (under-share %): intl+gap 44.38, 6wk dom+gap 53.34, 8wk dom+gap 53.32, mean Worlds 54.68
