@@ -1,6 +1,6 @@
 """Build data/pickems.duckdb from Oracle's Elixir yearly CSVs in data/raw/oe/.
 
-Run from the project root:  python ingest/oracles.py
+Run from the project root:  python -m ingest.oracles
 Idempotent: drops and rebuilds all tables from the CSVs.
 """
 

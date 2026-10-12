@@ -1,7 +1,7 @@
 """Build the Worlds 2026 team, roster and alias tables from data/pickems.duckdb.
 
 Read-only on the DuckDB file (built by ingest/oracles.py). No network access.
-Run from the project root:  python ingest/rosters_from_db.py
+Run from the project root:  python -m ingest.rosters_from_db
 
 Writes:
   data/worlds2026_teams.csv   one row per Worlds team (OE name, OE team_id, seed, stage entry)

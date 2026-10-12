@@ -7,7 +7,7 @@ Inputs:
   data/champion_changes.csv  hand-curated from Riot's official patch notes
                              (cached text in data/raw/patches/riot_patch_26-*.txt)
 Run:
-  python crystal/meta.py
+  python -m crystal.meta
 
 Patch labels: Oracle's Elixir label -> Riot patch
   16.17 -> 26.17 (live 2026-08-25)   16.18 -> 26.18 (2026-09-09)
