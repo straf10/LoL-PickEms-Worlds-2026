@@ -23,7 +23,7 @@ from common.paths import DB_PATH, ROOT
 from model.player_ratings import PlayerModel, PParams, load
 from model.ratings import BTModel, Params, load_games, series_prob, team_regions
 
-AS_OF = pd.Timestamp("2026-10-15")
+AS_OF = pd.Timestamp("2026-10-18")   # all data through 2026-10-17 (Play-In games included)
 W_PLAYER = 0.5
 MARKET_GAP = 0.15
 USE_CALIBRATION = True

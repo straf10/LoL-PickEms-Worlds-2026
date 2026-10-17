@@ -1,96 +1,96 @@
 team,role,player,games_2026,top3,pool_depth,low_sample,top30_share_pct
-AL,Top,Breathe,90,"Gnar 18, Ambessa 11, K'Sante 11",6,False,35.55555555555556
+AL,Top,Breathe,90,"Gnar 18, Ambessa 11, K'Sante 11",6,False,55.55555555555556
 AL,Jungle,Tarzan,142,"Naafiri 20, Pantheon 20, Jarvan IV 16",12,False,69.71830985915493
 AL,Mid,Shanks,142,"Ryze 23, Azir 18, Cassiopeia 15",9,False,47.88732394366197
-AL,Bot,Hope,142,"Varus 21, Ezreal 18, Corki 17",10,False,39.436619718309856
+AL,Bot,Hope,142,"Varus 21, Ezreal 18, Corki 17",10,False,33.80281690140845
 AL,Support,Kael,142,"Neeko 16, Bard 15, Seraphine 15",13,False,40.140845070422536
-BLG,Top,Bin,147,"Gnar 23, Sion 18, Renekton 16",11,False,28.57142857142857
+BLG,Top,Bin,147,"Gnar 23, Sion 18, Renekton 16",11,False,44.21768707482993
 BLG,Jungle,Xun,177,"Pantheon 26, Jarvan IV 24, Naafiri 19",14,False,68.36158192090396
 BLG,Mid,Knight,177,"Ryze 22, Orianna 15, Syndra 14",17,False,50.847457627118644
-BLG,Bot,Viper,177,"Ezreal 28, Ashe 18, Yunara 16",15,False,45.19774011299435
+BLG,Bot,Viper,177,"Ezreal 28, Ashe 18, Yunara 16",15,False,36.15819209039548
 BLG,Support,ON,177,"Bard 27, Alistar 21, Seraphine 19",14,False,43.50282485875706
-C9,Top,Thanatos,98,"Renekton 15, K'Sante 14, Gnar 13",6,False,29.591836734693878
-C9,Jungle,Blaber,98,"Jarvan IV 14, Nocturne 10, Wukong 10",11,False,57.14285714285714
-C9,Mid,Loki,50,"Orianna 8, Ryze 6, Aurora 5",4,False,54.0
-C9,Bot,Tactical,51,"Ezreal 11, Caitlyn 6, Yunara 5",8,False,72.54901960784314
-C9,Support,Vulcan,98,"Bard 11, Karma 11, Nautilus 10",8,False,51.02040816326531
-CFO,Top,Rest,87,"Rumble 17, Renekton 12, Gnar 8",4,False,37.93103448275862
+C9,Top,Thanatos,107,"Renekton 16, K'Sante 16, Gnar 14",8,False,43.925233644859816
+C9,Jungle,Blaber,107,"Jarvan IV 15, Wukong 11, Nocturne 10",9,False,57.009345794392516
+C9,Mid,Loki,59,"Orianna 9, Ryze 6, Sylas 6",5,False,54.23728813559322
+C9,Bot,Tactical,60,"Ezreal 13, Caitlyn 7, Yunara 6",7,False,63.33333333333333
+C9,Support,Vulcan,107,"Bard 12, Karma 12, Nautilus 11",8,False,50.467289719626166
+CFO,Top,Rest,87,"Rumble 17, Renekton 12, Gnar 8",4,False,47.12643678160919
 CFO,Jungle,Shad0w,87,"Jarvan IV 12, Pantheon 11, Wukong 10",9,False,66.66666666666666
 CFO,Mid,Pout,61,"Akali 11, Aurora 8, Orianna 6",8,False,60.65573770491803
-CFO,Bot,Doggo,87,"Lucian 13, Ezreal 10, Kai'Sa 10",6,False,47.12643678160919
+CFO,Bot,Doggo,87,"Lucian 13, Ezreal 10, Kai'Sa 10",6,False,37.93103448275862
 CFO,Support,Kino,61,"Nautilus 9, Lulu 8, Milio 7",5,False,42.62295081967213
-DK,Top,Siwoo,146,"Jayce 21, K'Sante 19, Gnar 16",11,False,35.61643835616438
+DK,Top,Siwoo,146,"Jayce 21, K'Sante 19, Gnar 16",11,False,46.57534246575342
 DK,Jungle,Lucid,145,"Jarvan IV 31, Xin Zhao 25, Vi 16",8,False,64.13793103448275
 DK,Mid,ShowMaker,146,"Viktor 17, Ryze 15, Annie 13",9,False,45.20547945205479
-DK,Bot,Smash,146,"Ezreal 16, Lucian 16, Yunara 16",12,False,56.849315068493155
+DK,Bot,Smash,146,"Ezreal 16, Lucian 16, Yunara 16",12,False,45.89041095890411
 DK,Support,Career,146,"Lulu 19, Bard 16, Seraphine 14",12,False,46.57534246575342
-FUR,Top,Guigo,102,"Ambessa 16, K'Sante 16, Sion 14",9,False,27.450980392156865
-FUR,Jungle,Tatu,96,"Xin Zhao 14, Pantheon 12, Wukong 8",13,False,47.91666666666667
-FUR,Mid,Tutsz,102,"Ryze 16, Akali 12, Syndra 11",9,False,52.94117647058824
-FUR,Bot,Ayu,102,"Ezreal 17, Yunara 13, Ashe 11",10,False,54.90196078431373
-FUR,Support,JoJo,102,"Seraphine 12, Lulu 11, Rakan 9",11,False,39.21568627450981
-G2,Top,BrokenBlade,131,"K'Sante 22, Rumble 13, Kled 12",13,False,32.06106870229007
+FUR,Top,Guigo,109,"Ambessa 17, K'Sante 17, Sion 14",10,False,31.19266055045872
+FUR,Jungle,Tatu,103,"Xin Zhao 14, Pantheon 12, Wukong 9",12,False,49.51456310679612
+FUR,Mid,Tutsz,109,"Ryze 17, Akali 13, Syndra 12",9,False,53.21100917431193
+FUR,Bot,Ayu,109,"Ezreal 17, Yunara 15, Ashe 11",10,False,40.36697247706422
+FUR,Support,JoJo,109,"Lulu 13, Seraphine 12, Rakan 10",11,False,39.44954128440367
+G2,Top,BrokenBlade,131,"K'Sante 22, Rumble 13, Kled 12",13,False,40.458015267175576
 G2,Jungle,SkewMond,131,"Xin Zhao 22, Jarvan IV 16, Pantheon 14",11,False,53.43511450381679
 G2,Mid,Caps,131,"Ahri 15, Orianna 13, Ryze 11",12,False,39.69465648854962
-G2,Bot,Hans Sama,131,"Yunara 19, Ashe 14, Ezreal 14",15,False,43.51145038167939
+G2,Bot,Hans Sama,131,"Yunara 19, Ashe 14, Ezreal 14",15,False,29.00763358778626
 G2,Support,Labrov,131,"Lulu 19, Bard 12, Alistar 11",13,False,45.80152671755725
-GEN,Top,Kiin,128,"Ambessa 17, Sion 12, Rumble 10",13,False,24.21875
+GEN,Top,Kiin,128,"Ambessa 17, Sion 12, Rumble 10",13,False,31.25
 GEN,Jungle,Canyon,128,"Xin Zhao 16, Pantheon 16, Jarvan IV 14",13,False,65.625
 GEN,Mid,Chovy,128,"Ryze 19, Galio 16, Anivia 14",15,False,33.59375
-GEN,Bot,Ruler,128,"Jhin 18, Ezreal 16, Yunara 15",14,False,60.15625
+GEN,Bot,Ruler,128,"Jhin 18, Ezreal 16, Yunara 15",14,False,48.4375
 GEN,Support,Duro,128,"Seraphine 17, Bard 14, Karma 12",15,False,43.75
-HLE,Top,Zeus,143,"Gnar 18, Jayce 14, Ambessa 14",13,False,25.874125874125873
+HLE,Top,Zeus,143,"Gnar 18, Jayce 14, Ambessa 14",13,False,38.46153846153847
 HLE,Jungle,Kanavi,143,"Jarvan IV 26, Vi 23, Pantheon 15",11,False,72.72727272727273
 HLE,Mid,Zeka,143,"Ryze 18, Aurora 16, Ahri 16",13,False,46.15384615384615
-HLE,Bot,Gumayusi,143,"Ziggs 19, Jhin 18, Ashe 15",10,False,42.65734265734265
+HLE,Bot,Gumayusi,143,"Ziggs 19, Jhin 18, Ashe 15",10,False,35.66433566433567
 HLE,Support,Delight,137,"Bard 19, Alistar 14, Seraphine 14",10,False,47.44525547445255
-IG,Top,TheShy,43,"Rumble 6, Olaf 4, Gnar 4",6,False,37.2093023255814
+IG,Top,TheShy,43,"Rumble 6, Olaf 4, Gnar 4",6,False,46.51162790697674
 IG,Jungle,Wei,126,"Xin Zhao 17, Jarvan IV 14, Nocturne 13",7,False,65.87301587301587
 IG,Mid,Rookie,86,"Syndra 10, Ryze 10, Orianna 8",6,False,44.18604651162791
-IG,Bot,JiaQi,114,"Yunara 18, Jhin 14, Ashe 13",8,False,49.122807017543856
+IG,Bot,JiaQi,114,"Yunara 18, Jhin 14, Ashe 13",8,False,33.33333333333333
 IG,Support,Meiko,81,"Lulu 15, Seraphine 12, Bard 10",5,False,59.25925925925925
-KC,Top,Canna,138,"Rumble 31, Gnar 18, Sion 14",10,False,34.05797101449276
-KC,Jungle,Yike,138,"Vi 23, Wukong 16, Jarvan IV 14",11,False,73.18840579710145
-KC,Mid,kyeahoo,138,"Azir 17, Ryze 15, Orianna 13",13,False,42.7536231884058
-KC,Bot,Caliste,138,"Ezreal 20, Ashe 15, Caitlyn 15",11,False,52.17391304347826
-KC,Support,Busio,138,"Bard 17, Seraphine 17, Nami 14",9,False,41.30434782608695
-LOS,Top,Zest,111,"Rumble 14, Jayce 12, Gnar 11",11,False,30.630630630630627
-LOS,Jungle,Curse,118,"Pantheon 17, Xin Zhao 15, Jarvan IV 14",9,False,61.86440677966102
-LOS,Mid,Feisty,111,"Ryze 22, Orianna 15, Taliyah 13",10,False,58.55855855855856
-LOS,Bot,Duduhh,111,"Ezreal 14, Corki 13, Lucian 12",10,False,48.64864864864865
-LOS,Support,Ackerman,111,"Alistar 13, Bard 12, Neeko 10",12,False,35.13513513513514
-LYON,Top,Dhokla,119,"Gnar 17, Rumble 16, K'Sante 12",10,False,33.61344537815126
+KC,Top,Canna,146,"Rumble 32, Gnar 18, Sion 14",11,False,46.57534246575342
+KC,Jungle,Yike,146,"Vi 25, Wukong 16, Jarvan IV 15",11,False,73.97260273972603
+KC,Mid,kyeahoo,146,"Azir 17, Ryze 15, Orianna 14",13,False,43.83561643835616
+KC,Bot,Caliste,146,"Ezreal 20, Ashe 16, Caitlyn 15",11,False,41.78082191780822
+KC,Support,Busio,146,"Seraphine 18, Bard 17, Nami 15",10,False,41.0958904109589
+LOS,Top,Zest,115,"Rumble 14, Jayce 13, Gnar 11",11,False,40.869565217391305
+LOS,Jungle,Curse,122,"Pantheon 18, Xin Zhao 15, Jarvan IV 14",10,False,62.295081967213115
+LOS,Mid,Feisty,115,"Ryze 22, Orianna 16, Taliyah 14",11,False,58.26086956521739
+LOS,Bot,Duduhh,115,"Ezreal 14, Lucian 13, Corki 13",10,False,43.47826086956522
+LOS,Support,Ackerman,115,"Alistar 13, Bard 12, Neeko 11",12,False,34.78260869565217
+LYON,Top,Dhokla,119,"Gnar 17, Rumble 16, K'Sante 12",10,False,47.89915966386555
 LYON,Jungle,Inspired,113,"Xin Zhao 16, Wukong 15, Nocturne 12",10,False,57.52212389380531
 LYON,Mid,Saint,122,"Ryze 15, Viktor 12, Ahri 10",15,False,45.08196721311475
-LYON,Bot,Berserker,122,"Yunara 18, Ezreal 15, Lucian 14",9,False,57.377049180327866
+LYON,Bot,Berserker,122,"Yunara 18, Ezreal 15, Lucian 14",9,False,42.62295081967213
 LYON,Support,Isles,122,"Lulu 18, Nautilus 13, Milio 11",16,False,44.26229508196721
-MKOI,Top,Myrwn,111,"Rumble 21, Ambessa 13, Renekton 9",11,False,33.33333333333333
+MKOI,Top,Myrwn,111,"Rumble 21, Ambessa 13, Renekton 9",11,False,37.83783783783784
 MKOI,Jungle,Elyoya,111,"Jarvan IV 14, Vi 14, Pantheon 14",6,False,70.27027027027027
 MKOI,Mid,Jojopyun,111,"Ryze 15, Azir 14, Anivia 11",7,False,42.34234234234234
-MKOI,Bot,Supa,111,"Ezreal 18, Yunara 13, Caitlyn 12",8,False,49.549549549549546
+MKOI,Bot,Supa,111,"Ezreal 18, Yunara 13, Caitlyn 12",8,False,37.83783783783784
 MKOI,Support,Alvaro,111,"Seraphine 13, Neeko 13, Lulu 12",9,False,45.94594594594595
-MVK,Top,Kratos,65,"Gnar 11, K'Sante 11, Ambessa 6",7,False,29.230769230769234
-MVK,Jungle,Gury,78,"Wukong 9, Vi 8, Aatrox 7",9,False,61.53846153846154
-MVK,Mid,Chika,60,"Cassiopeia 6, Hwei 6, Yone 6",6,False,38.333333333333336
-MVK,Bot,Harky,83,"Ezreal 15, Ashe 11, Corki 10",8,False,51.80722891566265
-MVK,Support,SiuLoong,74,"Seraphine 11, Karma 9, Pyke 7",6,False,36.486486486486484
-T1,Top,Doran,155,"Jayce 21, Ambessa 19, Gnar 15",13,False,33.5483870967742
+MVK,Top,Kratos,71,"Gnar 11, K'Sante 11, Ambessa 7",7,False,45.07042253521127
+MVK,Jungle,Gury,82,"Vi 9, Wukong 9, Aatrox 7",9,False,62.19512195121951
+MVK,Mid,Chika,66,"Cassiopeia 7, Yone 6, Hwei 6",7,False,40.909090909090914
+MVK,Bot,Harky,89,"Ezreal 16, Ashe 12, Corki 10",8,False,51.68539325842697
+MVK,Support,SiuLoong,80,"Seraphine 12, Karma 9, Pyke 8",7,False,36.25
+T1,Top,Doran,155,"Jayce 21, Ambessa 19, Gnar 15",13,False,43.225806451612904
 T1,Jungle,Oner,152,"Vi 24, Xin Zhao 24, Jarvan IV 17",9,False,67.76315789473685
 T1,Mid,Faker,155,"Ryze 21, Anivia 16, Orianna 16",14,False,46.45161290322581
-T1,Bot,Peyz,155,"Jhin 17, Lucian 15, Caitlyn 14",13,False,51.61290322580645
+T1,Bot,Peyz,155,"Jhin 17, Lucian 15, Caitlyn 14",13,False,46.45161290322581
 T1,Support,Keria,155,"Milio 15, Lulu 13, Camille 13",14,False,30.32258064516129
-TES,Top,ZUIAN,97,"Jayce 15, Rumble 14, Olaf 11",7,False,52.57731958762887
+TES,Top,ZUIAN,97,"Jayce 15, Rumble 14, Olaf 11",7,False,59.79381443298969
 TES,Jungle,Tian,97,"Jarvan IV 15, Lee Sin 12, Vi 12",8,False,73.19587628865979
 TES,Mid,Creme,140,"Azir 18, Ryze 17, Ahri 14",9,False,46.42857142857143
-TES,Bot,JackeyLove,97,"Ashe 14, Ezreal 14, Jhin 12",7,False,50.51546391752577
+TES,Bot,JackeyLove,97,"Ashe 14, Ezreal 14, Jhin 12",7,False,42.2680412371134
 TES,Support,Zhuo,112,"Lulu 15, Milio 13, Seraphine 12",10,False,48.214285714285715
-TL,Top,Morgan,101,"Rumble 13, Renekton 13, Gnar 12",11,False,21.782178217821784
+TL,Top,Morgan,101,"Rumble 13, Renekton 13, Gnar 12",11,False,33.663366336633665
 TL,Jungle,Josedeodo,101,"Jarvan IV 14, Pantheon 12, Xin Zhao 11",9,False,71.28712871287128
 TL,Mid,Quid,101,"Ryze 18, Orianna 13, Yone 9",10,False,51.48514851485149
-TL,Bot,Yeon,101,"Ashe 12, Lucian 12, Ezreal 12",8,False,48.51485148514851
+TL,Bot,Yeon,101,"Ashe 12, Lucian 12, Ezreal 12",8,False,43.56435643564357
 TL,Support,CoreJJ,101,"Rakan 13, Seraphine 11, Neeko 11",11,False,38.613861386138616
-TSW,Top,Pun,109,"Renekton 10, Jax 9, Olaf 9",16,False,18.34862385321101
+TSW,Top,Pun,109,"Renekton 10, Jax 9, Olaf 9",16,False,23.853211009174313
 TSW,Jungle,Hizto,110,"Jarvan IV 19, Xin Zhao 18, Naafiri 13",8,False,70.0
 TSW,Mid,Dire,110,"Ryze 17, Ahri 14, Aurora 14",11,False,42.72727272727273
-TSW,Bot,Eddie,110,"Ezreal 14, Yunara 13, Kai'Sa 12",13,False,47.27272727272727
+TSW,Bot,Eddie,110,"Ezreal 14, Yunara 13, Kai'Sa 12",13,False,35.45454545454545
 TSW,Support,Bie,110,"Nautilus 21, Karma 12, Bard 11",12,False,49.09090909090909

@@ -26,6 +26,14 @@ TIERS = {
     4: ["CFO", "IG", "DK"],  # + Play-In winner
 }
 PLAYIN = [("FUR", "MVK"), ("C9", "KC")]
+# Play-In series already played (Oracle's Elixir, 2026-10-15 to 2026-10-16), game winners in order.
+# Replayed as fixed results, not simulated. Empty once the Play-In is over.
+PLAYIN_PLAYED = {
+    "UB1": ["MVK", "MVK", "MVK"],
+    "UB2": ["C9", "KC", "C9", "KC", "KC"],
+    "UBF": ["KC", "KC", "KC"],
+    "LB1": ["C9", "FUR", "FUR", "FUR"],
+}
 
 PLACEMENT_ORDER = ["Champion", "Final", "SF", "QF", "Swiss 2-3", "Swiss 1-3", "Swiss 0-3", "Play-In"]
 
@@ -59,14 +67,27 @@ class Sim:
         return (a, b) if wa == need else (b, a)
 
     # --- Play-In -----------------------------------------------------------------------------
+    def _playin_series(self, slot, a, b):
+        """A finished Play-In series is replayed from its real game winners; an open one is simulated."""
+        if slot not in PLAYIN_PLAYED:
+            return self.series(a, b, 5, "PlayIn")
+        wins = PLAYIN_PLAYED[slot]
+        assert set(wins) <= {a, b}, (slot, a, b, wins)
+        sid, p = self.n_series, self.p(a, b)
+        self.n_series += 1
+        for g, w in enumerate(wins, 1):
+            self.games.append(("PlayIn", a, b, w, p, sid, g, 5))
+        winner = max((a, b), key=wins.count)
+        return winner, b if winner == a else a
+
     def playin(self):
         (a, b), (c, d) = PLAYIN
-        w1, l1 = self.series(a, b, 5, "PlayIn")
-        w2, l2 = self.series(c, d, 5, "PlayIn")
-        wu, lu = self.series(w1, w2, 5, "PlayIn")
-        wl, _ = self.series(l1, l2, 5, "PlayIn")
-        wlf, _ = self.series(lu, wl, 5, "PlayIn")
-        wg, _ = self.series(wu, wlf, 5, "PlayIn")
+        w1, l1 = self._playin_series("UB1", a, b)
+        w2, l2 = self._playin_series("UB2", c, d)
+        wu, lu = self._playin_series("UBF", w1, w2)
+        wl, _ = self._playin_series("LB1", l1, l2)
+        wlf, _ = self._playin_series("LBF", lu, wl)
+        wg, _ = self._playin_series("GF", wu, wlf)
         self.playin_slots = [w1, w2, wu, wl, wlf, wg]
         return wg
 
