@@ -92,33 +92,40 @@ class Sim:
         return wg
 
     # --- Swiss -------------------------------------------------------------------------------
-    def _pair(self, pool, played, avoid_region=False, tries=200):
-        for _ in range(tries):
-            order = list(self.rng.permutation(pool))
-            pairs, ok = [], True
-            while order:
-                a = order.pop(0)
-                cand = [b for b in order if frozenset((a, b)) not in played
-                        and not (avoid_region and self.region[a] == self.region[b])]
-                if not cand:
-                    ok = False
-                    break
-                b = cand[0]
-                order.remove(b)
-                pairs.append((a, b))
-            if ok:
-                return pairs
-        # fall back: allow region clash, keep no-rematch
-        return self._pair(pool, played, False, tries) if avoid_region else list(zip(pool[::2], pool[1::2]))
+    def _pair(self, pool, played, avoid_region=False):
+        """Random pairing of one record group with no rematches (and no same-region games if asked).
+        Backtracking search in random order, so it finds a valid pairing whenever one exists.
+        If none exists, rematches are allowed, which is how the official draw would have to resolve it."""
+        def ok(a, b, rematch_ok):
+            return (rematch_ok or frozenset((a, b)) not in played) and not (
+                avoid_region and self.region[a] == self.region[b])
 
-    def swiss(self, playin_winner):
+        def search(rest, rematch_ok):
+            if not rest:
+                return []
+            a, others = rest[0], rest[1:]
+            for k, b in enumerate(others):
+                if ok(a, b, rematch_ok):
+                    tail = search(others[:k] + others[k + 1:], rematch_ok)
+                    if tail is not None:
+                        return [(a, b)] + tail
+            return None
+
+        order = list(self.rng.permutation(pool))
+        pairs = search(order, False)
+        if pairs is None and avoid_region:
+            return self._pair(pool, played, False)
+        return pairs if pairs is not None else search(order, True)
+
+    def swiss(self, playin_winner, r1=None):
+        """r1: the official Round 1 pairs, once drawn. Without it, Round 1 is drawn at random."""
         tiers = {k: list(v) for k, v in TIERS.items()}
         tiers[4] = tiers[4] + [playin_winner]
         rec = {t: [0, 0] for v in tiers.values() for t in v}
         played = set()
         # round 1: tier-to-tier, no same region
-        pairs = []
-        for hi, lo in ((1, 4), (2, 3)):
+        pairs = list(r1) if r1 else []
+        for hi, lo in (() if r1 else ((1, 4), (2, 3))):
             for _ in range(500):
                 perm = list(self.rng.permutation(tiers[lo]))
                 if all(self.region[a] != self.region[b] for a, b in zip(tiers[hi], perm)):
