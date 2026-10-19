@@ -375,7 +375,7 @@
         "mean_logloss": 3.9528
       }
     ],
-    "fit_seconds": 27.5,
+    "fit_seconds": 26.9,
     "start_disagreements": 3,
     "start_checks": [
       {
@@ -524,5 +524,5 @@
     ]
   },
   "uniform_baseline_logloss": 5.1247,
-  "total_seconds": 59.7
+  "total_seconds": 60.7
 }

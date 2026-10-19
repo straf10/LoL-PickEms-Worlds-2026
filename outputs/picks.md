@@ -1,6 +1,6 @@
 # Worlds 2026 Pick'Em — current picks
 
-**Version:** v4.5 · 2026-10-12 · data: Oracle's Elixir 2022 → 2026-10-11 · Worlds patch 26.20 (OE 16.20)
+**Version:** v4.6 · 2026-10-17 · data: Oracle's Elixir 2022 → 2026-10-17 · Worlds patch 26.20 (OE 16.20)
 **Model:** 50/50 blend of team and player Bradley-Terry ratings (backtest log-loss 0.613 vs 0.693 coin on 862 international games 2022–26; calibration verified, no correction needed); FURIA–MVK blended 50/50 with bookmaker odds (gap > 15 pts). 20,000 full-tournament simulations with rating uncertainty: each simulation draws plausible team strengths from the models' Laplace covariance (`python -m crystal.estimate`; `--fixed` for point estimates).
 **Freeze:** Oct 14, 20:00 · **Lock:** ≈ Oct 15
 
@@ -45,12 +45,14 @@ Scoring: ranked questions (Q1–Q6, Q18) pay 50 / 20 / 10 for finishing 1st / 2n
 
 ⚖ = model can't separate the options; a judgement call is fine.
 
-## Tournament outlook (20k sims, with rating uncertainty)
-Champion: GEN 0.36 · HLE 0.19 · T1 0.17 · DK 0.11 · BLG 0.08 · AL 0.04 · TES 0.02 · IG 0.02. P(Knockouts): GEN .93, HLE .87, T1 .86, DK .80, BLG .78, AL .67, TES .60, IG .56, G2 .45.
+## Tournament outlook (20k sims, with rating uncertainty, as of Oct 17)
+Champion: GEN 0.35 · HLE 0.19 · T1 0.18 · DK 0.11 · BLG 0.08 · AL 0.03 · TES 0.02 · IG 0.02. P(Knockouts): GEN .93, HLE .87, T1 .86, DK .81, BLG .78, AL .67, TES .61, IG .55, G2 .46, KC .34, MKOI .28, LYON .24, TL .24, TSW .18.
+Swiss pool P4 is still open: KC is through to the Grand Final and advances with P ≈ 0.84; the rest of the Play-In slot goes to FURIA or MVK (LB Final, still to be played).
 
 **Champion questions (Q1–Q3, Q10)** come from a draft simulation (`python -m crystal.draft --main`): bans, picks and Fearless locks for every simulated game, drawn from each player's champion pool and the meta. The meta is shifted in each simulated tournament by a model fitted on 11 past international events (`python -m crystal.meta_shift`), which predicts event pick and ban rates from top-league rates and the last three weeks of all leagues. Backtested on those events, its leader probabilities are calibrated (favourites won 4 times against 2.8 expected). Details: `outputs/draft/champion_sim.md`, `outputs/meta/meta_shift_report.md`, `outputs/meta/leader_backtest.md`.
 
 ## Changelog
+- v4.6 (Oct 17): Play-In results in (4 series, 15 games; OE CSV to 2026-10-17). Play-In status: UB1 MVK 3-0 FURIA; UB2 KC 3-2 C9; UB Final KC 3-0 MVK; LB R1 FURIA 3-1 C9. Locked picks scored so far: UB2 and UB Final = 10 of 35. Still live: GF (KC, 10 pts, P ≈ 0.84); LB Final (C9 is out, so 0). Expected total ≈ 18.4 / 35. Crystal Ball answers unchanged (locked at Oct 15); the model rerun changed no answer (Q7 Peyz 0.67, Q11 After ≈ 0.62, Q16 No, P(LCS team in KO) 0.43). The Play-In picks are locked, so the rerun only feeds Swiss and Knockout.
 - v4.5 (Oct 12): Q11 stress test (`crystal/q11_check.py`). The 0.88 treated the 44% target as exact; with the target's backtested uncertainty (±8 pts), P(After) ≈ 0.65. Answer unchanged (After). Ties (~2%) count for neither side.
 - v4.4 (Oct 12): stress tests of Q7 and Q10, answers unchanged. Q7: Peyz 0.68→0.66 (recency shrink on kill share; opponent strength, Fearless and games played checked, all immaterial; `crystal/q7_check.py`). Q10: the −10 correction was measured on the meta-shift closed form. The draft sim agrees with it on Worlds 2026 (−0.8 gap), so the correction stands (−9.9 ± 7.3). It is now automated in `crystal/q10_correct.py`; a) 0.45.
 - v4.3 (Oct 12): Q10 is a bucket question (0–99 / 100–104 / 105–109 / 110–114 / 115–119 / 120+). The draft sim's distribution, shifted by the model's Worlds track record (−10 ± 7), puts a) 0–99 at ~0.45. Answer: a).

@@ -39,7 +39,7 @@ s_best (in-sample, minimum mean log-loss) = **1.5**.
 
 ## Leave-one-event-out (same model refit on the other 10 events)
 
-LOEO refits took 27.5 s in total (within the ~10 minute budget).
+LOEO refits took 26.9 s in total (within the ~10 minute budget).
 
 Optimizer caveat: in 3 of 22 held-out fits (pick and ban, 11 events each), the two L-BFGS-B starts ended at different points on a flat ridge (nll gap of 4-5 units; the parameters differ by up to about 0.09 in a, b and c). The lower-nll point is used. A Nelder-Mead polish did not close the gap, so these fits are less precise than the in-sample fit, which both starts agree on. Per-fit spreads are in the JSON (loeo.start_checks).
 

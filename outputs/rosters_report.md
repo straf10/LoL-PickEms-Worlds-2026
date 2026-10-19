@@ -98,7 +98,7 @@ Sources: https://lolesports.com/news/worlds-2026-primer ; https://www.gosugamers
 | Bot | Ruler | `b5fde49b` | 128 | 2026-09-13 | - |
 | Support | Duro | `8e463d1b` | 132 | 2026-09-13 | - |
 
-Other 2026 players for this team_id: Ripple (Top, 79g), Courage (Jungle, 79g), Juny (Jungle, 2g), Loid (Mid, 103g), Kemish (Mid, 77g), MUDAI (Bot, 79g), Harusary (Bot, 71g), Lumos (Support, 68g)
+Other 2026 players for this team_id: Ripple (Top, 79g), Courage (Jungle, 79g), Juny (Jungle, 2g), Loid (Mid, 108g), Kemish (Mid, 77g), MUDAI (Bot, 79g), Harusary (Bot, 71g), Lumos (Support, 68g)
 
 #### HLE - Hanwha Life Esports (LCK2)
 
@@ -208,11 +208,11 @@ Other 2026 players for this team_id: Breathe (Top, 90g), Soboro (Top, 65g), Nia 
 
 | Role | Player | player_id (last 8) | 2026 games | Last game | Flags |
 |---|---|---|---|---|---|
-| Top | Canna | `5503e75e` | 138 | 2026-09-19 | - |
-| Jungle | Yike | `a8618677` | 138 | 2026-09-19 | - |
-| Mid | kyeahoo | `f55bc80c` | 138 | 2026-09-19 | - |
-| Bot | Caliste | `0c9a5ffd` | 138 | 2026-09-19 | - |
-| Support | Busio | `41805a16` | 138 | 2026-09-19 | - |
+| Top | Canna | `5503e75e` | 146 | 2026-10-16 | - |
+| Jungle | Yike | `a8618677` | 146 | 2026-10-16 | - |
+| Mid | kyeahoo | `f55bc80c` | 146 | 2026-10-16 | - |
+| Bot | Caliste | `0c9a5ffd` | 146 | 2026-10-16 | - |
+| Support | Busio | `41805a16` | 146 | 2026-10-16 | - |
 
 #### TL - Team Liquid (LCS1)
 
@@ -240,11 +240,11 @@ Other 2026 players for this team_id: Castle (Top, 48g), Armao (Jungle, 9g)
 
 | Role | Player | player_id (last 8) | 2026 games | Last game | Flags |
 |---|---|---|---|---|---|
-| Top | Thanatos | `00b903f9` | 107 | 2026-10-03 | - |
-| Jungle | Blaber | `b5aeb42e` | 107 | 2026-10-03 | - |
-| Mid | Loki | `517b3175` | 50 | 2026-10-03 | PARTIAL_2026_TENURE: 32/78 team games, first 2026-07-26 |
-| Bot | Tactical | `dd72df1b` | 64 | 2026-10-03 | PARTIAL_2026_TENURE: 32/78 team games, first 2026-07-26 |
-| Support | Vulcan | `e9887f84` | 107 | 2026-10-03 | - |
+| Top | Thanatos | `00b903f9` | 116 | 2026-10-16 | - |
+| Jungle | Blaber | `b5aeb42e` | 116 | 2026-10-16 | - |
+| Mid | Loki | `517b3175` | 59 | 2026-10-16 | PARTIAL_2026_TENURE: 32/78 team games, first 2026-07-26 |
+| Bot | Tactical | `dd72df1b` | 73 | 2026-10-16 | PARTIAL_2026_TENURE: 32/78 team games, first 2026-07-26 |
+| Support | Vulcan | `e9887f84` | 116 | 2026-10-16 | - |
 
 Other 2026 players for this team_id: APA (Mid, 75g), Zven (Bot, 75g)
 
@@ -276,23 +276,23 @@ Other 2026 players for this team_id: Pungyeon (Mid, 26g), 2274 (Support, 66g)
 
 | Role | Player | player_id (last 8) | 2026 games | Last game | Flags |
 |---|---|---|---|---|---|
-| Top | Kratos | `ae4fc7ec` | 73 | 2026-08-29 | - |
-| Jungle | Gury | `0c4ad461` | 86 | 2026-08-29 | - |
-| Mid | Chika | `8eeadbea` | 60 | 2026-08-29 | PARTIAL_2026_TENURE: 42/75 team games, first 2026-04-04 |
-| Bot | Harky | `c07bb4c4` | 83 | 2026-08-29 | PARTIAL_2026_TENURE: 56/75 team games, first 2026-04-04 |
-| Support | SiuLoong | `18fb1f29` | 82 | 2026-08-29 | PARTIAL_2026_TENURE: 56/75 team games, first 2026-04-04 |
+| Top | Kratos | `ae4fc7ec` | 79 | 2026-10-16 | - |
+| Jungle | Gury | `0c4ad461` | 90 | 2026-10-16 | - |
+| Mid | Chika | `8eeadbea` | 66 | 2026-10-16 | PARTIAL_2026_TENURE: 42/75 team games, first 2026-04-04 |
+| Bot | Harky | `c07bb4c4` | 89 | 2026-10-16 | PARTIAL_2026_TENURE: 56/75 team games, first 2026-04-04 |
+| Support | SiuLoong | `18fb1f29` | 88 | 2026-10-16 | PARTIAL_2026_TENURE: 56/75 team games, first 2026-04-04 |
 
-Other 2026 players for this team_id: Steller (Top, 56g), Kratos (Top, 1g), SofM (Jungle, 3g), Seany (Mid, 50g), Kati (Mid, 22g), Shogun (Bot, 50g), Elio (Support, 75g)
+Other 2026 players for this team_id: Steller (Top, 56g), Kratos (Top, 1g), SanSan (Jungle, 16g), SofM (Jungle, 3g), Seany (Mid, 50g), Kati (Mid, 22g), Shogun (Bot, 50g), Elio (Support, 75g)
 
 #### LOS - LØS (CBLOL1)
 
 | Role | Player | player_id (last 8) | 2026 games | Last game | Flags |
 |---|---|---|---|---|---|
-| Top | Zest | `89a865c1` | 105 | 2026-10-10 | - |
-| Jungle | Curse | `8046f110` | 112 | 2026-10-10 | PARTIAL_2026_TENURE: 57/86 team games, first 2026-05-03 |
-| Mid | Feisty | `6504ca77` | 105 | 2026-10-10 | - |
-| Bot | Duduhh | `5710dd3e` | 105 | 2026-10-10 | - |
-| Support | Ackerman | `7d6bb5b6` | 116 | 2026-10-10 | - |
+| Top | Zest | `89a865c1` | 105 | 2026-10-12 | - |
+| Jungle | Curse | `8046f110` | 112 | 2026-10-12 | PARTIAL_2026_TENURE: 57/86 team games, first 2026-05-03 |
+| Mid | Feisty | `6504ca77` | 105 | 2026-10-12 | - |
+| Bot | Duduhh | `5710dd3e` | 105 | 2026-10-12 | - |
+| Support | Ackerman | `7d6bb5b6` | 116 | 2026-10-12 | - |
 
 Other 2026 players for this team_id: Drakehero (Jungle, 60g)
 
@@ -300,11 +300,11 @@ Other 2026 players for this team_id: Drakehero (Jungle, 60g)
 
 | Role | Player | player_id (last 8) | 2026 games | Last game | Flags |
 |---|---|---|---|---|---|
-| Top | Guigo | `f542d305` | 102 | 2026-10-10 | - |
-| Jungle | Tatu | `e4dd2fc1` | 96 | 2026-10-10 | - |
-| Mid | Tutsz | `e83b1544` | 102 | 2026-10-10 | - |
-| Bot | Ayu | `c1de83b3` | 102 | 2026-10-10 | - |
-| Support | JoJo | `15b04123` | 102 | 2026-10-10 | - |
+| Top | Guigo | `f542d305` | 109 | 2026-10-16 | - |
+| Jungle | Tatu | `e4dd2fc1` | 103 | 2026-10-16 | - |
+| Mid | Tutsz | `e83b1544` | 109 | 2026-10-16 | - |
+| Bot | Ayu | `c1de83b3` | 109 | 2026-10-16 | - |
+| Support | JoJo | `15b04123` | 109 | 2026-10-16 | - |
 
 Other 2026 players for this team_id: Shini (Jungle, 19g), Luuukz (Jungle, 2g)
 
